@@ -9,6 +9,11 @@ namespace ProjektasBIT2
             Console.WriteLine("______________________________________________________________");
             int a, b, c;
             Console.WriteLine("Hello World!");
+
+            while (true)
+            {
+             Console.WriteLine("Mano vardas yra Andrius");
+            }
         }
     }
 }
