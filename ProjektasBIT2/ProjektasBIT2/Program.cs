@@ -12,7 +12,7 @@ namespace ProjektasBIT2
 
             while (true)
             {
-             Console.WriteLine("Mano vardas yra Andrius");
+             Console.WriteLine("Mano pavarde yra Andrius");
             }
         }
     }
