@@ -17,6 +17,7 @@ namespace ProjektasBIT2
             while (true)
             {
              Console.WriteLine("Mano pavarde yra Andrius");
+                break;
             }
         }
         static int SkaiciusIsEkrano()
