@@ -6,7 +6,7 @@ namespace ProjektasBIT2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("______________________________________________________________");
+            Console.WriteLine("Deimantei reik padeti, nes ji nieko nesupranta");
             int a, b, c;
             Console.WriteLine("Hello World!");
         }
