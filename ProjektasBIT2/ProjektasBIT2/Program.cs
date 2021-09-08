@@ -9,6 +9,7 @@ namespace ProjektasBIT2
             Console.WriteLine("Deimantei reik padeti, nes ji nieko nesupranta");
             int a, b, c;
             Console.WriteLine("Hello World!");
+            var Jonas = 5;
 
             while (true)
             {
