@@ -7,6 +7,7 @@ namespace ProjektasBIT2
         static void Main(string[] args)
         {
             Console.WriteLine("______________________________________________________________");
+            int a, b, c;
             Console.WriteLine("Hello World!");
         }
     }
