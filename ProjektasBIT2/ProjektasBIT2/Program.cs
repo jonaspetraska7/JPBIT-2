@@ -10,6 +10,7 @@ namespace ProjektasBIT2
             int a, b, c;
             Console.WriteLine("Hello World!");
             var Jonas = 5;
+            int skaiciukas = 50;
 
             while (true)
             {
