@@ -1,0 +1,16 @@
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\bin\Debug\net5.0\ProjektasBIT2.exe
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\bin\Debug\net5.0\ProjektasBIT2.deps.json
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\bin\Debug\net5.0\ProjektasBIT2.runtimeconfig.json
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\bin\Debug\net5.0\ProjektasBIT2.runtimeconfig.dev.json
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\bin\Debug\net5.0\ProjektasBIT2.dll
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\bin\Debug\net5.0\ref\ProjektasBIT2.dll
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\bin\Debug\net5.0\ProjektasBIT2.pdb
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\obj\Debug\net5.0\ProjektasBIT2.csproj.AssemblyReference.cache
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\obj\Debug\net5.0\ProjektasBIT2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\obj\Debug\net5.0\ProjektasBIT2.AssemblyInfoInputs.cache
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\obj\Debug\net5.0\ProjektasBIT2.AssemblyInfo.cs
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\obj\Debug\net5.0\ProjektasBIT2.csproj.CoreCompileInputs.cache
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\obj\Debug\net5.0\ProjektasBIT2.dll
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\obj\Debug\net5.0\ref\ProjektasBIT2.dll
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\obj\Debug\net5.0\ProjektasBIT2.pdb
+C:\Users\LR.AM\Documents\code\JPBIT-2\ProjektasBIT2\ProjektasBIT2\obj\Debug\net5.0\ProjektasBIT2.genruntimeconfig.cache
