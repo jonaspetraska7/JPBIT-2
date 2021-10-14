@@ -8,6 +8,7 @@ import { MeniuComponent } from './meniu/meniu.component';
 import { PagrindinisComponent } from './pagrindinis/pagrindinis.component';
 
 import { KontaktaiComponent } from './kontaktai/kontaktai.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { KontaktaiComponent } from './kontaktai/kontaktai.component';
     MeniuComponent,
     PagrindinisComponent,
  
-    KontaktaiComponent
+    KontaktaiComponent,
+       CartComponent
   ],
   imports: [
     BrowserModule,

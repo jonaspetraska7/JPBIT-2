@@ -1,2 +1,18 @@
+.product-container {
+    display: flex;
+    flex-direction: row;
+    border: 3px solid chocolate;
+    margin: 5px;
+}
 
+.product-container img {
+    height: 250px;
+    width: 180px;
+    margin-right: 50px;
+}
 
+.mygtukas {
+    background-color: chocolate;
+    width: 100px;
+    height: 50px;
+}

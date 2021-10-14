@@ -1,12 +1,12 @@
-<div>
+<div style="background-color: antiquewhite;">
     <div class="product-container" *ngFor="let x of produktai">
         <img [src]="x.image" />
-        <div class="content">
+        <div class="apiePreke">
             <h2>{{x.title}}</h2>
             <p>{{x.description}}</p>
-            <p class="price">{{x.price}} EUR</p>
-            <p>Rating: {{x.rating.rate}} (Total: {{x.rating.count}})</p>
-            <button (click)=addToCart(x)>Pirkti</button>
+            <p class="kaina">Kaina: {{x.price}} EUR</p>
+            <p>Reitingas: {{x.rating.rate}} (Total: {{x.rating.count}})</p>
+            <button class="mygtukas" (click)=addToCart(x)>Pirkti</button>
         </div>
     </div>
 </div>
