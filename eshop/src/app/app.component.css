@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1600px;
+  margin: auto;
+  box-shadow: 30px 0px 40px rgb(0 0 0 / 10%), -30px 0px 40px rgb(0 0 0 / 10%);
+  display: block;
+  overflow: none;
+}
+
+#landing {
+  display: flex;
+  height: 100%;
+  background: #fff;
+  color: black;
+  flex-direction: row;
+  padding: 80px 0px 40px 0px;
+  margin: 70px 0px 70px 0px;
+}
+
+#produktu-kategorijos {
+  background-color: rgba(244, 244, 234, 1);
+  text-decoration: none;
+  display: flex;
+  width: 300px;
+  height: 400px;
+  margin-bottom: 45px;
+  position: sticky;
+  top: 200px;
+}
+
+#kategorijos {
+  margin-top: 20px;
+  display: flex;
+}
+
+#kategoriju-listas li {
+  list-style: none;
+  padding: 15px;
+}
+
+/*Footer*/
+footer {
+  text-align: center;
+  height: 30vh;
+  display: flex;
+  background-color: rgba(244, 244, 234, 1);
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+#listItem {
+  list-style-type: none;
+}
+
+#kontaktai1 {
+  display: flex;
+}
+#kontaktai1 {
+  display: flex;
+}
+#kontaktai1 {
+  display: flex;
+}
