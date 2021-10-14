@@ -1,2 +1,27 @@
 
+.product-container{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;       
+}
 
+.product-container img{
+    height: 220px;
+    width: 160px;
+    margin-right: 50px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.mygtukas {
+    background-color: chocolate;
+    width: 80px;
+    height: 40px;
+    margin-bottom: 5px;    
+}
+.apiePreke{
+    margin-bottom: 5px;   
+    width: 100px;
+    height: 50px;
+}
