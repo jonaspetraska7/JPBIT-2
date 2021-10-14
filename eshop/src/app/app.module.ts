@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ProduktasComponent } from './produktas/produktas.component';
 import { MeniuComponent } from './meniu/meniu.component';
 import { PagrindinisComponent } from './pagrindinis/pagrindinis.component';
-import { KotaktaiComponent } from './kotaktai/kotaktai.component';
+
 import { KontaktaiComponent } from './kontaktai/kontaktai.component';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { KontaktaiComponent } from './kontaktai/kontaktai.component';
     ProduktasComponent,
     MeniuComponent,
     PagrindinisComponent,
-    KotaktaiComponent,
+ 
     KontaktaiComponent
   ],
   imports: [
