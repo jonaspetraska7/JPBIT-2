@@ -1,0 +1,10 @@
+<p>produktu-kategorijos works!</p>
+<div *ngFor="let x of categorisedItems">
+
+    <p>{{x.category}}</p>
+
+</div>
+<button (click)="getCategory(0)">Pirmoji kategorija</button>
+<button (click)="getCategory(1)">Antroji kategorija</button>
+<button (click)="getCategory(2)">Trecioji kategorija</button>
+<button (click)="getCategory(3)">Ketvirtoji kategorija</button>
