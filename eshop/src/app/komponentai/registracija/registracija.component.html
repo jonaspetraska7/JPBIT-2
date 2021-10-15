@@ -26,9 +26,9 @@
     <small *ngIf="((password.touched || manoForma.submitted) && password.errors) || password.value != cfpassword.value">Slaptažodis nesutampa. Min. ilgis 8 simboliai</small>
 
     <label for="6">Telefono nr.</label>
-    <input id="6" type="number" name="telefonoNr" minlength="9" maxlength="9" required ngModel #telefonoNr="ngModel">
+    <input id="6" type="number" name="telefonoNr" required ngModel pattern='(86\d{7}|\+3706\d{7})' #telefonoNr="ngModel">
     <small *ngIf="telefonoNr.touched && !telefonoNr.valid">Įveskite telefono numeri</small>
-    <small *ngIf="(telefonoNr.touched || manoForma.submitted) && telefonoNr.errors?.required">Blogas telefono numeris</small>
+    <small *ngIf="(telefonoNr.touched || manoForma.submitted) && !telefonoNr.valid">Blogas telefono numeris</small>
 
     <label for="7">Gimimo data</label>
     <input id="7" type="date" name="gimimoData"  ngModel>
