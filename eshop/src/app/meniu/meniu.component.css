@@ -1,22 +1,30 @@
+* {
+  overflow: hidden;
+}
 .container {
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
+  height: 16vh;
 }
 
 .header {
-  padding: 30px 0px 30px 0px;
-  background-color: rgba(244, 244, 234, 1);
-  position: sticky;
+  padding: 30px 0px 0px 0px;
+  background: rgb(204, 204, 128);
+  background: linear-gradient(
+    151deg,
+    rgba(204, 204, 128, 0.35057773109243695) 30%,
+    rgba(244, 244, 234, 0.8127626050420168) 100%
+  );
   top: 0;
   width: 100%;
-  box-shadow: 5px 0px 5px rgb(0 0 0 / 10%), -30px 0px 40px rgb(0 0 0 / 10%);
+  box-shadow: 100px 0px 0px rgb(0 0 0 / 0%), -30px 0px 40px rgb(0 0 0 / 0%);
 }
 
 .logo img {
   width: 200px;
   position: relative;
   left: 280px;
-  top: 20px;
+  top: 0px;
 }
 
 ul.menu {
@@ -29,10 +37,6 @@ ul.menu li {
   float: left;
 }
 
-ul.menu li:last-child {
-  border-right: none;
-}
-
 ul.menu li a {
   padding: 10px 15px;
   display: inline-block;
@@ -42,24 +46,48 @@ ul.menu li a {
 }
 
 ul.menu li a:hover {
-  background-color: #ffee91;
+  background-color: #6a776981;
   color: #123c69;
+  transition: 1.5s;
 }
 
 #menu-bar {
   display: flex;
   justify-content: space-around;
   position: relative;
-  top: -80px;
-  left: ;
+  top: -120px;
+  left: 100px;
 }
 
 .menu {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu a {
   margin: 0px 30px 0px 30px;
-  box-shadow: 5px 0px 5px rgb(0 0 0 / 10%), -30px 0px 40px rgb(0 0 0 / 10%);
+  box-shadow: 8px 7px 7px rgb(0 0 0 / 5%), 0px 0px 40px rgb(0 0 0 / 3%);
   border-radius: 10px;
+}
+
+#menu-header {
+  position: relative;
+  left: 80vw;
+  top: -120px;
+}
+
+#menu-header a {
+  margin-right: 20px;
+}
+
+#krepselis {
+  width: 53px;
+  height: 53px;
+  box-shadow: none;
+  border-radius: 50px;
+}
+
+#krepselis:hover {
+  background-color: #6a776915;
 }
