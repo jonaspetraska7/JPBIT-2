@@ -1,55 +1,55 @@
 <app-meniu></app-meniu>
 <main>
-  <div id="landing">
-    <aside id="kategorijos">
-      <div id="produktu-kategorijos">
-        <ul id="kategoriju-listas">
-          <li><a href="#">Produkto kategorija</a></li>
-          <li><a href="#">Produkto kategorija</a></li>
-          <li><a href="#">Produkto kategorija</a></li>
-          <li><a href="#">Produkto kategorija</a></li>
-          <li><a href="#">Produkto kategorija</a></li>
-          <li><a href="#">Produkto kategorija</a></li>
-          <li><a href="#">Produkto kategorija</a></li>
-        </ul>
-      </div>
-    </aside>
-    <div id="produktai">
-      <router-outlet></router-outlet>
+    <div id="landing">
+        <aside id="kategorijos">
+            <div id="produktu-kategorijos">
+                <ul id="kategoriju-listas">
+                    <li><a [routerLink]="'ziviles'">Ziviles darbai</a></li>
+                    <li><a href="#">Produkto kategorija</a></li>
+                    <li><a href="#">Produkto kategorija</a></li>
+                    <li><a href="#">Produkto kategorija</a></li>
+                    <li><a href="#">Produkto kategorija</a></li>
+                    <li><a href="#">Produkto kategorija</a></li>
+                    <li><a href="#">Produkto kategorija</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div id="produktai">
+            <router-outlet></router-outlet>
+        </div>
     </div>
-  </div>
-  <footer>
-    <div id="footer">
-      <div id="footer-logo">
-        <img src="" alt="" />
-      </div>
-      <div id="kontaktai1">
-        <ul id="listItem">
-          <li>Telefono numeris</li>
-          <li>E-mail'as</li>
-          <li>Adresas</li>
-          <li>Miestas</li>
-          <li>Darbo laikas</li>
-        </ul>
-      </div>
-      <div id="kontaktai2">
-        <ul id="listItem">
-          <li>Telefono numeris</li>
-          <li>E-mail'as</li>
-          <li>Adresas</li>
-          <li>Miestas</li>
-          <li>Darbo laikas</li>
-        </ul>
-      </div>
-      <div id="kontaktai3">
-        <ul id="listItem">
-          <li>Telefono numeris</li>
-          <li>E-mail'as</li>
-          <li>Adresas</li>
-          <li>Miestas</li>
-          <li>Darbo laikas</li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+    <footer>
+        <div id="footer">
+            <div id="footer-logo">
+                <img src="" alt="" />
+            </div>
+            <div id="kontaktai1">
+                <ul id="listItem">
+                    <li>Telefono numeris</li>
+                    <li>E-mail'as</li>
+                    <li>Adresas</li>
+                    <li>Miestas</li>
+                    <li>Darbo laikas</li>
+                </ul>
+            </div>
+            <div id="kontaktai2">
+                <ul id="listItem">
+                    <li>Telefono numeris</li>
+                    <li>E-mail'as</li>
+                    <li>Adresas</li>
+                    <li>Miestas</li>
+                    <li>Darbo laikas</li>
+                </ul>
+            </div>
+            <div id="kontaktai3">
+                <ul id="listItem">
+                    <li>Telefono numeris</li>
+                    <li>E-mail'as</li>
+                    <li>Adresas</li>
+                    <li>Miestas</li>
+                    <li>Darbo laikas</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </main>

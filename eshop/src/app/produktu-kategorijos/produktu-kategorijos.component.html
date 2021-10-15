@@ -9,10 +9,23 @@
 <button (click)="getCategory(2)">Trecioji kategorija</button>
 <button (click)="getCategory(3)">Ketvirtoji kategorija</button>
 
-<p>Rusiuojam pagal kaina:</p>
+<!-- <p>Rusiuojam pagal kaina:</p>
 
 <div *ngFor="let x of naujas">
     <div>
         <P>{{x.price}}</P>
     </div>
+</div> -->
+
+<p>Ieskom parent kategoriju</p>
+<div *ngFor="let x of categories">
+    <p *ngIf="x.id_parent==0">{{x.title}}</p>
+</div>
+<h1>pirmos kategorijos:</h1>
+<div *ngFor="let x of categories">
+    <p *ngIf="x.id_parent==1">{{x.title}}</p>
+</div>
+<h1>Ketvirtos kategorijos</h1>
+<div *ngFor="let x of categories">
+    <p *ngIf="x.id_parent==4">{{x.title}}</p>
 </div>

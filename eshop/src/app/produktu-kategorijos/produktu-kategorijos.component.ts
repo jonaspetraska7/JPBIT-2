@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CartServiseService } from '../cart-servise.service';
 import { produktai } from '../Produktai';
 import { ProduktoModelis } from '../Produktai';
+import { kategorijos } from '../KategorijuDuomenys';
+import { KategorijuModelis } from '../KategorijuDuomenys';
 
 @Component({
   selector: 'app-produktu-kategorijos',
@@ -36,16 +38,17 @@ export class ProduktuKategorijosComponent implements OnInit {
 
   
  
-  getCategory(a:number) {
-    this.categorisedItems=[]
-    for (let x of this.prekes) {
+getCategory(a:number) {
+ this.categorisedItems=[]
+ for (let x of this.prekes) {
       
-      if (x.category == this.kategorijos[a]) {
+ if (x.category == this.kategorijos[a]) {
 this.categorisedItems.push(x)
-      }
-    }
+   }
+  }
   }
 
+categories= kategorijos
 
 
 
