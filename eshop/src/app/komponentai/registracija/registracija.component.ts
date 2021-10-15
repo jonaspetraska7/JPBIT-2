@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
+
 @Component({
   selector: 'app-registracija',
   templateUrl: './registracija.component.html',
@@ -9,6 +10,8 @@ import { NgForm } from '@angular/forms';
 export class RegistracijaComponent implements OnInit {
 
   constructor() { }
+
+  
 
   ngOnInit(): void {
   }
