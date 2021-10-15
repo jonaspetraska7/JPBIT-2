@@ -1,14 +1,3 @@
-<p>produktu-kategorijos works!</p>
-<div *ngFor="let x of categorisedItems">
-
-    <p>{{x.category}}</p>
-
-</div>
-<button (click)="getCategory(0)">Pirmoji kategorija</button>
-<button (click)="getCategory(1)">Antroji kategorija</button>
-<button (click)="getCategory(2)">Trecioji kategorija</button>
-<button (click)="getCategory(3)">Ketvirtoji kategorija</button>
-
 <!-- <p>Rusiuojam pagal kaina:</p>
 
 <div *ngFor="let x of naujas">
@@ -17,7 +6,7 @@
     </div>
 </div> -->
 
-<p>Ieskom parent kategoriju</p>
+<!-- <p>Ieskom parent kategoriju</p>
 <div *ngFor="let x of categories">
     <p *ngIf="x.id_parent==0">{{x.title}}</p>
 </div>
@@ -28,4 +17,13 @@
 <h1>Ketvirtos kategorijos</h1>
 <div *ngFor="let x of categories">
     <p *ngIf="x.id_parent==4">{{x.title}}</p>
+</div> -->
+
+<p>Sub-kategorijos:</p>
+<div *ngFor="let cat of currentCategories">
+    <p>
+        <a [title]="cat.title + ' details'" [routerLink]="['/kategorija', cat.id]">
+            {{cat.title}}
+        </a>
+    </p>
 </div>

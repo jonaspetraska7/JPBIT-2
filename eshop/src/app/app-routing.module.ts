@@ -9,7 +9,9 @@ const routes: Routes = [
   {path: '', component:ProduktasComponent},
   {path: 'pagrindinis', component:PagrindinisComponent},
   {path: 'kontaktai', component:KontaktaiComponent},
-  {path: 'ziviles', component:ProduktuKategorijosComponent}
+  {path: 'ziviles', component:ProduktuKategorijosComponent},
+  {path: 'kategorija', component:ProduktuKategorijosComponent},
+  {path: 'kategorija/:idCategory', component:ProduktuKategorijosComponent},
 ];
 
 @NgModule({
