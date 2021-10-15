@@ -8,3 +8,11 @@
 <button (click)="getCategory(1)">Antroji kategorija</button>
 <button (click)="getCategory(2)">Trecioji kategorija</button>
 <button (click)="getCategory(3)">Ketvirtoji kategorija</button>
+
+<p>Rusiuojam pagal kaina:</p>
+
+<div *ngFor="let x of naujas">
+    <div>
+        <P>{{x.price}}</P>
+    </div>
+</div>
