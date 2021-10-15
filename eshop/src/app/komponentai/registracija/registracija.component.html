@@ -16,15 +16,16 @@
     <small *ngIf="email.touched && !email.valid">Įveskite E-maila</small>
 
     <label for="4">Slaptažodis</label>
-    <input id="4" type="password" name="password" minlength="2" maxlength="5"  required ngModel #password="ngModel">
+    <input id="4" type="password" name="password" minlength="8" required ngModel #password="ngModel">
     <small *ngIf="(password.touched || manoForma.submitted) && password.errors?.required">Įveskite slaptažodį</small>
-    <small *ngIf="(password.touched || manoForma.submitted) && password.errors?.pattern">Slaptaždis nesutampa arba blogas ilgis min 2, max 5 zenklai</small>
+    
 
     <label for="5">Pakartoti slaptažodį</label>
-    <input id="5" type="password" name="password" required ngModel #password="ngModel">
+    <input id="5" type="password" name="cfpassword" required ngModel #cfpassword="ngModel">
     <small *ngIf="(password.touched || manoForma.submitted) && password.errors?.required">Pakartokite slaptažodį</small>
+    <small *ngIf="((password.touched || manoForma.submitted) && password.errors) || password.value != cfpassword.value">Slaptažodis nesutampa. Min. ilgis 8 simboliai</small>
 
-    <label for="6">Telefonas</label>
+    <label for="6">Telefono nr.</label>
     <input id="6" type="number" name="telefonoNr" minlength="9" maxlength="9" required ngModel #telefonoNr="ngModel">
     <small *ngIf="telefonoNr.touched && !telefonoNr.valid">Įveskite telefono numeri</small>
     <small *ngIf="(telefonoNr.touched || manoForma.submitted) && telefonoNr.errors?.required">Blogas telefono numeris</small>
