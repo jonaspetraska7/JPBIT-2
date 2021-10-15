@@ -11,7 +11,8 @@ export interface ProduktoModelis{
   
   export const produktai = [{
     "id": 1,
-    "title": "Fjallraven -nr. 1 kuprinė,  15 nešiojamųjų kompiuterių",
+    "title": "Kuprinė",
+    // "title": "Fjallraven -nr. 1 kuprinė,  15 nešiojamųjų kompiuterių",
     "price": 109.95,
     "description": "Puiki kuprinė kasdieniam naudojimui ir pasivaikščiojimams miške trumpoms,mažoms iškyloms. Telpa 15 colių nešiojamas kompiuteris ",
     "category": "men's clothing",
@@ -24,7 +25,8 @@ export interface ProduktoModelis{
 },
 {
     "id": 2,
-    "title": "Vyriški laisvalaikio PREMIUM SLIM marškinėliai ",
+    "title": "Marškinėliai ",
+    // "title": "Vyriški laisvalaikio PREMIUM SLIM marškinėliai ",
     "price": 22.3,
     "description": "Slim-fit stilius, kontrastingos raglaninės rankovės, trijų sagų „Henley“ plokštelė, lengvas ir minkštas audinys, leidžiantis kvėpuoti ir patogiai dėvėti. Tvirti susiūti marškiniai su apvaliu kaklu, skirti ilgaamžiškumui.Puikiai tinka kasdieniam dėvėjimui ir kietiems beisbolo gerbėjams. Į „Henley“ stiliaus apvalią iškirptę įeina trijų sagų segtukas.",
     "category": "men's clothing",
@@ -37,7 +39,8 @@ export interface ProduktoModelis{
 },
 {
     "id": 3,
-    "title": "Vyriška medvilninė striukė",
+    "title": "Striukė",
+    // "title": "Vyriška medvilninė striukė",
     "price": 55.99,
     "description": "Puiki striukė pavasariui/rudeniui/žiemai.Tinkančios įvairioms progoms, pavyzdžiui: darbui, žygiams pėsčiomis, stovyklavimui, laipiojimui kalnuose/uoloms, važinėjimui dviračiu, kelionėms ar kitoms lauko sąlygoms. Geras dovanų pasirinkimas jums ar jūsų šeimos nariui. Širdinga meilė tėčiui, vyrui ar sūnui per padėkos ar Kalėdų dieną.",
     "category": "men's clothing",

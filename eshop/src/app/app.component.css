@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap");
+
 * {
   margin: 0;
   text-decoration: none;
@@ -18,6 +20,7 @@ main {
   color: black;
   flex-direction: row;
   padding: 40px 0px 40px 0px;
+  width: 80vw;
 }
 
 #produktu-kategorijos {
@@ -39,6 +42,17 @@ main {
 #kategoriju-listas li {
   list-style: none;
   padding: 15px;
+}
+
+#kategoriju-listas a {
+  color: rgb(49, 49, 49);
+  font-size: 17px;
+  font-family: "Noto Serif", serif;
+}
+
+#kategoriju-listas a:hover {
+  color: rgba(49, 49, 49, 0.473);
+  transition: 200ms;
 }
 
 /*Footer*/
@@ -72,6 +86,6 @@ footer {
   display: flex;
 }
 
-#footer-logo{
+#footer-logo {
   display: flex;
 }

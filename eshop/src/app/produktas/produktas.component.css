@@ -1,27 +1,40 @@
 
 .product-container{
-    margin-top: 5px;
-    display: flex;
-    flex-direction: row;
-    border: 2px solid black;       
+    margin: 5px;
+    display: inline-flex;
+    flex-direction: column;
+    border: 2px solid black;  
+    height: fit-content;     
 }
 
 .product-container img{
-    height: 220px;
-    width: 160px;
-    margin-right: 50px;
-    margin-top: 5px;
-    margin-left: 5px;
+    height: 250px;
+    width: 200px;
+    align-items: center;
 }
 
-.mygtukas {
+.mygtukas{
     background-color: chocolate;
-    width: 80px;
-    height: 40px;
-    margin-bottom: 5px;    
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .apiePreke{
     margin-bottom: 5px;   
-    width: 100px;
+    width: 160px;
     height: 50px;
+    
+}
+.kaina{
+    display: inline-flex;
+    margin: 5px;
+
+}
+h2{
+    margin-left: 10px;
 }
