@@ -1,0 +1,90 @@
+<h1>Pirkėjo registracijos forma</h1>
+
+<form ngNativeValidate #manoForma="ngForm" (ngSubmit)="pateiktiForma(manoForma)">
+
+
+    <label for="1">Vardas</label>
+    <input id="1" type="text" name="vardas" required ngModel #vardas="ngModel">
+    <small *ngIf="vardas.touched && !vardas.valid">Įveskite vardą</small>
+
+    <label for="2">Pavardė</label>
+    <input id="2" type="text" name="pavarde" required ngModel #pavarde="ngModel">
+    <small *ngIf="pavarde.touched && !pavarde.valid">Įveskite pavardę</small>
+
+    <label for="3">El. pašto adresas</label>
+    <input id="3" type="email" name="email" required ngModel #email="ngModel">
+    <small *ngIf="email.touched && !email.valid">Įveskite E-maila</small>
+
+    <label for="4">Slaptažodis</label>
+    <input id="4" type="password" name="password" minlength="2" maxlength="5"  required ngModel #password="ngModel">
+    <small *ngIf="(password.touched || manoForma.submitted) && password.errors?.required">Įveskite slaptažodį</small>
+    <small *ngIf="(password.touched || manoForma.submitted) && password.errors?.pattern">Slaptaždis nesutampa arba blogas ilgis min 2, max 5 zenklai</small>
+
+    <label for="5">Pakartoti slaptažodį</label>
+    <input id="5" type="password" name="password" required ngModel #password="ngModel">
+    <small *ngIf="(password.touched || manoForma.submitted) && password.errors?.required">Pakartokite slaptažodį</small>
+
+    <label for="6">Telefonas</label>
+    <input id="6" type="number" name="telefonoNr" minlength="9" maxlength="9" required ngModel #telefonoNr="ngModel">
+    <small *ngIf="telefonoNr.touched && !telefonoNr.valid">Įveskite telefono numeri</small>
+    <small *ngIf="(telefonoNr.touched || manoForma.submitted) && telefonoNr.errors?.required">Blogas telefono numeris</small>
+
+    <label for="7">Gimimo data</label>
+    <input id="7" type="date" name="gimimoData"  ngModel>
+    <br>
+    <label>Pristatymo adresas:</label>
+    <br>
+    <label for="8">Gatvės pavadinimas</label>
+    <input id="8" type="text" name="gatve"  ngModel>
+
+    <label for="9">Namo numeris</label>
+    <input id="9" type="text" name="namoNr"  ngModel>
+
+    <label for="10">Buto numeris</label>
+    <input id="10" type="text" name="butoNr"  ngModel>
+
+    <label for="11">Pašto kodas</label>
+    <input id="11" type="text" name="pastoKodas"  ngModel>
+
+    <label for="12">Valstybė</label>
+    <input id="12" type="text" name="valstybe"  ngModel>
+    <br>
+    <br>
+
+    <label for="13">Ar reikalinga PVM sąskaita faktūra?</label>
+    <input class="perkelti" id="13" type="checkbox" name="arSaskaita" value="false" ngModel>
+
+    <div class="pvm" *ngIf="manoForma.controls['arSaskaita']?.value">
+
+        <label for="14">Imones pavadinimas</label>
+        <input id="14" type="text" name="pavadinimas" ngModel required>
+
+        <label for="15">Imones kodas</label>
+        <input id="15" type="number" name="kodas" ngModel>
+
+        <label for="16">Ar imone pvm moketoja?</label>
+        <input id="16" type="checkbox" name="arMoketojas" value="false" ngModel>
+
+        <div class="pvm" *ngIf="manoForma.controls['arMoketojas']?.value">
+            <label for="17">PVM moketojo kodas</label>
+            <input id="17" type="text" name="pvmKodas" ngModel>
+        </div>
+
+        <label for="18">Registracijos adresas</label>
+        <input id="18" type="text" name="adresas" ngModel>
+
+        <label for="19">Direktoriaus vardas, pavardė</label>
+        <input id="19" type="text" name="dirVardasPavarde" ngModel>
+    </div>
+
+    <br>
+    <br>
+    <label for="20">Sutinku su eshopo taisyklemis ir sąlygomis</label>
+    <input id="20" type="checkbox" name="taisykles" value="false" ngModel required>
+
+    <label for="21">Prenumeruoti naujienlaiškį</label>
+        <input id="21" type="checkbox" name="naujienos" value="false" ngModel>
+
+    <button [disabled]="!manoForma.valid"  type="submit">Registruotis</button>
+
+</form>
