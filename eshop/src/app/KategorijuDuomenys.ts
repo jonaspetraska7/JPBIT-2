@@ -9,49 +9,49 @@ export const kategorijos = [
     {
         id: 1,
         id_parent: 0,
-        title: "Clothes",
-        description: "Newest clothes collection for men and women"
+        title: "Drabužiai",
+        description: "Naujausi vyrų ir moterų drabužiai"
     },
     {
         id: 2,
         id_parent: 1,
-        title: "For men",
-        description: "Newest clothes collection for men"
+        title: "Vyrams",
+        description: "Naujausi drabužiai vyrams"
     },
     {
         id: 3,
         id_parent: 1,
-        title: "For women",
-        description: "Newest clothes collection for women"
+        title: "Moterims",
+        description: "Naujausi drabužiai moterims"
     },
     {
         id: 4,
         id_parent: 0,
-        title: "Jewelry",
-        description: "Feel beautiful with these accessories"
+        title: "Juvelyrika",
+        description: "Aksesuarai norintiems gyventi gražiai"
     },
     {
         id: 5,
         id_parent: 4,
-        title: "Rings",
-        description: ""
+        title: "Žiedai",
+        description: "žiedai kiekvienia progai"
     },
     {
         id: 6,
         id_parent: 4,
-        title: "Bracelets",
-        description: ""
+        title: "Apyrankės",
+        description: "Apyrankės kiekvienam"
     },
     {
         id: 7,
         id_parent: 0,
-        title: "Electronics",
-        description: "21th century stuff for computer science"
+        title: "Elektronika",
+        description: "21 amžiaus elektronika"
     },
     {
         id: 8,
         id_parent: 1,
-        title: "Accessories",
-        description: ""
-    },
+        title: "Aksesuarai",
+        description: "Kiti aksesuarai"
+    }
 ]

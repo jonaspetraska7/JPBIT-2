@@ -1,29 +1,18 @@
-<!-- <p>Rusiuojam pagal kaina:</p>
+<p>
+    Sub-kategorijos:</p>
 
-<div *ngFor="let x of naujas">
-    <div>
-        <P>{{x.price}}</P>
+<div *ngIf="currentCategories?.length; else noSubCategories">
+    <div *ngFor="let cat of currentCategories">
+        <p>
+            <a [title]="cat.title + ' details'" [routerLink]="['/kategorija', cat.id]" routerLinkActive="on">
+                    {{cat.title}}
+                </a>
+        </p>
     </div>
-</div> -->
-
-<!-- <p>Ieskom parent kategoriju</p>
-<div *ngFor="let x of categories">
-    <p *ngIf="x.id_parent==0">{{x.title}}</p>
 </div>
-<h1>pirmos kategorijos:</h1>
-<div *ngFor="let x of categories">
-    <p *ngIf="x.id_parent==1">{{x.title}}</p>
-</div>
-<h1>Ketvirtos kategorijos</h1>
-<div *ngFor="let x of categories">
-    <p *ngIf="x.id_parent==4">{{x.title}}</p>
-</div> -->
 
-<p>Sub-kategorijos:</p>
-<div *ngFor="let cat of currentCategories">
+<ng-template #noSubCategories>
     <p>
-        <a [title]="cat.title + ' details'" [routerLink]="['/kategorija', cat.id]">
-            {{cat.title}}
-        </a>
+        No sub-categories at the moment
     </p>
-</div>
+</ng-template>

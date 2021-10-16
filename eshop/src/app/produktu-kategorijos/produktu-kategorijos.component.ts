@@ -6,29 +6,36 @@ import { kategorijos } from '../KategorijuDuomenys';
 import { KategorijuModelis } from '../KategorijuDuomenys';
 import { ActivatedRoute } from '@angular/router';
 
+import {Router} from '@angular/router';
+
 @Component({
     selector: 'app-produktu-kategorijos',
     templateUrl: './produktu-kategorijos.component.html',
     styleUrls: ['./produktu-kategorijos.component.css']
 })
+
 export class ProduktuKategorijosComponent implements OnInit {
 
-    constructor(private cartServisas: CartServiseService, private route: ActivatedRoute) { }
+    constructor(private cartServisas: CartServiseService, private route: ActivatedRoute, private router: Router) { 
+        this.router.routeReuseStrategy.shouldReuseRoute = function () {
+            return false;
+          };
+     }
 
     ngOnInit(): void {
     }
 
     prekes = produktai;
 
-    naujas = this.sortPrice();
+    
 
-    prekesPrices: ProduktoModelis[] = []
+    
 
     categorisedItems: ProduktoModelis[] = []
 
     kategorijos = ["men's clothing", "jewelery", "electronics", "women's clothing"]
 
-    sortedPrice = this.cartServisas.getSortedPrice();
+    
 
     sortPrice() {
         let naujas = this.prekes.sort(function (a, b): any {
@@ -49,11 +56,11 @@ export class ProduktuKategorijosComponent implements OnInit {
 
     categories = kategorijos
     
-    routeParams = this.route.snapshot.paramMap;
-    currentCategoryId = Number(this.routeParams.get('idCategory'));
+    
+    currentCategoryId = Number(this.route.snapshot.paramMap.get("idCategory"));
     currentCategories = this.getCategoryByParent(this.currentCategoryId);
 
-    getCategoryByParent(idParent: number = 0) {
+    getCategoryByParent(idParent: number) {
         let collectedCategories = [];
 
         for (let x of this.categories) {
