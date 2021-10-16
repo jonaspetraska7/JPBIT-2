@@ -1,19 +1,18 @@
-<div style="background-color: rgb(219, 250, 215);">
+<div id="produktai">
     <div class="product-container" *ngFor="let x of produktai">
         <img [src]="x.image" />
         <div class="apiePreke">
-            <h2>{{x.title}}</h2>
-            <!-- <p>{{x.description}}</p> -->
-            <!-- <p class="kaina">{{x.price}} EUR </p> -->
-            <!-- <p>Reitingas: {{x.rating.rate}} (Total: {{x.rating.count}})</p> -->
-            <!-- <button class="mygtukas" (click)=addToCart(x)>Pirkti</button> -->
-            <p class="kaina">
-                <button class="mygtukas" (click)=addToCart(x)>Pirkti </button>  {{x.price}}EUR </p>
-
-
-
+            <div class="product-title-container">
+                <h2>
+                    {{(x.title.length>22)? (x.title | slice:0:22)+'...':(x.title)}}
+                </h2>
+            </div>
+            <div class="product-bottom">
+                <div class="product-bottom-content">
+                    <button class="mygtukas" (click)=addToCart(x)>Pirkti </button>
+                    <span class="kaina">{{x.price | number:'1.2-2'}} €</span>
+                </div>
+            </div>
         </div>
     </div>
-
-
 </div>

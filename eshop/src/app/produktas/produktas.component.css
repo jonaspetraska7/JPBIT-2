@@ -1,40 +1,82 @@
+#produktai {
+    padding: 15px;
+}
 
-.product-container{
-    margin: 5px;
+.product-container {
+    margin: 15px 15px 0 0;
     display: inline-flex;
     flex-direction: column;
-    border: 2px solid black;  
-    height: fit-content;     
+    border: 2px solid black;
+    width: 222px;
+    height: 333px;
+    justify-content: space-between;
 }
 
-.product-container img{
-    height: 250px;
-    width: 200px;
-    align-items: center;
+.product-container:hover {
+    -webkit-box-shadow: 5px 5px 15px 5px #999999;
+    box-shadow: 5px 5px 15px 5px #999999;
 }
 
-.mygtukas{
+.product-container img {
+    height: 180px;
+    width: 150px;
+    margin: 20px auto 0;
+}
+
+.mygtukas {
     background-color: chocolate;
-    width: 40px;
-    height: 20px;
     margin-right: 10px;
-    margin-left: 5px;
-    display: flex;
+    padding: 10px 15px;
     justify-content: center;
     align-items: center;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    border: solid 3px chocolate;
+    color: #fff;
+}
 
+.mygtukas:hover {
+    border-color: rgb(109, 52, 12);
 }
-.apiePreke{
-    margin-bottom: 5px;   
-    width: 160px;
-    height: 50px;
-    
+
+.apiePreke {
+    margin-bottom: 5px;
 }
-.kaina{
+
+.kaina {
     display: inline-flex;
     margin: 5px;
-
+    color: chocolate;
+    font-size: 20px;
+    font-weight: bold;
 }
-h2{
-    margin-left: 10px;
+
+.product-title-container {
+    position: relative;
+    line-height: 55px;
+    height: 55px;
+    margin-bottom: 10px;
+}
+
+.product-title-container h2 {
+    display: inline-block;
+    width: calc(100% - 10px);
+    line-height: 24px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.product-bottom {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.product-bottom-content {
+    display: inline-block;
 }
