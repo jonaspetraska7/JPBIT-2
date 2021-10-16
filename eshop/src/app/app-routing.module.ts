@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, UrlSegment } from '@angular/router';
 import { KontaktaiComponent } from './kontaktai/kontaktai.component';
 import { PagrindinisComponent } from './pagrindinis/pagrindinis.component';
 import { LoginComponent } from './komponentai/login/login.component';
@@ -10,20 +10,19 @@ import { ProduktuKategorijosComponent } from './produktu-kategorijos/produktu-ka
 import { ProduktoDetailsComponent } from './produkto-details/produkto-details.component';
 
 const routes: Routes = [
-  {path: '', component:ProduktasComponent},
+  {path: '', component:ProduktuKategorijosComponent},
   {path: 'pagrindinis', component:PagrindinisComponent},
   {path: 'kontaktai', component:KontaktaiComponent},
   {path: 'ziviles', component:ProduktuKategorijosComponent},
 
   {path: 'kategorija', component:ProduktuKategorijosComponent},
-  {path: 'kategorija/:idCategory', component:ProduktuKategorijosComponent},
+  {path: 'kategorija/:idCategory', component: ProduktuKategorijosComponent},
 
   {path: 'produktas/:idProduct', component:ProduktoDetailsComponent},
 
   {path: 'registracija', component:RegistracijaComponent},
   {path: 'login', component:LoginComponent},
   {path: 'pass-recover', component:PassRecoverComponent}
-
 ];
 
 @NgModule({

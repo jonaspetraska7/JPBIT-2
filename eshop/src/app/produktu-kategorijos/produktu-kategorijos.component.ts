@@ -6,26 +6,26 @@ import { kategorijos } from '../KategorijuDuomenys';
 import { KategorijuModelis } from '../KategorijuDuomenys';
 import { ActivatedRoute } from '@angular/router';
 
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-produktu-kategorijos',
     templateUrl: './produktu-kategorijos.component.html',
-    styleUrls: ['./produktu-kategorijos.component.css']
+    styleUrls: ['./produktu-kategorijos.component.css', '../produktas/produktas.component.css']
 })
 
 export class ProduktuKategorijosComponent implements OnInit {
 
-    constructor(private cartServisas: CartServiseService, private route: ActivatedRoute, private router: Router) { 
+    constructor(private cartServisas: CartServiseService, private route: ActivatedRoute, private router: Router) {
         this.router.routeReuseStrategy.shouldReuseRoute = function () {
             return false;
-          };
-     }
+        };
+    }
 
     ngOnInit(): void {
     }
 
-    prekes = produktai;
+    products = produktai;
 
 
     // sortPrice() {
@@ -37,10 +37,42 @@ export class ProduktuKategorijosComponent implements OnInit {
 
 
     categories = kategorijos
-    
-    
+
+
     currentCategoryId = Number(this.route.snapshot.paramMap.get("idCategory"));
     currentCategories = this.getCategoryByParent(this.currentCategoryId);
+    currentProducts = this.getProductsByCategory(this.currentCategoryId);
+
+    currentParent = this.getParentId();
+
+    getParentId() {
+        for (let x of this.categories) {
+            if (this.currentCategoryId == x.id) {
+                return x.id_parent;
+            }
+        }
+
+        return 0;
+    }
+
+    getProductsByCategory(idCategory: number) {
+        if(!idCategory){
+        return this.products;
+        }
+        let collectedProducts = [];
+
+        for (let x of this.products) {
+            if (x.categories.indexOf(idCategory) > -1) {
+                collectedProducts.push(x);
+            }
+        }
+
+        return collectedProducts;
+    }
+
+    addToCart(x: ProduktoModelis) {
+        return this.cartServisas.addToCart(x);
+    }
 
     getCategoryByParent(idParent: number) {
         let collectedCategories = [];
@@ -54,4 +86,3 @@ export class ProduktuKategorijosComponent implements OnInit {
         return collectedCategories;
     }
 }
-

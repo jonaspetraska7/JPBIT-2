@@ -16,6 +16,8 @@ import { RegistracijaComponent } from './komponentai/registracija/registracija.c
 import { LoginComponent } from './komponentai/login/login.component';
 import { PassRecoverComponent } from './komponentai/pass-recover/pass-recover.component';
 import { ProduktoDetailsComponent } from './produkto-details/produkto-details.component';
+import { LeftCategoryComponent } from './left-category/left-category.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ProduktoDetailsComponent } from './produkto-details/produkto-details.co
     RegistracijaComponent,
     LoginComponent,
     PassRecoverComponent,
-    ProduktoDetailsComponent
+    ProduktoDetailsComponent,
+    LeftCategoryComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

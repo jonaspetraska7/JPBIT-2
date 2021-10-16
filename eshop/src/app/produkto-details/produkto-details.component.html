@@ -1,11 +1,17 @@
 <div *ngIf="currentPreke">
-    <h1>{{currentPreke.title}}</h1>
-    <img [src]="currentPreke.image">
+    <div class="main">
+        <div class="main1">
+            <img [src]="currentPreke.image">
+        </div>
+        <div class="main2">
+            <h1>{{currentPreke.title}}</h1>
+            <p class="description">{{currentPreke.description}}</p>
+            <p>Reitingas: {{currentPreke.rating.rate}} balsavo: {{currentPreke.rating.count}}</p>
+            <p>Kaina {{currentPreke.price}} €</p>
+            <button>Pirkti</button>
+        </div>
+    </div>
 
-    <p>{{currentPreke.description}}</p>
-    <p>Reitingas: {{currentPreke.rating.rate}} balsavo: {{currentPreke.rating.count}}</p>
-    <p>Kaina {{currentPreke.price}} €</p>
-    <p></p>
 </div>
 <div *ngIf="!currentPreke">
     <p> preke nerasta</p>

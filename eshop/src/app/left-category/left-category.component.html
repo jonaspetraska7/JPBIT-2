@@ -1,0 +1,11 @@
+<aside id="kategorijos">
+    <div id="produktu-kategorijos">
+        <ul id="kategoriju-listas">
+            <li *ngFor="let cat of leftCategories">
+                <a [title]="cat.title + ' details'" [routerLink]="['/kategorija', cat.id]" routerLinkActive="on">
+                    {{cat.title}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>

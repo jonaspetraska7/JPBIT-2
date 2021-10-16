@@ -1,17 +1,35 @@
-<p>Sub-kategorijos:</p>
+<aside id="kategorijos">
+    <div id="produktu-kategorijos">
+        <ul id="kategoriju-listas">
+            <li *ngFor="let cat of currentCategories">
+                <a [title]="cat.title + ' details'" [routerLink]="['/kategorija', cat.id]" routerLinkActive="on">
+                    {{cat.title}}
+                </a>
+            </li>
+            <li *ngIf="currentCategoryId > 0">
+                <a [routerLink]="['/kategorija', currentParent]">&laquo; Atgal</a>
+            </li>
+        </ul>
+    </div>
+</aside>
 
-<div *ngIf="currentCategories?.length; else noSubCategories">
-    <div *ngFor="let cat of currentCategories">
-        <p>
-            <a [title]="cat.title + ' details'" [routerLink]="['/kategorija', cat.id]" routerLinkActive="on">
-                {{cat.title}}
-            </a>
-        </p>
+<div id="produktai">
+    <div class="product-container" *ngFor="let x of currentProducts">
+        <img [src]="x.image" />
+        <div class="apiePreke">
+            <div class="product-title-container">
+                <a [title]="x.title + ' details'" [routerLink]="['/produktas', x.id]" routerLinkActive="on">
+                    <h2>
+                        {{(x.title.length>22)? (x.title | slice:0:22)+'...':(x.title)}}
+                    </h2>
+                </a>
+            </div>
+            <div class="product-bottom">
+                <div class="product-bottom-content">
+                    <button class="mygtukas" (click)=addToCart(x)>Pirkti </button>
+                    <span class="kaina">{{x.price | number:'1.2-2'}} €</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
-<ng-template #noSubCategories>
-    <p>
-        No sub-categories at the moment
-    </p>
-</ng-template>

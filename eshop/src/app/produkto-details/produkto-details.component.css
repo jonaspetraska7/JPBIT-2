@@ -1,0 +1,49 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main img {
+    height: 300px;
+    width: 200x;
+}
+
+.main button {
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: chocolate;
+    margin-right: 10px;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    border: solid 3px chocolate;
+    color: #fff;
+}
+
+.main button:hover {
+    border-color: rgb(109, 52, 12);
+}
+
+.description {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.main1,
+.main2 {
+    flex: 1;
+    text-align: center;
+    height: 600px;
+}
+
+.main2 {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+}

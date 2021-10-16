@@ -1,0 +1,37 @@
+/*Footer*/
+
+footer {
+    text-align: center;
+    height: 30vh;
+    display: flex;
+    background-color: rgba(244, 244, 234, 1);
+    justify-content: space-around;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+}
+
+#listItem {
+    list-style-type: none;
+    min-width: 300px;
+}
+
+#kontaktai1 {
+    display: flex;
+}
+
+#kontaktai2 {
+    display: flex;
+}
+
+#kontaktai3 {
+    display: flex;
+}
+
+#footer-logo {
+    display: flex;
+}
