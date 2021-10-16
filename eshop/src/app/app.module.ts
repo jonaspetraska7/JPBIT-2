@@ -15,6 +15,7 @@ import { ProduktuKategorijosComponent } from './produktu-kategorijos/produktu-ka
 import { RegistracijaComponent } from './komponentai/registracija/registracija.component';
 import { LoginComponent } from './komponentai/login/login.component';
 import { PassRecoverComponent } from './komponentai/pass-recover/pass-recover.component';
+import { ProduktoDetailsComponent } from './produkto-details/produkto-details.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PassRecoverComponent } from './komponentai/pass-recover/pass-recover.co
        ProduktuKategorijosComponent,
     RegistracijaComponent,
     LoginComponent,
-    PassRecoverComponent
+    PassRecoverComponent,
+    ProduktoDetailsComponent
   ],
   imports: [
     BrowserModule,

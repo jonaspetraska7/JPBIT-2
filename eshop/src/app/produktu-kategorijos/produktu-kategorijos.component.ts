@@ -27,32 +27,14 @@ export class ProduktuKategorijosComponent implements OnInit {
 
     prekes = produktai;
 
-    
 
-    
+    // sortPrice() {
+    //     let naujas = this.prekes.sort(function (a, b): any {
+    //         return b.price < a.price ? 1 : b.price > a.price ? -1 : 0;
+    //     });
+    //     return naujas
+    // }
 
-    categorisedItems: ProduktoModelis[] = []
-
-    kategorijos = ["men's clothing", "jewelery", "electronics", "women's clothing"]
-
-    
-
-    sortPrice() {
-        let naujas = this.prekes.sort(function (a, b): any {
-            return b.price < a.price ? 1 : b.price > a.price ? -1 : 0;
-        });
-        return naujas
-    }
-
-    getCategory(a: number) {
-        this.categorisedItems = []
-        for (let x of this.prekes) {
-
-            if (x.category == this.kategorijos[a]) {
-                this.categorisedItems.push(x)
-            }
-        }
-    }
 
     categories = kategorijos
     

@@ -1,12 +1,11 @@
-<p>
-    Sub-kategorijos:</p>
+<p>Sub-kategorijos:</p>
 
 <div *ngIf="currentCategories?.length; else noSubCategories">
     <div *ngFor="let cat of currentCategories">
         <p>
             <a [title]="cat.title + ' details'" [routerLink]="['/kategorija', cat.id]" routerLinkActive="on">
-                    {{cat.title}}
-                </a>
+                {{cat.title}}
+            </a>
         </p>
     </div>
 </div>

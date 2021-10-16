@@ -7,6 +7,7 @@ import { PassRecoverComponent } from './komponentai/pass-recover/pass-recover.co
 import { RegistracijaComponent } from './komponentai/registracija/registracija.component';
 import { ProduktasComponent } from './produktas/produktas.component';
 import { ProduktuKategorijosComponent } from './produktu-kategorijos/produktu-kategorijos.component';
+import { ProduktoDetailsComponent } from './produkto-details/produkto-details.component';
 
 const routes: Routes = [
   {path: '', component:ProduktasComponent},
@@ -16,6 +17,8 @@ const routes: Routes = [
 
   {path: 'kategorija', component:ProduktuKategorijosComponent},
   {path: 'kategorija/:idCategory', component:ProduktuKategorijosComponent},
+
+  {path: 'produktas/:idProduct', component:ProduktoDetailsComponent},
 
   {path: 'registracija', component:RegistracijaComponent},
   {path: 'login', component:LoginComponent},

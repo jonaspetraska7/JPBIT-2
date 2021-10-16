@@ -6,7 +6,10 @@ export interface ProduktoModelis{
     image:string;
     category:string;
     categories:number[]
-    rating:object
+    rating:{
+        rate: number,
+        count: number
+    }
   }
   
   export const produktai = [{

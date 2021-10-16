@@ -59,10 +59,20 @@
     margin-bottom: 10px;
 }
 
-.product-title-container h2 {
+.product-title-container a {
     display: inline-block;
     width: calc(100% - 10px);
     line-height: 24px;
+    text-decoration: none;
+    color: #333;
+}
+
+.product-title-container a:visited {
+    color: #333;
+}
+
+.product-title-container a:hover {
+    color: chocolate;
 }
 
 h2 {

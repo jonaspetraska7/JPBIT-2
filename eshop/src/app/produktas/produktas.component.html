@@ -3,9 +3,11 @@
         <img [src]="x.image" />
         <div class="apiePreke">
             <div class="product-title-container">
-                <h2>
-                    {{(x.title.length>22)? (x.title | slice:0:22)+'...':(x.title)}}
-                </h2>
+                <a [title]="x.title + ' details'" [routerLink]="['/produktas', x.id]" routerLinkActive="on">
+                    <h2>
+                        {{(x.title.length>22)? (x.title | slice:0:22)+'...':(x.title)}}
+                    </h2>
+                </a>
             </div>
             <div class="product-bottom">
                 <div class="product-bottom-content">
