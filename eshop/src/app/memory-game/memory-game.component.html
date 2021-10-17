@@ -1,0 +1,28 @@
+<div class="main">
+    <div class="before" *ngIf="!start">
+        <h1>Žaisk "memory" žaidimą ir gauk Savo nuolaidą visoms prekėms</h1>
+        <p>Skirtingų elementų kiekis: {{maxUsedClasses}} suteikiama nuolaida: {{maxUsedClasses-1}}%</p>
+        <button (click)=usedClases(1)>Padidinti</button>
+        <button (click)=usedClases(-1)>Sumazinti</button>
+        <button (click)=starting()>Pradedam</button>
+
+
+
+
+    </div>
+    <div *ngIf="start">
+        <div class="game">
+            <div [ngStyle]="{'flex':maxUsedClasses%2==0&&maxUsedClasses<16?'25%':(maxUsedClasses%3==0&&maxUsedClasses<22)?'16.6%':(maxUsedClasses%4==0&&maxUsedClasses<61)?'12.5%':(maxUsedClasses%5==0&&maxUsedClasses<44)?'20%':'1'}" class="flexed" *ngFor="let x of shuffledCards, let ind=index">
+                <div (click)=flip(ind) [className]="x.open ? x.className : 'full'">
+
+                </div>
+            </div>
+        </div>
+        <button (click)=restarting()>is naujo</button>
+    </div>
+
+    <div *ngIf="victory">
+        <p>Laimejote (bus nuolaida {{maxUsedClasses}})%</p>
+        <button>Čia Jūsų nulaida</button>
+    </div>
+</div>

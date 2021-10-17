@@ -18,6 +18,7 @@ import { PassRecoverComponent } from './komponentai/pass-recover/pass-recover.co
 import { ProduktoDetailsComponent } from './produkto-details/produkto-details.component';
 import { LeftCategoryComponent } from './left-category/left-category.component';
 import { FooterComponent } from './footer/footer.component';
+import { MemoryGameComponent } from './memory-game/memory-game.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FooterComponent } from './footer/footer.component';
     PassRecoverComponent,
     ProduktoDetailsComponent,
     LeftCategoryComponent,
-    FooterComponent
+    FooterComponent,
+    MemoryGameComponent
   ],
   imports: [
     BrowserModule,
