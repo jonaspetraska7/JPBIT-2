@@ -3,12 +3,18 @@
         <div class="main1">
             <img [src]="currentPreke.image">
         </div>
-        <div class="main2">
-            <h1>{{currentPreke.title}}</h1>
-            <p class="description">{{currentPreke.description}}</p>
-            <p>Reitingas: {{currentPreke.rating.rate}} balsavo: {{currentPreke.rating.count}}</p>
-            <p>Kaina {{currentPreke.price}} €</p>
-            <button>Pirkti</button>
+        <div class="main20">
+            <div class="main2">
+                <h1>{{currentPreke.title}}</h1>
+                <p class="reitingas">Reitingas: {{currentPreke.rating.rate}} balsavo: {{currentPreke.rating.count}}</p>
+            </div>
+
+            <div class="main22">
+                <p class="description">{{currentPreke.description}}</p>
+                <!-- <p>Reitingas: {{currentPreke.rating.rate}} balsavo: {{currentPreke.rating.count}}</p> -->
+                <!-- <p>Kaina {{currentPreke.price}} €</p> -->
+                <button>Pirkti {{currentPreke.price}} €</button>
+            </div>
         </div>
     </div>
 

@@ -3,19 +3,23 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    /* margin-left: 30px; */
+
 }
 
 .main img {
-    height: 300px;
+    height: 600px;
     width: 200x;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .main button {
     text-align: center;
     margin-bottom: 10px;
     background-color: chocolate;
-    margin-right: 10px;
-    padding: 10px 15px;
+    /* margin-right: 10px; */
+    /* padding: 10px 15px; */
     justify-content: center;
     align-items: center;
     border-radius: 30px;
@@ -31,19 +35,36 @@
 
 .description {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 25px;
     padding: 10px;
 }
-
-.main1,
+.main20{
+    
+    flex-direction: column;
+}
 .main2 {
     flex: 1;
     text-align: center;
-    height: 600px;
-}
-
-.main2 {
-    justify-content: space-around;
+    height: 200px;
+    /* justify-content: space-around; */
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
+}
+.main22{
+    flex: 1;
+    text-align: center;
+    height: 400px;
+    justify-content: space-around;
+    margin-right: 100px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    font-size: 70px;
+}
+.reitingas{
+    font-size: 12px;
+    margin-top: 10px;
 }
