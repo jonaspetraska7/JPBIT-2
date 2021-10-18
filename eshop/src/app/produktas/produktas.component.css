@@ -6,10 +6,15 @@
     margin: 15px 15px 0 0;
     display: inline-flex;
     flex-direction: column;
+
     border: 2px solid black;
     width: 222px;
     height: 333px;
     justify-content: space-between;
+
+    border: 2px solid black;  
+    height: fit-content; 
+    background-color: beige;    
 }
 
 .product-container:hover {
@@ -23,18 +28,25 @@
     margin: 20px auto 0;
 }
 
-.mygtukas {
-    background-color: chocolate;
+
+
+
+.mygtukas{
+    background-color: whitesmoke;
+    width: 60px;
+    height: 30px;
     margin-right: 10px;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
     justify-content: center;
     align-items: center;
     border-radius: 30px;
     font-weight: bold;
     font-size: 16px;
     border: solid 3px chocolate;
-    color: #fff;
+    color:black;
 }
+   
+    
 
 .mygtukas:hover {
     border-color: rgb(109, 52, 12);
