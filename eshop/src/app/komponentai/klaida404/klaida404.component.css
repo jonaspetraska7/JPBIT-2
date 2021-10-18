@@ -1,4 +1,14 @@
+.apvadas {
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    
+}
+
+
+
 .paveiksliukas {
-    height: 200px;
-    width: 200px;
+    height: 2px;
+    width: 2px;
 }

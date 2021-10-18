@@ -26,7 +26,9 @@ const routes: Routes = [
   {path: 'registracija', component:RegistracijaComponent},
   {path: 'login', component:LoginComponent},
   {path: 'pass-recover', component:PassRecoverComponent},
-  {path: 'error404', component:Klaida404Component}
+  {path: 'klaida404', component:Klaida404Component},
+  { path: '**',   redirectTo: '/klaida404' }
+  
 ];
 
 @NgModule({

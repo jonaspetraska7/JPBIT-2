@@ -1,11 +1,17 @@
-<app-meniu></app-meniu>
+<div *ngIf="!klaida404">
+    <app-meniu></app-meniu>
 
-<main>
-    <div id="landing">
-        <router-outlet></router-outlet>
-        <app-baneris></app-baneris>
-    </div>
-    <footer>
-        <app-footer></app-footer>
-    </footer>
-</main>
+    <main>
+        <div id="landing">
+            <router-outlet></router-outlet>
+            <app-baneris></app-baneris>
+        </div>
+        <footer>
+            <app-footer></app-footer>
+        </footer>
+    </main>
+
+</div>
+<div *ngIf="klaida404">
+<app-klaida404></app-klaida404>
+</div>
