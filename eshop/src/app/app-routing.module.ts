@@ -9,6 +9,7 @@ import { ProduktasComponent } from './produktas/produktas.component';
 import { ProduktuKategorijosComponent } from './produktu-kategorijos/produktu-kategorijos.component';
 import { ProduktoDetailsComponent } from './produkto-details/produkto-details.component';
 import { MemoryGameComponent } from './memory-game/memory-game.component';
+import { Klaida404Component } from './komponentai/klaida404/klaida404.component';
 
 const routes: Routes = [
   {path: '', component:ProduktuKategorijosComponent},
@@ -24,7 +25,8 @@ const routes: Routes = [
 
   {path: 'registracija', component:RegistracijaComponent},
   {path: 'login', component:LoginComponent},
-  {path: 'pass-recover', component:PassRecoverComponent}
+  {path: 'pass-recover', component:PassRecoverComponent},
+  {path: 'error404', component:Klaida404Component}
 ];
 
 @NgModule({
