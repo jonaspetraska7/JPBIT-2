@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 
 @Component({
@@ -8,20 +8,24 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'eshop';
 
   constructor(private route: ActivatedRoute, private router: Router) {
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
         return false;
         };
-console.log(this.router.url)
-}
 
+    router.events.subscribe((event: any) => {
+      //console.log(event);
+      if (event instanceof NavigationEnd ) {
+        this.klaida404 = event.url == "/klaida404" || event.urlAfterRedirects == "/klaida404";
+      }
+    });
 
-  klaida404=this.router.url.includes("/klaida404");
+  }
 
-patikrinimas() {
-  return window.location.href.includes("klaida404");
-}
+  klaida404=false;
+
 }
 
