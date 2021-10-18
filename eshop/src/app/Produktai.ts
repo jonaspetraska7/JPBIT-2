@@ -56,7 +56,8 @@ export interface ProduktoModelis{
 },
 {
     "id": 4,
-    "title": "Vyrų laisvalaikio slim-fit ",
+    // "title": "Vyrų laisvalaikio slim-fit ",
+    "title": "Slim-fit ",
     "price": 15.99,
     "description": "Spalva ekrane ir realybeje praktiškai gali šiek tiek skirtis. / Atkreipkite dėmesį, kad kūno formos skiriasi kiekvieno asmenio, todėl išsami informacija apie dydį turėtų būti pateikta žemiau esančiame produkto aprašyme.",
     "category": "men's clothing",
@@ -69,7 +70,8 @@ export interface ProduktoModelis{
 },
 {
     "id": 5,
-    "title": "John Hardy moterų legenda Naga Gold & Silver Dragon Station apyrankė",
+    // "title": "John Hardy moterų legenda Naga Gold & Silver Dragon Station apyrankė",
+    "title": "Apyrankė",
     "price": 695,
     "description": "Iš mūsų legendos kolekcijos Naga įkvėpė mitinis vandens slibinas, saugantis vandenyno perlą. Dėvėkite viduje, kad būtumėte apdovanotas meile arba į išorę - apsaugai.",
     "category": "jewelery",
@@ -82,7 +84,8 @@ export interface ProduktoModelis{
 },
 {
     "id": 6,
-    "title": "Solidus,smulkus auksinis mikropavas ",
+    // "title": "Solidus,smulkus auksinis mikropavas ",
+    "title": "Mikropavas ",
     "price": 168,
     "description": "Kokybė garantuota. Grąžinkite arba keiskite bet kokį kita užsakymą per 30 dienų. Sukūrė Hafeez Center JAV.",
     "category": "jewelery",
