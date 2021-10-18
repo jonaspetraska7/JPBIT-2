@@ -1,0 +1,10 @@
+<h1>Valdymas su w-up, a-left, s-down, d-right</h1>
+<div class="main">
+    <div class="container" [ngStyle]="{'grid-template-columns': 'auto auto auto'}">
+        <div class="grid">
+            <div *ngFor="let x of labirinth let ind=index">
+                <div [className]=labirinth[ind] (keydown.a)="funkcija()"></div>
+            </div>
+        </div>
+    </div>
+</div>

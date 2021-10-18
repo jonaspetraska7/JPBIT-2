@@ -20,7 +20,11 @@ import { LeftCategoryComponent } from './left-category/left-category.component';
 import { FooterComponent } from './footer/footer.component';
 import { MemoryGameComponent } from './memory-game/memory-game.component';
 import { BanerisComponent } from './komponentai/baneris/baneris.component';
+
 import { Klaida404Component } from './komponentai/klaida404/klaida404.component';
+
+import { LabirintasComponent } from './labirintas/labirintas.component';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +44,8 @@ import { Klaida404Component } from './komponentai/klaida404/klaida404.component'
     FooterComponent,
     MemoryGameComponent,
     BanerisComponent,
-    Klaida404Component
+    Klaida404Component,
+    LabirintasComponent
   ],
   imports: [
     BrowserModule,

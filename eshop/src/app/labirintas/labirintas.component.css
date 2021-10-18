@@ -1,0 +1,59 @@
+.container {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #ff00ff;
+}
+
+@media (max-width: 1250px) {
+    .container {
+        width: 600px;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+}
+
+.item {
+    width: calc(100% - 10px);
+    padding-top: calc(100% - 10px);
+    background-color: aqua;
+    margin: 5px;
+}
+
+.start {
+    width: calc(100% - 10px);
+    padding-top: calc(100% - 10px);
+    background-color: yellow;
+    margin: 5px;
+    animation: blinker 2s linear infinite;
+}
+
+.path {
+    width: calc(100% - 10px);
+    padding-top: calc(100% - 10px);
+    background-color: yellow;
+    margin: 5px;
+}
+
+.wall {
+    width: calc(100% - 10px);
+    padding-top: calc(100% - 10px);
+    background-color: black;
+    margin: 5px;
+}
+
+.end {
+    width: calc(100% - 10px);
+    padding-top: calc(100% - 10px);
+    background-color: blue;
+    margin: 5px;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0.5;
+    }
+}
