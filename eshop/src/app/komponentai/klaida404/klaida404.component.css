@@ -6,9 +6,11 @@
     
 }
 
-
-
+.irasas {
+    font-size: 18px;
+    padding: 15px;
+}
 .paveiksliukas {
-    height: 2px;
-    width: 2px;
+    height: 640px;
+    width: 480px;
 }
