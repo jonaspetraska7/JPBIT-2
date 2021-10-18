@@ -19,6 +19,7 @@ import { ProduktoDetailsComponent } from './produkto-details/produkto-details.co
 import { LeftCategoryComponent } from './left-category/left-category.component';
 import { FooterComponent } from './footer/footer.component';
 import { MemoryGameComponent } from './memory-game/memory-game.component';
+import { BanerisComponent } from './komponentai/baneris/baneris.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MemoryGameComponent } from './memory-game/memory-game.component';
     ProduktoDetailsComponent,
     LeftCategoryComponent,
     FooterComponent,
-    MemoryGameComponent
+    MemoryGameComponent,
+    BanerisComponent
   ],
   imports: [
     BrowserModule,

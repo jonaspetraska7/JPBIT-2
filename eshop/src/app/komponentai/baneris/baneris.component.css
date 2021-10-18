@@ -1,0 +1,10 @@
+.baneris {
+    background-color: rgba(244, 244, 234, 1);
+    text-decoration: none;
+    display: flex;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 45px;
+    position: sticky;
+    top: 200px;
+}
