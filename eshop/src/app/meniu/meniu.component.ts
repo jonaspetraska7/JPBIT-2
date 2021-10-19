@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartServiseService } from '../cart-servise.service';
 
 @Component({
   selector: 'app-meniu',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeniuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cartservisas: CartServiseService) { }
 
   ngOnInit(): void {
   }
 
+    suma= this.cartservisas.getItemPrices()
+
+    
 }

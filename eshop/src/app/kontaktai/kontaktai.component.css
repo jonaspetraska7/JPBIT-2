@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  height: 30vh;
+  display: flex;
+  background-color: rgba(244, 244, 234, 1);
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+#footer #kontaktai {
+  justify-content: space-around;
+}
+
+#listItem {
+  list-style-type: none;
+  min-width: 300px;
+}
+
+#kontaktai1 {
+  display: flex;
+}
+
+#kontaktai2 {
+  display: flex;
+}
+
+#kontaktai3 {
+  display: flex;
+}
+
+.map {
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+hr {
+  width: 58%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
