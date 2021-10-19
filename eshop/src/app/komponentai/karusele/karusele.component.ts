@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IImage } from 'ng-simple-slideshow';
+
 
 @Component({
   selector: 'app-karusele',
@@ -13,12 +13,7 @@ export class KaruseleComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  imageUrlsArray: (string | IImage)[] = [
-    { url: 'assets/pic1', caption: 'The first slide', href: '#' },
-    { url: 'assets/pic2', caption: 'The first slide', href: '#' },
-    { url: 'assets/pic3', caption: 'trecias pav', href: '#' },
-    
-  ];
+  
 
 
 }

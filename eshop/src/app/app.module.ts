@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { SlideshowModule } from 'ng-simple-slideshow';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,7 +23,7 @@ import { KrepselioSumaComponent } from './krepselio-suma/krepselio-suma.componen
 
 import { Klaida404Component } from './komponentai/klaida404/klaida404.component';
 import { KaruseleComponent } from './komponentai/karusele/karusele.component';
-import { SlideshowComponent } from 'ng-simple-slideshow/src/app/modules/slideshow/slideshow.component';
+
 
 import { LabirintasComponent } from './labirintas/labirintas.component';
 
@@ -54,8 +53,8 @@ import { LabirintasComponent } from './labirintas/labirintas.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    SlideshowModule
+    FormsModule
+    
 
   ],
   providers: [],
