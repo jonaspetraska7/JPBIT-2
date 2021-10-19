@@ -11,6 +11,7 @@ import { ProduktoDetailsComponent } from './produkto-details/produkto-details.co
 import { MemoryGameComponent } from './memory-game/memory-game.component';
 import { Klaida404Component } from './komponentai/klaida404/klaida404.component';
 import { KaruseleComponent } from './komponentai/karusele/karusele.component';
+import { LabirintasComponent } from './labirintas/labirintas.component';
 
 const routes: Routes = [
   {path: '', component:ProduktuKategorijosComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'kontaktai', component:KontaktaiComponent},
   {path: 'ziviles', component:ProduktuKategorijosComponent},
   {path:'memory', component:MemoryGameComponent},
+  {path:'labirintas', component:LabirintasComponent},
 
   {path: 'kategorija', component:ProduktuKategorijosComponent},
   {path: 'kategorija/:idCategory', component: ProduktuKategorijosComponent},
