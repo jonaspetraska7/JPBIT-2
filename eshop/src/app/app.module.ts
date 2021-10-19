@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,13 +22,12 @@ import { LeftCategoryComponent } from './left-category/left-category.component';
 import { FooterComponent } from './footer/footer.component';
 import { MemoryGameComponent } from './memory-game/memory-game.component';
 import { BanerisComponent } from './komponentai/baneris/baneris.component';
-import { KrepselioSumaComponent } from './krepselio-suma/krepselio-suma.component';
-
 import { Klaida404Component } from './komponentai/klaida404/klaida404.component';
 import { KaruseleComponent } from './komponentai/karusele/karusele.component';
 
 
 import { LabirintasComponent } from './labirintas/labirintas.component';
+import { KotaktuFormaComponent } from './kotaktu-forma/kotaktu-forma.component';
 
 
 @NgModule({
@@ -34,7 +36,6 @@ import { LabirintasComponent } from './labirintas/labirintas.component';
     ProduktasComponent,
     MeniuComponent,
     PagrindinisComponent,
-    
     KontaktaiComponent,
     CartComponent,
     ProduktuKategorijosComponent,
@@ -48,13 +49,19 @@ import { LabirintasComponent } from './labirintas/labirintas.component';
     BanerisComponent,
     Klaida404Component,
     KaruseleComponent,
-    LabirintasComponent
+    LabirintasComponent,
+    KotaktuFormaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
     
+    FormsModule,
+    SlideshowModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],

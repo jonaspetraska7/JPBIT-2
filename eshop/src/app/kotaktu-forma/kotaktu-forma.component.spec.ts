@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { KrepselioSumaComponent } from './krepselio-suma.component';
+import { KotaktuFormaComponent } from './kotaktu-forma.component';
 
-describe('KrepselioSumaComponent', () => {
-  let component: KrepselioSumaComponent;
-  let fixture: ComponentFixture<KrepselioSumaComponent>;
+describe('KotaktuFormaComponent', () => {
+  let component: KotaktuFormaComponent;
+  let fixture: ComponentFixture<KotaktuFormaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ KrepselioSumaComponent ]
+      declarations: [ KotaktuFormaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(KrepselioSumaComponent);
+    fixture = TestBed.createComponent(KotaktuFormaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
