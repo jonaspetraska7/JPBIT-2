@@ -55,8 +55,6 @@ import { KotaktuFormaComponent } from './kotaktu-forma/kotaktu-forma.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-    
     FormsModule,
     SlideshowModule,
     FormsModule,
