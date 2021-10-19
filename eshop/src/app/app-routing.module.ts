@@ -10,6 +10,7 @@ import { ProduktuKategorijosComponent } from './produktu-kategorijos/produktu-ka
 import { ProduktoDetailsComponent } from './produkto-details/produkto-details.component';
 import { MemoryGameComponent } from './memory-game/memory-game.component';
 import { Klaida404Component } from './komponentai/klaida404/klaida404.component';
+import { KaruseleComponent } from './komponentai/karusele/karusele.component';
 
 const routes: Routes = [
   {path: '', component:ProduktuKategorijosComponent},
@@ -22,7 +23,7 @@ const routes: Routes = [
   {path: 'kategorija/:idCategory', component: ProduktuKategorijosComponent},
 
   {path: 'produktas/:idProduct', component:ProduktoDetailsComponent},
-
+  {path: 'karusele', component:KaruseleComponent},
   {path: 'registracija', component:RegistracijaComponent},
   {path: 'login', component:LoginComponent},
   {path: 'pass-recover', component:PassRecoverComponent},

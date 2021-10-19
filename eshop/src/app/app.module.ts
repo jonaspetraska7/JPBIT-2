@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +21,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MemoryGameComponent } from './memory-game/memory-game.component';
 import { BanerisComponent } from './komponentai/baneris/baneris.component';
 import { Klaida404Component } from './komponentai/klaida404/klaida404.component';
+import { KaruseleComponent } from './komponentai/karusele/karusele.component';
+import { SlideshowComponent } from 'ng-simple-slideshow/src/app/modules/slideshow/slideshow.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +30,10 @@ import { Klaida404Component } from './komponentai/klaida404/klaida404.component'
     ProduktasComponent,
     MeniuComponent,
     PagrindinisComponent,
- 
+    
     KontaktaiComponent,
-       CartComponent,
-       ProduktuKategorijosComponent,
+    CartComponent,
+    ProduktuKategorijosComponent,
     RegistracijaComponent,
     LoginComponent,
     PassRecoverComponent,
@@ -40,13 +42,15 @@ import { Klaida404Component } from './komponentai/klaida404/klaida404.component'
     FooterComponent,
     MemoryGameComponent,
     BanerisComponent,
-    Klaida404Component
+    Klaida404Component,
+    KaruseleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-    
+    FormsModule,
+    SlideshowModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
