@@ -1,0 +1,32 @@
+#kategorijos {
+    margin-top: 20px;
+    /*position: fixed;
+    left: calc((100% - 80vw + 8px) / 2)*/
+}
+
+#kategoriju-listas li {
+    list-style: none;
+    padding: 15px;
+}
+
+#kategoriju-listas a {
+    color: rgb(49, 49, 49);
+    font-size: 17px;
+    font-family: "Noto Serif", serif;
+}
+
+#kategoriju-listas a:hover {
+    color: rgba(49, 49, 49, 0.473);
+    transition: 200ms;
+}
+
+#produktu-kategorijos {
+    background-color: rgba(244, 244, 234, 1);
+    text-decoration: none;
+    display: flex;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 45px;
+    position: sticky;
+    top: 400px;
+}

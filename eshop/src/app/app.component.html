@@ -3,8 +3,15 @@
 
     <main>
         <div id="landing">
-            <router-outlet></router-outlet>
-            <app-baneris></app-baneris>
+            <div id="left-column">
+                <app-left-category></app-left-category>
+            </div>
+            <div id="main-column">
+                <router-outlet></router-outlet>
+            </div>
+            <div id="right-column">
+                <app-baneris></app-baneris>
+            </div>
         </div>
         <footer>
             <app-footer></app-footer>
@@ -13,5 +20,5 @@
 
 </div>
 <div *ngIf="klaida404">
-<app-klaida404></app-klaida404>
+    <app-klaida404></app-klaida404>
 </div>
