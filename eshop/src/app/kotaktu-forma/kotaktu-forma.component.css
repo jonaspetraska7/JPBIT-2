@@ -1,0 +1,55 @@
+* {
+  font-style: "arial,helvetica,sans-serif";
+}
+
+input:focus {
+  outline: none;
+}
+
+#kontaktuForma {
+  height: 50vh;
+  display: flex;
+  position: inherit;
+  width: 30vw;
+  position: relative;
+  left: 50%;
+  top: 50px;
+}
+
+#zinute {
+  width: 68%;
+}
+
+#kontaktuForma input {
+  background-color: transparent;
+  border: none !important;
+  border-bottom: 1px solid #e3e3c2 !important;
+  padding: 10px 15px 10px 0px;
+  margin: 15px 15px 15px 0px;
+}
+
+#kontaktuForma textarea {
+  background-color: transparent;
+  border: none !important;
+  border-bottom: 1px solid #e3e3c2 !important;
+  padding: 0px;
+  margin: 15px 15px 15px 0px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+#kontaktuForma button {
+  background-color: transparent;
+  border: none !important;
+  border-bottom: 1px solid #e3e3c2 !important;
+  font-style: "arial,helvetica,sans-serif";
+  cursor: pointer;
+}
+
+button {
+  display: flex;
+  color: rgb(88, 88, 88);
+  padding-left: 0.3px;
+}

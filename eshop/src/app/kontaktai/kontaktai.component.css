@@ -37,8 +37,8 @@ footer {
 }
 
 .map {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   border-radius: 5px;
 }
 
@@ -46,4 +46,13 @@ hr {
   width: 58%;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+/* Forma */
+
+#forma{
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

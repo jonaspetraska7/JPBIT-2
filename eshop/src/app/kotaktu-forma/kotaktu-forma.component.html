@@ -1,0 +1,11 @@
+<div id="kontaktuForma">
+  <form [formGroup]="manoForma" (ngSubmit)="pateiktiForma()">
+    <input type="text" formControlName="vardas" placeholder="Vardas" />
+    <input type="text" formControlName="telefonas" placeholder="Telefonas" />
+    <input type="text" formControlName="elPastas" placeholder="El. paštas" />
+    <textarea formControlName="zinute" id="zinute" cols="20" rows="5" placeholder="Žinutė"></textarea>
+    <button class="button" type="submit">SIŲSTI</button>
+  </form>
+</div>
+
+
