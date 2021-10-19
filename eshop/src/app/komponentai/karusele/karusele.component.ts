@@ -13,7 +13,7 @@ export class KaruseleComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  imageUrls: (string | IImage)[] = [
+  imageUrlsArray: (string | IImage)[] = [
     { url: 'assets/pic1', caption: 'The first slide', href: '#' },
     { url: 'assets/pic2', caption: 'The first slide', href: '#' },
     { url: 'assets/pic3', caption: 'trecias pav', href: '#' },
