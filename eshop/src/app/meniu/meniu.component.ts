@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartServiseService } from '../cart-servise.service';
+import { produktai } from '../Produktai';
 
 @Component({
   selector: 'app-meniu',
@@ -17,3 +18,8 @@ export class MeniuComponent implements OnInit {
 
     
 }
+
+// addToCart(produktai) {
+//   debugger;
+//   this.cartservisas.addToCart(produktai);
+// }
