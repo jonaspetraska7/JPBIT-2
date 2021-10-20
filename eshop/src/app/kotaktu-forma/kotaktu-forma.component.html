@@ -20,8 +20,14 @@
       <input type="text" formControlName="vardas" placeholder="Vardas" />
       <input type="text" formControlName="telefonas" placeholder="Telefonas" />
       <input type="text" formControlName="elPastas" placeholder="El. paštas" />
-      <textarea style="max-height: 70px; max-width: 450px" formControlName="zinute" id="zinute" cols="20" rows="5"
-        placeholder="Žinutė"></textarea>
+      <textarea
+        style="max-height: 70px; max-width: 450px"
+        formControlName="zinute"
+        id="zinute"
+        cols="20"
+        rows="5"
+        placeholder="Žinutė"
+      ></textarea>
       <button class="button" type="submit" [disabled]="!manoForma.valid">
         SIŲSTI
       </button>
