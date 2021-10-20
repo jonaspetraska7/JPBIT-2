@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { ApiServisasService } from './api-servisas.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class AppComponent {
   
   title = 'eshop';
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(private servisas:ApiServisasService, private route: ActivatedRoute, private router: Router) {
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
         return false;
         };
@@ -27,5 +28,15 @@ export class AppComponent {
 
   klaida404=false;
 
+check=location.pathname.includes('kategorija');
+isfunk=this.servisas.getLocation();
+
+  gautiduomenis(catID:any){
+console.log("gavom duomenis")
+console.log(catID)
+  }
 }
+
+// 
+
 
