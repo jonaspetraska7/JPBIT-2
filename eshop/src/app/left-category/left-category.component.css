@@ -1,7 +1,6 @@
 #kategorijos {
     margin-top: 20px;
-    /*position: fixed;
-    left: calc((100% - 80vw + 8px) / 2)*/
+    float: left;
 }
 
 #kategoriju-listas li {

@@ -31,7 +31,7 @@ export class LeftCategoryComponent implements OnInit {
     categories = kategorijos
     
 
-    currentCategoryId = 0;
+    currentCategoryId = this.catID.getID();
     currentCategories = this.getCategoryByParent(this.currentCategoryId);
     currentParent = this.getParentId();
 
@@ -67,7 +67,7 @@ export class LeftCategoryComponent implements OnInit {
 
     getCategoryByParent(idParent: number) {
         let collectedCategories = [];
-        console.log('id parent : ' + idParent);
+        console.log('id parent from left : ' + idParent);
 
         for (let x of this.categories) {
             if (x.id_parent == idParent) {

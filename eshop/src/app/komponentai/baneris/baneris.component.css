@@ -1,14 +1,7 @@
 .baneris {
-    background-color: rgba(244, 244, 234, 1);    
-    /* display: flex; */
-    margin-right: 10px;
-    justify-content: center;
-    align-items:center;
-    text-align:center;
-    width: 300px;
+    background-color: rgba(244, 244, 234, 1);
+    align-items: center;
+    text-align: center;
     height: 400px;
-    /* margin-bottom: 5px; */
     margin-top: 20px;
-    
-
 }

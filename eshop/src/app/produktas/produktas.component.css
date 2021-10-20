@@ -1,20 +1,19 @@
 #produktai {
-    padding: 15px;
+    padding: 20px 15px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .product-container {
-    margin: 15px 15px 0 0;
     display: inline-flex;
     flex-direction: column;
-
-    border: 2px solid black;
-    width: 222px;
+    border: 2px solid rgb(49, 49, 49);
+    width: 230px;
     height: 333px;
-    justify-content: space-between;
-
-    border: 2px solid black;  
-    height: fit-content; 
-    background-color: beige;    
+    height: fit-content;
+    background-color: beige;
+    margin-bottom: 20px;
 }
 
 .product-container:hover {
@@ -28,10 +27,7 @@
     margin: 20px auto 0;
 }
 
-
-
-
-.mygtukas{
+.mygtukas {
     background-color: whitesmoke;
     width: 60px;
     height: 30px;
@@ -43,10 +39,8 @@
     font-weight: bold;
     font-size: 16px;
     border: solid 3px chocolate;
-    color:black;
+    color: black;
 }
-   
-    
 
 .mygtukas:hover {
     border-color: rgb(109, 52, 12);
@@ -69,6 +63,10 @@
     line-height: 55px;
     height: 55px;
     margin-bottom: 10px;
+}
+
+.product-title-container h2::first-letter {
+    text-transform: capitalize;
 }
 
 .product-title-container a {

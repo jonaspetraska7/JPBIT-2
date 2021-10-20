@@ -75,11 +75,14 @@ export class ProduktuKategorijosComponent implements OnInit {
     }
 
     addToCart(x: ProduktoModelis) {
-        return this.cartServisas.addToCart(x);
+        this.cartServisas.addToCart(x);
+        alert("preke priedeta i krepseli")
+        
+        
     }
 
     public getCategoryByParent(idParent: number) {
-        console.log('idParent: ' + idParent);
+        console.log('idParent from category: ' + idParent);
         let collectedCategories = [];
 
         for (let x of this.categories) {

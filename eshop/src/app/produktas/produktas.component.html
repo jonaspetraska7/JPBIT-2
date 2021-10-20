@@ -1,23 +1,24 @@
-
+<app-left-category>
+</app-left-category>
 <div id="produktai">
 
-<div>
-    <div class="product-container" *ngFor="let x of produktai">
-        <img [src]="x.image" />
-        <div class="apiePreke">
-            <div class="product-title-container">
-                <a [title]="x.title + ' details'" [routerLink]="['/produktas', x.id]" routerLinkActive="on">
-                    <h2>
-                        {{(x.title.length>22)? (x.title | slice:0:22)+'...':(x.title)}}
-                    </h2>
-                </a>
-            </div>
-            <div class="product-bottom">
-                <div class="product-bottom-content">
-                    <button class="mygtukas" (click)=addToCart(x)>Pirkti </button>
-                    <span class="kaina">{{x.price | number:'1.2-2'}} €</span>
+    <div>
+        <div class="product-container" *ngFor="let x of produktai">
+            <img [src]="x.image" />
+            <div class="apiePreke">
+                <div class="product-title-container">
+                    <a [title]="x.title + ' details'" [routerLink]="['/produktas', x.id]" routerLinkActive="on">
+                        <h2>
+                            {{(x.title.length>22)? (x.title | slice:0:22)+'...':(x.title)}}
+                        </h2>
+                    </a>
+                </div>
+                <div class="product-bottom">
+                    <div class="product-bottom-content">
+                        <button class="mygtukas" (click)=addToCart(x)>Pirkti </button>
+                        <span class="kaina">{{x.price | number:'1.2-2'}} €</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
