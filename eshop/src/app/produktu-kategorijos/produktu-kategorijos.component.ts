@@ -79,7 +79,7 @@ export class ProduktuKategorijosComponent implements OnInit {
     }
 
     public getCategoryByParent(idParent: number) {
-        console.log('idParent: ' + idParent);
+        console.log('idParent from category: ' + idParent);
         let collectedCategories = [];
 
         for (let x of this.categories) {

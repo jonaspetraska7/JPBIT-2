@@ -21,7 +21,6 @@ const routes: Routes = [
   {path: 'ziviles', component:ProduktuKategorijosComponent},
   {path:'memory', component:MemoryGameComponent},
   {path:'labirintas', component:LabirintasComponent},
-  {path:'left', component:LeftCategoryComponent},
 
   {path: 'kategorija', component:ProduktuKategorijosComponent},
   {path: 'kategorija/:idCategory', component: ProduktuKategorijosComponent},
@@ -32,8 +31,8 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'pass-recover', component:PassRecoverComponent},
   {path: 'klaida404', component:Klaida404Component},
-  { path: '**',   redirectTo: '/klaida404' }
-  
+  {path:'left', component:LeftCategoryComponent},
+  {path: '**',   redirectTo: '/klaida404' }
 ];
 
 @NgModule({

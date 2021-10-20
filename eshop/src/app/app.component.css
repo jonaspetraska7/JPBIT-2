@@ -17,46 +17,14 @@ main {
     border-radius: 1% 1% 1% 1%;
 }
 
-#landing {
-    display: flex;
-    height: 100%;
-    background: #fff;
-    color: black;
-    flex-direction: row;
-    padding: 40px 0px 40px 0px;
-    width: 80vw;
-    flex: 1;
-}
-
-#left-column {
-    flex: 1;
-    order: 1;
-    width: 20%;
-}
-
-#right-column {
-    flex: 1;
-    order: 3;
-    width: 20%;
-    flex: 1;
-    order: 1;
-    /* width: 20%; */
-}
-
-#right-column {
-    flex: 1;
-    order: 3;
-    /* width: 20%; */
-}
-
 #main-column {
-    flex: 4;
-    order: 2;
+    display: inline-block;
+    width: 85%;
 }
 
-router-outlet {
-    flex: 1;
-    order: 2;
+#right-column {
+    float: right;
+    width: 15%;
 }
 
 footer {
