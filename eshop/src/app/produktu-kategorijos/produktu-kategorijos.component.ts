@@ -76,7 +76,6 @@ export class ProduktuKategorijosComponent implements OnInit {
 
     addToCart(x: ProduktoModelis) {
         this.cartServisas.addToCart(x);
-        alert("preke priedeta i krepseli")
         
         
     }
