@@ -1,4 +1,4 @@
-<aside id="kategorijos">
+<!-- <aside id="kategorijos">
     <div id="produktu-kategorijos">
         <ul id="kategoriju-listas">
             <li *ngFor="let cat of leftCategories">
@@ -8,4 +8,19 @@
             </li>
         </ul>
     </div>
+</aside> -->
+<aside id="kategorijos">
+    <div id="produktu-kategorijos">
+        <ul id="kategoriju-listas">
+            <li *ngFor="let cat of currentCategories">
+                <a (click)="mygtukas(cat.id_parent)" [title]="cat.title + ' ' + cat.description" [routerLink]="['/kategorija', cat.id]" routerLinkActive="on">
+                    {{cat.title}}
+                </a>
+            </li>
+            <li *ngIf="currentCategoryId > 0">
+                <a [routerLink]="['/kategorija', currentParent]">&laquo; Atgal</a>
+            </li>
+        </ul>
+    </div>
+
 </aside>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CartServiseService } from '../cart-servise.service';
 import { produktai } from '../Produktai';
 import { ProduktoModelis } from '../Produktai';
@@ -7,6 +7,7 @@ import { KategorijuModelis } from '../KategorijuDuomenys';
 import { ActivatedRoute } from '@angular/router';
 
 import { Router } from '@angular/router';
+import { ApiServisasService } from '../api-servisas.service';
 
 @Component({
     selector: 'app-produktu-kategorijos',
@@ -16,13 +17,15 @@ import { Router } from '@angular/router';
 
 export class ProduktuKategorijosComponent implements OnInit {
 
-    constructor(private cartServisas: CartServiseService, private route: ActivatedRoute, private router: Router) {
+    constructor(private cartServisas: CartServiseService,private sendID:ApiServisasService, private route: ActivatedRoute, private router: Router) {
         this.router.routeReuseStrategy.shouldReuseRoute = function () {
             return false;
         };
+
+        console.log('Suveikis');
     }
 
-    ngOnInit(): void {
+    ngOnInit(): void { 
     }
 
     products = produktai;
@@ -39,10 +42,11 @@ export class ProduktuKategorijosComponent implements OnInit {
     categories = kategorijos
 
 
-    currentCategoryId = Number(this.route.snapshot.paramMap.get("idCategory"));
+    public currentCategoryId = Number(this.route.snapshot.paramMap.get("idCategory"));
     currentCategories = this.getCategoryByParent(this.currentCategoryId);
     currentProducts = this.getProductsByCategory(this.currentCategoryId);
-
+    
+    
     currentParent = this.getParentId();
 
     getParentId() {
@@ -51,7 +55,7 @@ export class ProduktuKategorijosComponent implements OnInit {
                 return x.id_parent;
             }
         }
-
+        
         return 0;
     }
 
@@ -66,7 +70,7 @@ export class ProduktuKategorijosComponent implements OnInit {
                 collectedProducts.push(x);
             }
         }
-
+        
         return collectedProducts;
     }
 
@@ -74,7 +78,8 @@ export class ProduktuKategorijosComponent implements OnInit {
         return this.cartServisas.addToCart(x);
     }
 
-    getCategoryByParent(idParent: number) {
+    public getCategoryByParent(idParent: number) {
+        console.log('idParent: ' + idParent);
         let collectedCategories = [];
 
         for (let x of this.categories) {
@@ -83,6 +88,9 @@ export class ProduktuKategorijosComponent implements OnInit {
             }
         }
 
+        this.sendID.changeID(idParent);
+        this.sendID.emitter.emit();
+        
         return collectedCategories;
     }
 }
