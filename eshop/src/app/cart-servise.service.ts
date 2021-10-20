@@ -16,12 +16,23 @@ addToCart(x:ProduktoModelis){
   this.items.push(x);
 }
 
-getItems(x:ProduktoModelis) {
+getItems() {
  return this.items;
 }
 
 kaina=0
+discount=true;
 
+getDiscount(x:number){
+  if(this.discount){
+    this.discount=false;
+    this.kaina=this.kaina-(this.kaina/100*x)
+    alert('pritaikyta nulaida '+x+' Nauja kaina:'+ this.kaina)
+  }
+  else{
+    alert('nuolaida jau buvo pritaikyta')
+  }
+}
 getItemPrices(){
   for(let x of this.items){
     this.kaina+=x.price

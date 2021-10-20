@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartServiseService } from '../cart-servise.service';
 
 @Component({
   selector: 'app-memory-game',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemoryGameComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cartServisas:CartServiseService) { }
 
   ngOnInit(): void {
   }
@@ -146,5 +147,9 @@ export class MemoryGameComponent implements OnInit {
       }
       return
   }
+
+getDiscount(){
+    this.cartServisas.getDiscount(this.maxUsedClasses)
+}
 
 }
