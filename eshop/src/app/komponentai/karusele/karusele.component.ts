@@ -8,12 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KaruseleComponent implements OnInit {
 
-  constructor() { }
+  images: Array<any> = []
+
+  constructor() { this.images = [
+      { name: 'assets/pic1.jpg' },
+      { name: 'assets/pic2.jpg' },
+      { name: 'assets/pic3.jpg' },
+      
+    ]}
 
   ngOnInit(): void {
   }
-
-  
 
 
 }

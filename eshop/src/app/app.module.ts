@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SlideshowModule } from 'ng-simple-slideshow';
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -59,7 +60,8 @@ import { KotaktuFormaComponent } from './kotaktu-forma/kotaktu-forma.component';
     SlideshowModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2CarouselamosModule
 
   ],
   providers: [],
