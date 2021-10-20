@@ -13,10 +13,8 @@ footer {
   display: flex;
   align-items: center;
   text-decoration: none;
-}
-
-#footer #kontaktai {
   justify-content: space-around;
+  margin-top: 50px ;
 }
 
 #listItem {

@@ -19,6 +19,7 @@ export class KotaktuFormaComponent implements OnInit {
 
   pateiktiForma(){
     console.log('Jusu forma issiusta!', this.manoForma.value);
+    this.manoForma.reset();
   }
 
   ngOnInit(): void {
