@@ -19,7 +19,7 @@ export class MeniuComponent implements OnInit {
     
 }
 
-addToCart(produktai) {
-  debugger;
-  this.cartservisas.addToCart(produktai);
-}
+// addToCart(produktai) {
+//   debugger;
+//   this.cartservisas.addToCart(produktai);
+// }
