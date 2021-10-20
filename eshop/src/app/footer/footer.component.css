@@ -1,38 +1,23 @@
-/*Footer*/
-
-footer {
-    text-align: center;
-    height: 30vh;
-    display: flex;
-    background-color: rgba(244, 244, 234, 1);
-    justify-content: space-around;
-}
 
 #footer {
+    height: 30vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     text-decoration: none;
 }
 
 #listItem {
     list-style-type: none;
-    min-width: 300px;
+    min-width: 600px;
 }
 
 #kontaktai1 {
     display: flex;
-}
-
-#kontaktai2 {
-    display: flex;
-}
-
-#kontaktai3 {
-    display: flex;
+    margin-top: -100px;
 }
 
 #footer-logo {
     display: flex;
-    margin-top: 60px;
+    margin-top: -110px;
 }

@@ -65,6 +65,10 @@
     margin-bottom: 10px;
 }
 
+.product-title-container h2::first-letter {
+    text-transform: capitalize;
+}
+
 .product-title-container a {
     display: inline-block;
     width: calc(100% - 10px);

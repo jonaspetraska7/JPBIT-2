@@ -1,5 +1,5 @@
 #container {
-    width: 50%;
+    width: 100%;
     margin: auto;
     padding: 0;
     background:#fff;
@@ -9,4 +9,10 @@
     width:300px;
     height:300px;
     background:#ECECEC;
+}
+
+.slides-wrapper {
+    width: 100%;
+    margin: 5em auto;
+    padding: 0;
 }

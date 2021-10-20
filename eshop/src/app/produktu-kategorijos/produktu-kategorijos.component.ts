@@ -75,7 +75,10 @@ export class ProduktuKategorijosComponent implements OnInit {
     }
 
     addToCart(x: ProduktoModelis) {
-        return this.cartServisas.addToCart(x);
+        this.cartServisas.addToCart(x);
+        alert("preke priedeta i krepseli")
+        
+        
     }
 
     public getCategoryByParent(idParent: number) {

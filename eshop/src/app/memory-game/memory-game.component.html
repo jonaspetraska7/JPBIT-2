@@ -24,6 +24,6 @@
 
     <div *ngIf="victory">
         <p>Laimejote (bus nuolaida {{maxUsedClasses}})%</p>
-        <button>Čia Jūsų nulaida</button>
+        <button (click)=getDiscount()>Čia Jūsų nuolaida</button>
     </div>
 </div>
