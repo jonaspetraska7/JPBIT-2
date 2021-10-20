@@ -15,7 +15,7 @@ export class ProduktoDetailsComponent implements OnInit {
 
 
 
-  constructor(private route: ActivatedRoute, private router: Router, private cartServisas: CartServiseService) {
+  constructor(private cartservisas:CartServiseService ,private route: ActivatedRoute, private router: Router, private cartServisas: CartServiseService) {
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     };
@@ -29,6 +29,10 @@ export class ProduktoDetailsComponent implements OnInit {
   prekes = produktai;
 
   currentPreke: ProduktoModelis | undefined;
+
+  addTOCart(x:ProduktoModelis){
+    this.cartServisas.addToCart(x)
+  }
   // getCurrentProduct(id: number) {
   //   for (let x of this.prekes) {
   //     if (x.id == id) {

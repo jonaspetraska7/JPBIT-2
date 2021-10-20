@@ -1,11 +1,34 @@
-<div id="kontaktuForma">
-  <form [formGroup]="manoForma" (ngSubmit)="pateiktiForma()">
-    <input type="text" formControlName="vardas" placeholder="Vardas" />
-    <input type="text" formControlName="telefonas" placeholder="Telefonas" />
-    <input type="text" formControlName="elPastas" placeholder="El. paštas" />
-    <textarea formControlName="zinute" id="zinute" cols="20" rows="5" placeholder="Žinutė"></textarea>
-    <button class="button" type="submit">SIŲSTI</button>
-  </form>
+<div id="apacia">
+  <div id="rekvizitai">
+    <p>
+      UAB "JPBIT-2" <br />
+      Registracijos adresas: <br />
+      Įmonės kodas: 0000000<br />
+      PVM kodas: LT0000000
+    </p>
+    <br />
+    <p style="font-weight: 800">Banko rekvizitai:</p>
+    <p>
+      <br />
+      AB SEB bankas <br />A/S (IBAN): LT00 000 000 000 000 000 <br />
+      Banko kodas: 70440 <br />
+      SWIFT kodas (BIC): CBVILT2X
+    </p>
+  </div>
+  <div id="kontaktuForma">
+    <form [formGroup]="manoForma" (ngSubmit)="pateiktiForma()">
+      <input type="text" formControlName="vardas" placeholder="Vardas" />
+      <input type="text" formControlName="telefonas" placeholder="Telefonas" />
+      <input type="text" formControlName="elPastas" placeholder="El. paštas" />
+      <textarea style="max-height: 70px; max-width: 450px" formControlName="zinute" id="zinute" cols="20" rows="5"
+        placeholder="Žinutė"></textarea>
+      <button class="button" type="submit">SIŲSTI</button>
+    </form>
+  </div>
 </div>
-
-
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

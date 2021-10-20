@@ -13,36 +13,46 @@ items: ProduktoModelis[]=[];
 
 
 addToCart(x:ProduktoModelis){
+  
   this.items.push(x);
+  this.getItemPrices();
+  
+  alert("preke priedeta i krepseli, galutine kaina:"+this.kaina)
 }
 
 getItems() {
  return this.items;
 }
 
-kaina=0
+kaina=0;
 discount=true;
 
 getDiscount(x:number){
+  
   if(this.discount){
     this.discount=false;
-    this.kaina=this.kaina-(this.kaina/100*x)
-    alert('pritaikyta nulaida '+x+' Nauja kaina:'+ this.kaina)
+    let a=this.kaina-((this.kaina/100)*x);
+    
+    this.kaina=a;
+    
+    alert('pritaikyta nuolaida '+x+' Nauja kaina:'+ this.kaina.toFixed(2) )
   }
   else{
     alert('nuolaida jau buvo pritaikyta')
   }
 }
 getItemPrices(){
+   let a=0
   for(let x of this.items){
-    this.kaina+=x.price
+    a+=x.price
   }
+  this.kaina=a;
   return this.kaina
 }
 
 clearCart(x:ProduktoModelis){
  this.items = [];
- return this.items;
+ 
 }
 
 
