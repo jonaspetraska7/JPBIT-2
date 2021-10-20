@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-kotaktu-forma',
@@ -22,7 +22,10 @@ export class KotaktuFormaComponent implements OnInit {
     this.manoForma.reset();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit() {
+    this.manoForma = this.formBuilder.group({
+      elPastas: [null, [Validators.required, Validators.email]]
+  });
+}
 
 }

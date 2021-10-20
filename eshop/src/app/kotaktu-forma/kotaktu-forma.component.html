@@ -22,12 +22,15 @@
       <input type="text" formControlName="elPastas" placeholder="El. paštas" />
       <textarea style="max-height: 70px; max-width: 450px" formControlName="zinute" id="zinute" cols="20" rows="5"
         placeholder="Žinutė"></textarea>
-      <button class="button" type="submit">SIŲSTI</button>
+      <button class="button" type="submit" [disabled]="!manoForma.valid">
+        SIŲSTI
+      </button>
     </form>
   </div>
 </div>
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <strong>Holy guacamole!</strong> You should check in on some of those fields
+  below.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
