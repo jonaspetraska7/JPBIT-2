@@ -14,9 +14,10 @@
 
 #kontaktai1 {
     display: flex;
+    margin-top: -100px;
 }
 
 #footer-logo {
     display: flex;
-    margin-top: 20px;
+    margin-top: -110px;
 }
