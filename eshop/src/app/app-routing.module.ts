@@ -33,6 +33,7 @@ const routes: Routes = [
   {path: 'klaida404', component:Klaida404Component},
   {path:'left', component:LeftCategoryComponent},
   {path: '**',   redirectTo: '/klaida404' }
+  {path: 'cart', component:cartcomponent}
 ];
 
 @NgModule({
