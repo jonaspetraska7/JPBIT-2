@@ -14,7 +14,7 @@
                 <p class="description">{{currentPreke.description}}</p>
                 <!-- <p>Reitingas: {{currentPreke.rating.rate}} balsavo: {{currentPreke.rating.count}}</p> -->
                 <!-- <p>Kaina {{currentPreke.price}} €</p> -->
-                <button>Pirkti {{currentPreke.price}} €</button>
+                <button (click)="addTOCart(currentPreke)">Pirkti {{currentPreke.price}} €</button>
             </div>
         </div>
     </div>
