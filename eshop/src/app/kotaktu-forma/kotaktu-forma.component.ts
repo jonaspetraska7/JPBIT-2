@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-kotaktu-forma',
@@ -8,24 +8,14 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class KotaktuFormaComponent implements OnInit {
 
-  constructor(private formBuilder : FormBuilder) { }
+  constructor() { }
 
-  manoForma = this.formBuilder.group({
-    vardas: "",
-    telefonas: "",
-    elPastas: "",
-    zinute: "",
-  })
-
-  pateiktiForma(){
-    console.log('Jusu forma issiusta!', this.manoForma.value);
-    this.manoForma.reset();
+  ngOnInit(): void {}
+  pateiktiForma(manoForma: NgForm){
+    console.log(manoForma.value);
+    let json = JSON.stringify(manoForma.value);
+    console.log(json)
+    manoForma.reset();
   }
-
-  ngOnInit() {
-    this.manoForma = this.formBuilder.group({
-      elPastas: [null, [Validators.required, Validators.email]]
-  });
 }
 
-}

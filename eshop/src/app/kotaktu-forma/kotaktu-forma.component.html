@@ -16,28 +16,27 @@
     </p>
   </div>
   <div id="kontaktuForma">
-    <form [formGroup]="manoForma" (ngSubmit)="pateiktiForma()">
-      <input type="text" formControlName="vardas" placeholder="Vardas" />
-      <input type="text" formControlName="telefonas" placeholder="Telefonas" />
-      <input type="text" formControlName="elPastas" placeholder="El. paštas" />
-      <textarea
-        style="max-height: 70px; max-width: 450px"
-        formControlName="zinute"
-        id="zinute"
-        cols="20"
-        rows="5"
-        placeholder="Žinutė"
-      ></textarea>
-      <button class="button" type="submit" [disabled]="!manoForma.valid">
+    <form ngNativeValidate #manoForma="ngForm" (ngSubmit)="pateiktiForma(manoForma)">
+
+      <div><input type="text" name="vardas" placeholder="Vardas" required ngModel #vardas="ngModel" />
+        <small *ngIf="vardas.touched && !vardas.valid">Įveskite vardą </small>
+      </div>
+
+      <div><input type="string" name="telefonas" placeholder="Telefonas" required ngModel
+          pattern='(86\d{7}|\+3706\d{7})' #telefonas="ngModel" /><small
+          *ngIf="telefonas.touched && !telefonas.valid">Neteisingas telefono numeris</small></div>
+
+      <div><input type="email" name="email" placeholder="El. paštas" required ngModel #email="ngModel" /><small
+          *ngIf="email.touched && !email.valid">Įveskite elektroninį paštą</small> </div>
+
+
+      <textarea style="max-height: 90px; max-width: 450px; min-width: 300px;" name="zinute" id="zinute" cols="20" rows="5"
+        placeholder="Žinutė" required ngModel #zinute="ngModel"> <small *ngIf="zinute.touched && 
+        !zinute.valid">Įveskite tekstą</small> </textarea>
+
+      <button *ngIf="manoForma.valid" class="button" type="submit">
         SIŲSTI
       </button>
     </form>
   </div>
-</div>
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields
-  below.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
 </div>
