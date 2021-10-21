@@ -14,6 +14,10 @@
 </aside> -->
 <app-left-category></app-left-category>
 
+<div class="paieska">
+    <input class="paieskosLaukelis" (input)="ieskojimas($event)">
+</div>
+
 <div id="produktai">
     <div class="product-container" *ngFor="let x of currentProducts">
         <img [src]="x.image" />

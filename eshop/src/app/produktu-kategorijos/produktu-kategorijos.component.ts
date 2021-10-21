@@ -46,7 +46,7 @@ export class ProduktuKategorijosComponent implements OnInit {
     currentCategories = this.getCategoryByParent(this.currentCategoryId);
     currentProducts = this.getProductsByCategory(this.currentCategoryId);
     
-    
+    allProducts = this.currentProducts;
     currentParent = this.getParentId();
 
     getParentId() {
@@ -57,6 +57,10 @@ export class ProduktuKategorijosComponent implements OnInit {
         }
         
         return 0;
+    }
+
+    ieskojimas(event: any){
+        let ivestas_tekstas = event.target.value;
     }
 
     getProductsByCategory(idCategory: number) {

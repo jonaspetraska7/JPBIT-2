@@ -34,3 +34,13 @@
     width: calc(100% - 330px);
     float: left;
 }
+
+.paieska {
+    margin: 15px;
+}
+
+.paieskosLaukelis {
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 800px;
+}
