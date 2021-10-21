@@ -16,25 +16,19 @@ export class PagrindinisComponent implements OnInit {
 
   prekes = produktai;
 
-
+  
 
 
   bandymas(x: string) {
     let byPrice = this.prekes.sort(function (a, b): any {
       return b.price < a.price ? 1 : b.price > a.price ? -1 : 0;
     });
-    let byPriceDsc = this.prekes.sort(function (a, b): any {
-      return b.price > a.price ? 1 : b.price < a.price ? -1 : 0;
-    });
-    let byName = this.prekes.sort(function (a, b): any {
-      return b.title < a.title ? 1 : b.title > a.title ? -1 : 0;
-    });
+    let byPriceDsc =0; 
+    let byName = 0;
     let byNameDsc = this.prekes.sort(function (a, b): any {
       return b.title > a.title ? 1 : b.title < a.title ? -1 : 0;
     });
-    let byRating = this.prekes.sort(function (a, b): any {
-      return b.rating.rate > a.rating.rate ? 1 : b.rating.rate < a.rating.rate ? -1 : 0;
-    });
+    let byRating = 0;
     let byRatingDsc = this.prekes.sort(function (a, b): any {
       return b.rating.rate < a.rating.rate ? 1 : b.rating.rate > a.rating.rate ? -1 : 0;
     });
@@ -45,9 +39,15 @@ export class PagrindinisComponent implements OnInit {
       return b.rating.rate > a.rating.rate ? 1 : b.rating.rate < a.rating.rate ? -1 : 0;
     });
     switch (x) {
-      case "123": { this.prekes = byPriceDsc; break; };
-      case "234": { this.prekes = byName; break };
-      case "345": { this.prekes = byRating; break };
+      case "123": { this.prekes = this.prekes.sort(function (a, b): any {
+        return b.price > a.price ? 1 : b.price < a.price ? -1 : 0;
+      });  break; };
+      case "234": { this.prekes = this.prekes.sort(function (a, b): any {
+        return b.title < a.title ? 1 : b.title > a.title ? -1 : 0;
+      });; break };
+      case "345": { this.prekes = this.prekes.sort(function (a, b): any {
+        return b.rating.rate > a.rating.rate ? 1 : b.rating.rate < a.rating.rate ? -1 : 0;
+      });; break };
       default: break;
 
 
