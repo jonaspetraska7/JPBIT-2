@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Router } from '@angular/router';
 import { ApiServisasService } from '../api-servisas.service';
+import { of } from 'rxjs';
 
 @Component({
     selector: 'app-produktu-kategorijos',
@@ -61,6 +62,8 @@ export class ProduktuKategorijosComponent implements OnInit {
 
     ieskojimas(event: any){
         let ivestas_tekstas = event.target.value;
+        if(event=="") this.currentProducts = this.allProducts;
+        this.currentProducts=this.allProducts.filter(x => x.title.includes(event.value));
     }
 
     getProductsByCategory(idCategory: number) {
