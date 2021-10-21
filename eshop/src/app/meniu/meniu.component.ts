@@ -12,6 +12,13 @@ export class MeniuComponent implements OnInit {
   constructor(private cartservisas: CartServiseService) { }
 
   ngOnInit(): void {
+
+    this.cartservisas.kainaAtnaujinta.subscribe(value => {
+      if (value === true) { 
+          this.suma = this.cartservisas.getItemPrices()
+      }
+    });
+
   }
 
     suma= this.cartservisas.getItemPrices()

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { produktai } from './Produktai';
 import { ProduktoModelis } from './Produktai';
 
@@ -11,6 +12,8 @@ export class CartServiseService {
 
 items: ProduktoModelis[]=[];
 
+kainaAtnaujinta = new BehaviorSubject<boolean>(false);
+
 
 addToCart(x:ProduktoModelis){
   
@@ -18,6 +21,9 @@ addToCart(x:ProduktoModelis){
   this.getItemPrices();
   
   alert("preke priedeta i krepseli, galutine kaina:"+this.kaina)
+
+  this.kainaAtnaujinta.next(true);
+  
 }
 
 getItems() {
