@@ -1,19 +1,20 @@
 <div style="margin: 40px;">
-    <div ng2-carouselamos class="slides-wrapper" [items]="images" [width]="50" [$prev]="prev" [$next]="next" [$item]="item">
+    <div ng2-carouselamos class="slides-wrapper" [items]="images" [width]="800" [$prev]="prev" [$next]="next" [$item]="item">
+        <ng-template #prev>
+            <img style="width: 30px;" src="assets/prev.png" id="left" />
+        </ng-template>
+        <ng-template #next>
+            <img style="width: 40px;" src="assets/next.png" id="right" />
+        </ng-template>
+        <ng-template #item let-item let-i="index">
+    
+            <div class="slide-items">
+                <img class="nuotrauka" src="{{ item.name }}">
+            </div>
+    
+        </ng-template>
     </div>
 
 
-    <ng-template #prev>
-        <img style="width: 30px;" src="assets/prev.png" id="left" />
-    </ng-template>
-    <ng-template #next>
-        <img style="width: 50px;" src="assets/next.png" id="right" />
-    </ng-template>
-    <ng-template #item let-item let-i="index">
 
-        <div class="slide-items">
-            <img src="{{ item.name }}">
-        </div>
-
-    </ng-template>
 </div>
