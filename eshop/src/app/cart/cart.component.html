@@ -1,12 +1,6 @@
-<section class="cart_section">
-    <div class="container">
-        <h2>HTML Table</h2>
-        <table>
-          <tr>
-            <th>Produktas</th>
-            <th>Kiekis</th>
-            <th>Kaina</th>
-          </tr>
-        </table>
-    </div>
-</section>
+<h3>KREPŠELIS</h3>
+
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.title }}</span>
+  <span>{{ item.price  }} €</span>
+</div>
