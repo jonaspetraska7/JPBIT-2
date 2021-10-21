@@ -10,7 +10,7 @@ input {
 #kontaktuForma {
   height: 50vh;
   display: flex;
-  max-width: 30vw;
+  min-width: 20vw;
   position: inherit;
   left: 50%;
   top: 90vh;
@@ -26,18 +26,18 @@ input {
   border-bottom: 1px solid #e3e3c2 !important;
   padding: 10px 15px 10px 0px;
   margin: 15px 15px 15px 0px;
+  width: 300px;
 }
 
 #kontaktuForma textarea {
   background-color: transparent;
   border: none !important;
   border-bottom: 1px solid #e3e3c2 !important;
-  padding: 0px;
   margin: 15px 15px 15px 0px;
 }
 
 textarea:focus {
-  outline: none;
+  outline-style: ridge;
 }
 
 textarea {
@@ -50,7 +50,6 @@ textarea {
   border: none !important;
   border-bottom: 1px solid #e3e3c2 !important;
   font-style: "arial,helvetica,sans-serif";
-  cursor: pointer;
 }
 
 button {
@@ -63,8 +62,7 @@ button {
 
 #rekvizitai {
   height: 30vh;
-  display: block;
-  width: 20vw;
+  min-width: 20vw !important;
   position: relative;
   background-color: rgba(244, 244, 234, 1);
   border-radius: 8px;
@@ -79,9 +77,15 @@ button {
   margin-top: 90px;
   margin-bottom: 40px;
   justify-content: space-around;
-  max-width: 83vw;
+  width: auto;
 }
 
 #rekvizitai p {
   color: #747474;
+}
+
+small {
+  position: relative;
+  left: -150px;
+  top: 27px;
 }
