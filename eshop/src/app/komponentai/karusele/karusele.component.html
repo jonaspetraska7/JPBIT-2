@@ -1,5 +1,5 @@
 <div style="margin: 40px;">
-    <div ng2-carouselamos class="slides-wrapper" [items]="images" [width]="50" [$prev]="prev" [$next]="next" [$item]="item">
+    <div ng2-carouselamos class="slides-wrapper" [items]="images" [width]="1000" [$prev]="prev" [$next]="next" [$item]="item">
     </div>
 
 
@@ -12,7 +12,7 @@
     <ng-template #item let-item let-i="index">
 
         <div class="slide-items">
-            <img src="{{ item.name }}">
+            <img class="nuotrauka" src="{{ item.name }}">
         </div>
 
     </ng-template>
