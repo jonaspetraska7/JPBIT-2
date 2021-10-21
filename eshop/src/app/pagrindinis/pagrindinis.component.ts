@@ -16,12 +16,10 @@ export class PagrindinisComponent implements OnInit {
 
   prekes = produktai;
 
-  pagalKaina = this.prekes.sort(function (a, b): any {
-    return b.price < a.price ? 1 : b.price > a.price ? -1 : 0;
-  });
 
 
-  bandymas() {
+
+  bandymas(x: string) {
     let byPrice = this.prekes.sort(function (a, b): any {
       return b.price < a.price ? 1 : b.price > a.price ? -1 : 0;
     });
@@ -34,30 +32,35 @@ export class PagrindinisComponent implements OnInit {
     let byNameDsc = this.prekes.sort(function (a, b): any {
       return b.title > a.title ? 1 : b.title < a.title ? -1 : 0;
     });
-    let byRating =this.prekes.sort(function (a, b): any {
+    let byRating = this.prekes.sort(function (a, b): any {
       return b.rating.rate > a.rating.rate ? 1 : b.rating.rate < a.rating.rate ? -1 : 0;
     });
-    let byRatingDsc =this.prekes.sort(function (a, b): any {
+    let byRatingDsc = this.prekes.sort(function (a, b): any {
       return b.rating.rate < a.rating.rate ? 1 : b.rating.rate > a.rating.rate ? -1 : 0;
     });
-    let byRatingCount =this.prekes.sort(function (a, b): any {
+    let byRatingCount = this.prekes.sort(function (a, b): any {
       return b.rating.rate > a.rating.rate ? 1 : b.rating.rate < a.rating.rate ? -1 : 0;
     });
-    let byRatingCountDsc =this.prekes.sort(function (a, b): any {
+    let byRatingCountDsc = this.prekes.sort(function (a, b): any {
       return b.rating.rate > a.rating.rate ? 1 : b.rating.rate < a.rating.rate ? -1 : 0;
     });
+    switch (x) {
+      case "123": { this.prekes = byPriceDsc; break; };
+      case "234": { this.prekes = byName; break };
+      case "345": { this.prekes = byRating; break };
+      default: break;
 
 
 
+    }
+
+
+    // sortPrice() {
+    //   let naujas = this.prekes.sort(function (a, b): any {
+    //     return b.price < a.price ? 1 : b.price > a.price ? -1 : 0;
+    //   });
+    //   return naujas
+    // }
 
   }
-
-
-  sortPrice() {
-    let naujas = this.prekes.sort(function (a, b): any {
-      return b.price < a.price ? 1 : b.price > a.price ? -1 : 0;
-    });
-    return naujas
-  }
-
 }
