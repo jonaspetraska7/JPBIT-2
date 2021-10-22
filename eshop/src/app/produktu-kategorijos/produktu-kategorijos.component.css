@@ -50,3 +50,10 @@
     margin-right: 40px;
     float: right;
 }
+
+.sorting select {
+    padding: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}

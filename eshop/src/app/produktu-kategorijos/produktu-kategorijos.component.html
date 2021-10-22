@@ -7,15 +7,22 @@
 <div class="sorting">
     <select #sortSelect (change)="sortByValue(sortSelect.value)">
         <option selected value="default">Rikiuoti pagal</option>
-        <option value="price1">Pagal kainą nuo mažiausios</option>
-        <option value="price2">Pagal kainą nuo didžiausios</option>
-        <option value="name1">Pagal pavadinimą nuo A iki Ž</option>
-        <option value="name2">Pagal pavadinimą nuo Ž iki A</option>
-        <option value="rate1">Pagal reitingą nuo geriausio</option>
-        <option value="rate2">Pagal reitingą nuo blogiausio</option>
-        <option value="count1">Pagal vertinimų kiekį nuo didžiausio</option>
-        <option value="count2">Pagal vertinimų kiekį nuo mažiausio</option>
-
+        <optgroup label="Kaina">
+            <option value="price1">Pagal kainą nuo mažiausios</option>
+            <option value="price2">Pagal kainą nuo didžiausios</option>
+        </optgroup>
+        <optgroup label="Pavadinimas">
+            <option value="name1">Pagal pavadinimą nuo A iki Ž</option>
+            <option value="name2">Pagal pavadinimą nuo Ž iki A</option>
+        </optgroup>
+        <optgroup label="Reitingas">
+            <option value="rate1">Pagal reitingą nuo geriausio</option>
+            <option value="rate2">Pagal reitingą nuo blogiausio</option>
+        </optgroup>
+        <optgroup label="Vertinimai">
+            <option value="count1">Pagal vertinimų kiekį nuo didžiausio</option>
+            <option value="count2">Pagal vertinimų kiekį nuo mažiausio</option>
+        </optgroup>
     </select>
 </div>
 
