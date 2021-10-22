@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { ApiServisasService } from '../api-servisas.service';
 import { of } from 'rxjs';
+import { CursorError } from '@angular/compiler/src/ml_parser/lexer';
 
 @Component({
     selector: 'app-produktu-kategorijos',
@@ -18,7 +19,7 @@ import { of } from 'rxjs';
 
 export class ProduktuKategorijosComponent implements OnInit {
 
-    constructor(private cartServisas: CartServiseService,private sendID:ApiServisasService, private route: ActivatedRoute, private router: Router) {
+    constructor(private cartServisas: CartServiseService, private sendID: ApiServisasService, private route: ActivatedRoute, private router: Router) {
         this.router.routeReuseStrategy.shouldReuseRoute = function () {
             return false;
         };
@@ -26,7 +27,7 @@ export class ProduktuKategorijosComponent implements OnInit {
         console.log('Suveikis');
     }
 
-    ngOnInit(): void { 
+    ngOnInit(): void {
     }
 
     products = produktai;
@@ -46,29 +47,85 @@ export class ProduktuKategorijosComponent implements OnInit {
     public currentCategoryId = Number(this.route.snapshot.paramMap.get("idCategory"));
     currentCategories = this.getCategoryByParent(this.currentCategoryId);
     currentProducts = this.getProductsByCategory(this.currentCategoryId);
-    
+
     allProducts = this.currentProducts;
     currentParent = this.getParentId();
 
+
+    sortByValue(x: string) {
+        switch (x) {
+            case "price1":
+                {
+                    this.currentProducts = this.currentProducts.sort(function (a, b): any {
+                        return b.price < a.price ? 1 : b.price > a.price ? -1 : 0;
+                    }); break
+                }
+            case "price2":
+                {
+                    this.currentProducts = this.currentProducts.sort(function (a, b): any {
+                        return b.price > a.price ? 1 : b.price < a.price ? -1 : 0;
+                    }); break
+                }
+            case "name2":
+                {
+                    this.currentProducts = this.currentProducts.sort(function (a, b): any {
+                        return b.title > a.title ? 1 : b.title < a.title ? -1 : 0;
+                    }); break
+                }
+            case "name1":
+                {
+                    this.currentProducts = this.currentProducts.sort(function (a, b): any {
+                        return b.title < a.title ? 1 : b.title > a.title ? -1 : 0;
+                    }); break
+                }
+            case "rate2":
+                {
+                    this.currentProducts = this.currentProducts.sort(function (a, b): any {
+                        return b.rating.rate < a.rating.rate ? 1 : b.rating.rate > a.rating.rate ? -1 : 0;
+                    }); break
+                }
+            case "rate1":
+                {
+                    this.currentProducts = this.currentProducts.sort(function (a, b): any {
+                        return b.rating.rate > a.rating.rate ? 1 : b.rating.rate < a.rating.rate ? -1 : 0;
+                    }); break
+                }
+            case "count1":
+                {
+                    this.currentProducts=this.currentProducts.sort(function (a, b): any {
+                        return b.rating.count > a.rating.count ? 1 : b.rating.count < a.rating.count ? -1 : 0;
+                    }); break
+                }
+                case "count2":
+                    {
+                        this.currentProducts=this.currentProducts.sort(function (a, b): any {
+                            return b.rating.count < a.rating.count ? 1 : b.rating.count > a.rating.count ? -1 : 0;
+                        }); break
+                    }
+                    default: this.currentProducts=this.currentProducts.sort(function (a, b): any {
+                        return b.id < a.id ? 1 : b.id > a.id ? -1 : 0;
+                    }); break
+        }
+    }
     getParentId() {
         for (let x of this.categories) {
             if (this.currentCategoryId == x.id) {
                 return x.id_parent;
             }
         }
-        
+
         return 0;
     }
 
-    ieskojimas(event: any){
+    ieskojimas(event: any) {
         let ivestas_tekstas = event.target.value;
-        if(event=="") this.currentProducts = this.allProducts;
-        this.currentProducts=this.allProducts.filter(x => x.title.includes(event.value));
+        if (event == "") this.currentProducts = this.allProducts;
+        this.currentProducts = this.allProducts.filter(x => x.title.includes(event.value));
     }
 
     getProductsByCategory(idCategory: number) {
-        if(!idCategory){
-        return this.products;
+        if (!idCategory) {
+            return this.products;
         }
         let collectedProducts = [];
 
@@ -77,14 +134,14 @@ export class ProduktuKategorijosComponent implements OnInit {
                 collectedProducts.push(x);
             }
         }
-        
+
         return collectedProducts;
     }
 
     addToCart(x: ProduktoModelis) {
         this.cartServisas.addToCart(x);
-        
-        
+
+
     }
 
     public getCategoryByParent(idParent: number) {
@@ -99,7 +156,7 @@ export class ProduktuKategorijosComponent implements OnInit {
 
         this.sendID.changeID(idParent);
         this.sendID.emitter.emit();
-        
+
         return collectedCategories;
     }
 }

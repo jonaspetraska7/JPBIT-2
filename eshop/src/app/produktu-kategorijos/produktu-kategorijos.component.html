@@ -1,21 +1,22 @@
-<!-- <aside id="kategorijos">
-    <div id="produktu-kategorijos">
-        <ul id="kategoriju-listas">
-            <li *ngFor="let cat of currentCategories">
-                <a [title]="cat.title + ' details'" [routerLink]="['/kategorija', cat.id]" routerLinkActive="on">
-                    {{cat.title}}
-                </a>
-            </li>
-            <li *ngIf="currentCategoryId > 0">
-                <a [routerLink]="['/kategorija', currentParent]">&laquo; Atgal</a>
-            </li>
-        </ul>
-    </div>
-</aside> -->
-<app-left-category></app-left-category>
+<app-left-category>
+</app-left-category>
 
 <div class="paieska">
     <span>Produktų paieška</span><input class="paieskosLaukelis" (input)="ieskojimas($event)">
+</div>
+<div class="sorting">
+    <select #sortSelect (change)="sortByValue(sortSelect.value)">
+        <option selected value="default">Rikiuoti pagal</option>
+        <option value="price1">Pagal kainą nuo mažiausios</option>
+        <option value="price2">Pagal kainą nuo didžiausios</option>
+        <option value="name1">Pagal pavadinimą nuo A iki Ž</option>
+        <option value="name2">Pagal pavadinimą nuo Ž iki A</option>
+        <option value="rate1">Pagal reitingą nuo geriausio</option>
+        <option value="rate2">Pagal reitingą nuo blogiausio</option>
+        <option value="count1">Pagal vertinimų kiekį nuo didžiausio</option>
+        <option value="count2">Pagal vertinimų kiekį nuo mažiausio</option>
+
+    </select>
 </div>
 
 <div id="produktai">
