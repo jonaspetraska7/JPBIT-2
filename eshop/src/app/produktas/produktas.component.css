@@ -2,18 +2,23 @@
     padding: 20px 15px 15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .product-container {
     display: inline-flex;
     flex-direction: column;
-    border: 2px solid rgb(49, 49, 49);
+    border: 2px solid rgb(124, 117, 117);
     width: 230px;
     height: 333px;
     height: fit-content;
     background-color: beige;
     margin-bottom: 20px;
+    margin-right: calc((100% - 234px * 4) / 3);
+}
+
+.product-container:nth-child(4n) {
+    margin-right: 0;
 }
 
 .product-container:hover {
@@ -29,7 +34,7 @@
 
 .mygtukas {
     background-color: whitesmoke;
-    width: 60px;
+    width: 100px;
     height: 30px;
     margin-right: 10px;
     /* padding: 10px 15px; */

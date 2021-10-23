@@ -15,6 +15,10 @@
             <option value="name1">Pagal pavadinimą nuo A iki Ž</option>
             <option value="name2">Pagal pavadinimą nuo Ž iki A</option>
         </optgroup>
+        <optgroup label="Likutis sandėlyje">
+            <option value="quantity2">Pagal likutį nuo didžiausio</option>
+            <option value="quantity1">Pagal likutį nuo mažiausio</option>
+        </optgroup>
         <optgroup label="Reitingas">
             <option value="rate1">Pagal reitingą nuo geriausio</option>
             <option value="rate2">Pagal reitingą nuo blogiausio</option>
@@ -23,6 +27,7 @@
             <option value="count1">Pagal vertinimų kiekį nuo didžiausio</option>
             <option value="count2">Pagal vertinimų kiekį nuo mažiausio</option>
         </optgroup>
+
     </select>
 </div>
 
@@ -36,10 +41,12 @@
                         {{(x.title.length>22)? (x.title | slice:0:22)+'...':(x.title)}}
                     </h2>
                 </a>
+
             </div>
             <div class="product-bottom">
                 <div class="product-bottom-content">
-                    <button class="mygtukas" (click)=addToCart(x)>Pirkti </button>
+                    <button *ngIf="x.quantity>0" class="mygtukas" (click)=addToCart(x)>Pirkti </button>
+                    <button *ngIf="x.quantity==0" (click)=inform(x) class="mygtukas">Domina</button>
                     <span class="kaina">{{x.price | number:'1.2-2'}} €</span>
                 </div>
             </div>

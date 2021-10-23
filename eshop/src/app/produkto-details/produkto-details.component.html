@@ -7,14 +7,24 @@
         <div class="main20">
             <div class="main2">
                 <h1>{{currentPreke.title}}</h1>
+
                 <p class="reitingas">Reitingas: {{currentPreke.rating.rate}} balsavo: {{currentPreke.rating.count}}</p>
+                <p *ngIf="currentPreke.quantity>1">Prekių likutis: {{currentPreke.quantity}}</p>
+                <p *ngIf="currentPreke.quantity==1">
+                    Prekių likutis: {{currentPreke.quantity}}
+                    <span class="last">
+                        Paskutinė prekė
+                    </span>
+                </p>
+                <p *ngIf="currentPreke.quantity<1">Prekės nėra sandėlyje</p>
             </div>
 
             <div class="main22">
                 <p class="description">{{currentPreke.description}}</p>
                 <!-- <p>Reitingas: {{currentPreke.rating.rate}} balsavo: {{currentPreke.rating.count}}</p> -->
                 <!-- <p>Kaina {{currentPreke.price}} €</p> -->
-                <button (click)="addTOCart(currentPreke)">Pirkti {{currentPreke.price}} €</button>
+                <button *ngIf="currentPreke.quantity>=1" (click)="addTOCart(currentPreke)">Pirkti {{currentPreke.price}} €</button>
+                <button *ngIf="currentPreke.quantity<1" (click)="inform(currentPreke)">Domina</button>
             </div>
         </div>
     </div>

@@ -33,13 +33,8 @@ export class ProduktoDetailsComponent implements OnInit {
   addTOCart(x:ProduktoModelis){
     this.cartServisas.addToCart(x)
   }
-  // getCurrentProduct(id: number) {
-  //   for (let x of this.prekes) {
-  //     if (x.id == id) {
-  //       this.currentPreke = x;
-  //     }
-
-  //   }
-  // }
+  inform(x:ProduktoModelis){
+    alert(" Atsiprašome, kad prekės "+ x.title + " nebeturime, informuosime Jus kai vėl turėsime")
+}
 
 }

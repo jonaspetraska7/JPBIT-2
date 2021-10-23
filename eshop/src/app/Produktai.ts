@@ -5,11 +5,12 @@ export interface ProduktoModelis{
     description:string;
     image:string;
     category:string;
-    categories:number[]
+    categories:number[];
     rating:{
         rate: number,
         count: number
-    }
+    };
+    quantity:number
   }
   
   export const produktai = [{
@@ -24,7 +25,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 3.9,
         "count": 120
-    }
+    },
+    "quantity":30,
 },
 {
     "id": 2,
@@ -38,7 +40,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 4.1,
         "count": 259
-    }
+    },
+    "quantity":10
 },
 {
     "id": 3,
@@ -52,7 +55,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 4.7,
         "count": 500
-    }
+    },
+    "quantity":0
 },
 {
     "id": 4,
@@ -66,7 +70,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 2.1,
         "count": 430
-    }
+    },
+    "quantity":2
 },
 {
     "id": 5,
@@ -80,7 +85,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 4.6,
         "count": 400
-    }
+    },
+    "quantity":6
 },
 {
     "id": 6,
@@ -94,7 +100,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 3.9,
         "count": 70
-    }
+    },
+    "quantity":1
 },
 {
     "id": 7,
@@ -107,7 +114,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 3,
         "count": 400
-    }
+    },
+    "quantity":25
 },
 {
     "id": 8,
@@ -120,7 +128,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 1.9,
         "count": 100
-    }
+    },
+    "quantity":5
 },
 {
     "id": 9,
@@ -133,7 +142,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 3.3,
         "count": 203
-    }
+    },
+    "quantity":110
 },
 {
     "id": 10,
@@ -146,7 +156,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 2.9,
         "count": 470
-    }
+    },
+    "quantity":4
 },
 {
     "id": 11,
@@ -159,7 +170,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 4.8,
         "count": 319
-    }
+    },
+    "quantity":0
 },
 {
     "id": 12,
@@ -172,7 +184,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 4.8,
         "count": 400
-    }
+    },
+    "quantity":3
 },
 {
     "id": 13,
@@ -185,7 +198,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 2.9,
         "count": 250
-    }
+    },
+    "quantity":6
 },
 {
     "id": 14,
@@ -198,7 +212,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 2.2,
         "count": 140
-    }
+    },
+    "quantity":4
 },
 {
     "id": 15,
@@ -211,7 +226,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 2.6,
         "count": 235
-    }
+    },
+    "quantity":12
 },
 {
     "id": 16,
@@ -224,7 +240,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 2.9,
         "count": 340
-    }
+    },
+    "quantity":4
 },
 {
     "id": 17,
@@ -237,7 +254,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 3.8,
         "count": 679
-    }
+    },
+    "quantity":1
 },
 {
     "id": 18,
@@ -250,7 +268,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 4.7,
         "count": 130
-    }
+    },
+    "quantity":0
 },
 {
     "id": 19,
@@ -263,7 +282,8 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 4.5,
         "count": 146
-    }
+    },
+    "quantity":5
 },
 {
     "id": 20,
@@ -276,6 +296,7 @@ export interface ProduktoModelis{
     "rating": {
         "rate": 3.6,
         "count": 145
-    }
+    },
+    "quantity":6
 }
 ]

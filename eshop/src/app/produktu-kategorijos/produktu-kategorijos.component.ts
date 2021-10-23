@@ -92,19 +92,32 @@ export class ProduktuKategorijosComponent implements OnInit {
                 }
             case "count1":
                 {
-                    this.currentProducts=this.currentProducts.sort(function (a, b): any {
+                    this.currentProducts = this.currentProducts.sort(function (a, b): any {
                         return b.rating.count > a.rating.count ? 1 : b.rating.count < a.rating.count ? -1 : 0;
                     }); break
                 }
-                case "count2":
-                    {
-                        this.currentProducts=this.currentProducts.sort(function (a, b): any {
-                            return b.rating.count < a.rating.count ? 1 : b.rating.count > a.rating.count ? -1 : 0;
-                        }); break
-                    }
-                    default: this.currentProducts=this.currentProducts.sort(function (a, b): any {
-                        return b.id < a.id ? 1 : b.id > a.id ? -1 : 0;
+            case "count2":
+                {
+                    this.currentProducts = this.currentProducts.sort(function (a, b): any {
+                        return b.rating.count < a.rating.count ? 1 : b.rating.count > a.rating.count ? -1 : 0;
                     }); break
+                }
+            case "quantity1": {
+                this.currentProducts = this.currentProducts.sort(function (a, b): any {
+                    return b.quantity < a.quantity ? 1 : b.quantity > a.quantity ? -1 : 0;
+                });
+                break;
+            }
+            case "quantity2": {
+                this.currentProducts = this.currentProducts.sort(function (a, b): any {
+                    return b.quantity > a.quantity ? 1 : b.quantity < a.quantity ? -1 : 0;
+                });
+                break;
+                
+            }
+            default: this.currentProducts = this.currentProducts.sort(function (a, b): any {
+                return b.id < a.id ? 1 : b.id > a.id ? -1 : 0;
+            }); break
         }
     }
     getParentId() {
@@ -158,5 +171,9 @@ export class ProduktuKategorijosComponent implements OnInit {
         this.sendID.emitter.emit();
 
         return collectedCategories;
+    }
+
+    inform(x: ProduktoModelis) {
+        alert(" Atsiprašome, kad prekės " + x.title + " nebeturime, informuosime Jus kai vėl turėsime")
     }
 }
