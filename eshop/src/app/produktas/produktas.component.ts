@@ -17,6 +17,7 @@ export class ProduktasComponent implements OnInit {
 produktai = produktai;
 
 addToCart(x:ProduktoModelis){
-  alert("cia reikia krepselio pridejimo funkcijos is serviso prekei" + x.title)
+ alert("cia reikia krepselio pridejimo funkcijos is serviso prekei" + x.title)
+
 }
 }

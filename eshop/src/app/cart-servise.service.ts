@@ -61,6 +61,10 @@ clearCart(x:ProduktoModelis){
  
 }
 
+//removeCartItem(x:ProduktoModelis){
+//  this.items=[];
+//}
+
 
 
 }
