@@ -51,7 +51,8 @@ export class MemoryGameComponent implements OnInit {
       this.shuffledCards = this.shuffleArray(this.unshuffledCards);
   }
   restarting(){
-      this.start=false
+      this.start=false;
+      this.victory=false
   }
 
   usedClases(x: number) {
@@ -139,12 +140,14 @@ export class MemoryGameComponent implements OnInit {
 
   checkVictory() {
       this.victory = true
+      
       for (let x of this.shuffledCards) {
           if (!x.open) {
               this.victory = false
               return
           }
       }
+      
       return
   }
 

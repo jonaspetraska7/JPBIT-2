@@ -3,5 +3,39 @@
     align-items: center;
     text-align: center;
     height: 400px;
+    width: 200px;
     margin-top: 20px;
+    position: relative;
+}
+
+.baneris span {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    font-size: 35px;
+    border: 10px solid aqua;
+    animation: infinite 4s blinkeriukas;
+    transition: 200ms;
+}
+
+@keyframes blinkeriukas {
+    0% {
+        background-color: bisque;
+        border-color: azure;
+    }
+    33% {
+        background-color: rgb(238, 142, 25);
+        border-color: beige;
+    }
+    66% {
+        background-image: radial-gradient(rgb(238, 142, 25), bisque);
+        border-color: rgb(238, 142, 25);
+    }
+    100% {
+        background-image: radial-gradient(bisque, rgb(238, 142, 25));
+        border-color: blanchedalmond;
+    }
 }

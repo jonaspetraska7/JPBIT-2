@@ -8,9 +8,10 @@
 .before button {
     padding: 10px;
     max-width: 200px;
-    background-color: cyan;
+    background-color: rgb(183, 209, 209);
     border-radius: 20px;
-    border: darkgrey solid 2px
+    border: rgb(214, 213, 213) solid 2px;
+    font-size: larger;
 }
 
 .before button:hover {
@@ -33,7 +34,7 @@
     height: 60px;
     width: 60px;
     background-color: gray;
-    margin: 20px;
+    margin: 10px;
 }
 
 .egg,
@@ -60,9 +61,9 @@
 .round9,
 .round10,
 .round11 {
-    height: 50px;
-    width: 50px;
-    margin: 20px;
+    height: 60px;
+    width: 60px;
+    margin: 10px;
 }
 
 .egg,
@@ -110,11 +111,11 @@ egg11 {
 .dashed9,
 .dashed10,
 .dashed11 {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     background-color: blueviolet;
     border: white dashed 10px;
-    margin: 20px;
+    margin: 10px;
 }
 
 .snow,
@@ -129,11 +130,11 @@ egg11 {
 .snow9,
 .snow10,
 .snow11 {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     background-color: white;
     border: dashed 10px rgb(18, 18, 216);
-    margin: 20px;
+    margin: 10px;
 }
 
 .triangle,
@@ -153,7 +154,7 @@ egg11 {
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
     border-top: 60px solid red;
-    margin: 20px;
+    margin: 10px;
 }
 
 .egg,

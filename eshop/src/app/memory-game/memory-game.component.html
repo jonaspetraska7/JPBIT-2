@@ -11,7 +11,7 @@
 
 
     </div>
-    <div *ngIf="start">
+    <div class="before" *ngIf="start">
         <div class="game">
             <div [ngStyle]="{'flex':maxUsedClasses%2==0&&maxUsedClasses<16?'25%':(maxUsedClasses%3==0&&maxUsedClasses<22)?'16.6%':(maxUsedClasses%4==0&&maxUsedClasses<61)?'12.5%':(maxUsedClasses%5==0&&maxUsedClasses<44)?'20%':'1'}" class="flexed" *ngFor="let x of shuffledCards, let ind=index">
                 <div (click)=flip(ind) [className]="x.open ? x.className : 'full'">
@@ -22,7 +22,7 @@
         <button (click)=restarting()>Is naujo</button>
     </div>
 
-    <div *ngIf="victory">
+    <div *ngIf="victory" class="before">
         <p>Laimejote (bus nuolaida {{maxUsedClasses}})%</p>
         <button (click)=getDiscount()>Čia Jūsų nuolaida</button>
     </div>
