@@ -8,7 +8,7 @@
 .product-container {
     display: inline-flex;
     flex-direction: column;
-    border: 2px solid rgb(124, 117, 117);
+    border: 2px solid #ccc;
     width: 230px;
     height: 333px;
     height: fit-content;
@@ -26,10 +26,17 @@
     box-shadow: 5px 5px 15px 5px #999999;
 }
 
+.product-container:hover img {
+    width: 190px;
+    height: 220px;
+    border: none;
+}
+
 .product-container img {
     height: 180px;
     width: 150px;
-    margin: 20px auto 0;
+    margin: 20px auto 10px;
+    border: solid 20px #ffffff;
 }
 
 .mygtukas {

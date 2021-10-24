@@ -101,3 +101,43 @@ ul.menu li a:hover {
     display: flex;
     justify-content: center;
 }
+
+.header #krepselis img {
+    width: 50px;
+}
+
+.header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #F1F1DF;
+    padding: 0;
+    margin: 0;
+    height: 80px;
+    border: none;
+}
+
+.header.sticky #menu-header {
+    display: none;
+}
+
+.header.sticky #menu-bar {
+    top: -60px;
+}
+
+.header.sticky .container {
+    height: auto;
+}
+
+.header.sticky .logo img {
+    width: 90px;
+    margin-top: 10px;
+}
+
+.header.sticky #krepselis {
+    height: 32px;
+}
+
+.header.sticky #krepselis img {
+    width: 32px;
+}

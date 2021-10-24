@@ -33,7 +33,7 @@
 
 <div id="produktai">
     <div class="product-container" *ngFor="let x of currentProducts">
-        <img [src]="x.image" />
+        <img [routerLink]="['/produktas', x.id]" [src]="x.image" />
         <div class="apiePreke">
             <div class="product-title-container">
                 <a [title]="x.title + ' details'" [routerLink]="['/produktas', x.id]" routerLinkActive="on">
