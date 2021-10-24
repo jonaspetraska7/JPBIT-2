@@ -17,11 +17,11 @@ export class CartComponent implements OnInit {
   private cartService: CartServiseService){}
 
 
-  ngOnInit(): void {
-    this.cartService.getItems();
-  }
- // removeItem(x:ProduktoModelis){
- //   this.cartService.remove
+  ngOnInit(): void {}
+   // this.addToCart.getItems();
 
- // }
-}
+   suma(x:ProduktoModelis){
+    this.cartService.getItemPrices()
+  }
+  
+  }

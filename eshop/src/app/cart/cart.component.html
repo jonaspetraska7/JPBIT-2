@@ -1,6 +1,6 @@
 <ng-container *ngIf="items.length !=0">
    <div class="card-table">
-     <table class="table table-responsive">
+     <table class="table table-stripped">
        <thead>
          <h2>KREPŠELIS</h2>
          <tr>
@@ -13,18 +13,20 @@
        </thead>
        <tbody *ngFor= "let item of items; let i = index ">
         <td><img style="width: 120px;" src="{{item.image}}" alt="" ></td>
-        <td>{{item.title}}</td>
-        <td>{{item.price}}</td>
-        <td>{{item.quantity}}</td>
+        <td style="width: 25%;">{{item.title}}</td>
+        <td style="width: 12%;">{{item.price}}</td>
+        <td style="width: 12%;">{{item.quantity}}</td>
         <td>
           <button class="btn btn-danger">Pasalinti</button>
        
         </td>
        </tbody>
        <tr>
-        <td><button class="btn btn-danger">Panaikinti krepseli</button></td>
-        <td><button class="btn btn-danger">Testi apsipirkima</button></td>
-        <td><button class="btn btn-danger">Apmokejimas</button></td>
+         <td colspan="4"></td>
+      <td><button class="btn btn-danger">Panaikinti krepseli</button></td>
+        <td><button routerLink="" class="btn btn-danger">Testi apsipirkima</button></td>
+        <td><button routerLink="/login" class="btn btn-danger">Apmokejimas</button></td>
+        <td><strong>Suma :  €</strong></td>
       </tr>
 
      </table>
