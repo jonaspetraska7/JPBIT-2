@@ -1,6 +1,49 @@
-<h3>KREPŠELIS</h3>
+<ng-container *ngIf="items.length !=0">
+   <div class="card-table">
+     <table class="table table-stripped">
+       <thead>
+         <h2>KREPŠELIS</h2>
+         <tr>
+           <th>Nuotrauka</th>
+           <th>Pavadinimas</th>
+           <th>Kaina</th>
+           <th>Kiekis</th>
+           <th>Pasalinti</th>
+         </tr>
+       </thead>
+       <tbody *ngFor= "let item of items; let i = index ">
+        <td><img style="width: 120px;" src="{{item.image}}" alt="" ></td>
+        <td style="width: 25%;">{{item.title}}</td>
+        <td style="width: 12%;">{{item.price}}</td>
+        <td style="width: 12%;">{{item.quantity}}</td>
+        <td>
+          <button class="btn btn-danger">Pasalinti</button>
+       
+        </td>
+       </tbody>
+       <tr>
+         <td colspan="4"></td>
+      <td><button class="btn btn-danger">Panaikinti krepseli</button></td>
+        <td><button routerLink="" class="btn btn-danger">Testi apsipirkima</button></td>
+        <td><button routerLink="/login" class="btn btn-danger">Apmokejimas</button></td>
+        <td><strong>Suma :  €</strong></td>
+      </tr>
 
-<div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.title }}</span>
-  <span>{{ item.price  }} €</span>
-</div>
+     </table>
+   </div>
+</ng-container>
+
+
+<ng-container *ngIf="items.length ==0">
+  <div class="container">
+    <div class="card">
+      <h2 class="card-title">KREPŠELIS</h2>
+    </div>
+    <div class="center">
+      <img src="https://tiendaramo.com/vistas/imagenes/empty-cart.png" alt="">
+      <h4>Jusu krepselis tuscias</h4>
+      <button routerLink="" mat-flat-button>Prideti produkta</button>
+    </div>
+  
+  </div>
+</ng-container>

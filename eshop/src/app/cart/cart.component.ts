@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartServiseService } from '../cart-servise.service';
+import { ProduktoModelis } from '../Produktai';
 
 
 @Component({
@@ -10,11 +11,17 @@ import { CartServiseService } from '../cart-servise.service';
 export class CartComponent implements OnInit {
   items = this.cartService.getItems();
 
+  //public produktai : any =[];
+
   constructor(
-    private cartService: CartServiseService
-  ) { }
+  private cartService: CartServiseService){}
 
-  ngOnInit(): void {
+
+  ngOnInit(): void {}
+   // this.addToCart.getItems();
+
+   suma(x:ProduktoModelis){
+    this.cartService.getItemPrices()
   }
-
-}
+  
+  }
