@@ -1,5 +1,5 @@
 #produktai {
-    padding: 20px 15px 15px;
+    padding: 15px 10px 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -8,13 +8,13 @@
 .product-container {
     display: inline-flex;
     flex-direction: column;
-    border: 2px solid #ccc;
     width: 230px;
     height: 333px;
     height: fit-content;
-    background-color: beige;
     margin-bottom: 20px;
     margin-right: calc((100% - 234px * 4) / 3);
+    background-color: rgba(247, 247, 247, 0.685);
+    border-radius: 20px;
 }
 
 .product-container:nth-child(4n) {
@@ -56,6 +56,7 @@
 
 .mygtukas:hover {
     border-color: rgb(109, 52, 12);
+    background-color: rgba(128, 128, 128, 0.199);
 }
 
 .apiePreke {
