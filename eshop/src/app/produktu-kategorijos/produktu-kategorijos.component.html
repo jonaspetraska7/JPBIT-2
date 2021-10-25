@@ -4,6 +4,9 @@
 <div class="paieska">
     <span>Produktų paieška</span><input class="paieskosLaukelis" (input)="ieskojimas($event)">
 </div>
+<div>
+    <app-karusele></app-karusele>
+</div>
 <div class="sorting">
     <select #sortSelect (change)="sortByValue(sortSelect.value)">
         <option selected value="default">Rikiuoti pagal</option>
