@@ -14,6 +14,10 @@ export class KaruseleComponent implements OnInit {
       { name: 'assets/pic1.jpg' },
       { name: 'assets/pic2.jpg' },
       { name: 'assets/pic3.jpg' },
+      { name: 'assets/pic4.jpg' },
+      { name: 'assets/pic5.jpg' },
+      { name: 'assets/pic6.jpg' },
+      { name: 'assets/pic7.jpg' },
       
     ]}
 
