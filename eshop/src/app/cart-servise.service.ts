@@ -52,6 +52,7 @@ getItemPrices(){
   for(let x of this.items){
     a+=x.price
   }
+  
   this.kaina=a;
   return this.kaina
 }

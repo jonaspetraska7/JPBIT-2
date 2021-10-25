@@ -111,8 +111,8 @@ egg11 {
 .dashed9,
 .dashed10,
 .dashed11 {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
     background-color: blueviolet;
     border: white dashed 10px;
     margin: 10px;
@@ -130,8 +130,8 @@ egg11 {
 .snow9,
 .snow10,
 .snow11 {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
     background-color: white;
     border: dashed 10px rgb(18, 18, 216);
     margin: 10px;
