@@ -16,3 +16,8 @@
     height: 480px;
     width: 640px;
 }
+
+.mygtukas {
+    display: flex;
+    justify-content: center;
+}
