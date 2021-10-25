@@ -1,3 +1,16 @@
+
+.flexed{
+    justify-content: center;
+    display: flex;
+}
+h1{
+    margin-top: 25px;
+}
+.didinamMazinam{
+    margin: 20px;
+    margin-bottom: 0%;
+    display: flex;
+}
 .before {
     display: flex;
     flex-direction: column;
@@ -12,6 +25,8 @@
     border-radius: 20px;
     border: rgb(214, 213, 213) solid 2px;
     font-size: larger;
+    margin: 10px;
+    width: 140px;
 }
 
 .before button:hover {
@@ -26,6 +41,7 @@
 
 .game {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -111,8 +127,8 @@ egg11 {
 .dashed9,
 .dashed10,
 .dashed11 {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
     background-color: blueviolet;
     border: white dashed 10px;
     margin: 10px;
@@ -130,8 +146,8 @@ egg11 {
 .snow9,
 .snow10,
 .snow11 {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
     background-color: white;
     border: dashed 10px rgb(18, 18, 216);
     margin: 10px;
