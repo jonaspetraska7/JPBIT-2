@@ -38,11 +38,17 @@
 .paieska {
     display: flex;
     justify-content: right;
+    flex-direction: row;
+}
+
+.paieska p{
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 150px;
 }
 
 .paieskosLaukelis {
     margin-top: 20px;
-    margin-left: 550px;
     width: 200px;
 }
 

@@ -133,7 +133,7 @@ export class ProduktuKategorijosComponent implements OnInit {
     ieskojimas(event: any) {
         let ivestas_tekstas = event.target.value;
         if (event == "") this.currentProducts = this.allProducts;
-        this.currentProducts = this.allProducts.filter(x => x.title.includes(event.value));
+        this.currentProducts = this.allProducts.filter(x => x.title.includes(ivestas_tekstas));
     }
 
     getProductsByCategory(idCategory: number) {
