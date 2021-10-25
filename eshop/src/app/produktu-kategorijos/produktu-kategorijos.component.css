@@ -36,11 +36,12 @@
 }
 
 .paieska {
-    margin: 15px;
+    display: flex;
+    justify-content: right;
 }
 
 .paieskosLaukelis {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 550px;
     width: 200px;
 }
@@ -57,3 +58,4 @@
     font-weight: normal;
     font-family: Arial, Helvetica, sans-serif;
 }
+
