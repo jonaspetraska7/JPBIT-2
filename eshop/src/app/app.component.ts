@@ -35,6 +35,7 @@ isfunk=this.servisas.getLocation();
 console.log("gavom duomenis")
 console.log(catID)
   }
+
 }
 
 // 

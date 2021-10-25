@@ -16,6 +16,12 @@ input {
   top: 90vh;
 }
 
+kontaktai{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #zinute {
   width: 68%;
 }
@@ -67,7 +73,6 @@ button {
   background-color: rgba(244, 244, 234, 1);
   border-radius: 8px;
   margin-left: 15vw;
-  margin-right: 5vw;
   padding: 15px 15px 15px 20px;
 }
 

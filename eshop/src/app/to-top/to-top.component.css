@@ -1,0 +1,23 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.show-scrollTop {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+.mygtukas {
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  background-color: rgba(58, 170, 6, 0.479);
+}
+
+.mygtukas:hover {
+  background-color: grey;
+  cursor: pointer;
+}
