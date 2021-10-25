@@ -30,6 +30,7 @@ import { KaruseleComponent } from './komponentai/karusele/karusele.component';
 import { LabirintasComponent } from './labirintas/labirintas.component';
 import { KotaktuFormaComponent } from './kotaktu-forma/kotaktu-forma.component';
 import { ToTopComponent } from './to-top/to-top.component';
+import { PalyginimasComponent } from './komponentai/palyginimas/palyginimas.component';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { ToTopComponent } from './to-top/to-top.component';
     LabirintasComponent,
     KotaktuFormaComponent,
     ToTopComponent,
+    PalyginimasComponent,
   ],
   imports: [
     BrowserModule,
