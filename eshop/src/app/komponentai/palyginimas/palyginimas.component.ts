@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CartServiseService } from 'src/app/cart-servise.service';
+import { ProduktoModelis } from 'src/app/Produktai';
 
 
 @Component({
@@ -8,16 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PalyginimasComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: CartServiseService) {
+        this.lyginamosPrekes = this.service.gautiPalyginimoMasyva();
+   }
 
   ngOnInit(): void {
   }
+lyginamosPrekes: ProduktoModelis[]=[]; 
 
 
 }
-let palyginimas: any[] = ['3'];
 
 
-function palyginti(x: any) {
-  palyginimas.push(x);
-}

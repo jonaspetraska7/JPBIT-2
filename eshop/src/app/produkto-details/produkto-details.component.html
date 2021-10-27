@@ -4,6 +4,9 @@
         <div class="main1">
             <img [src]="currentPreke.image">
         </div>
+        <div class="palyginti"><input type="checkbox" [checked]="palyginti(this.currentPreke)" id="palyginti" name="palyginti[]">
+            <label for="palyginti">Įtraukti į palyginimą</label>
+        </div>
         <div class="main20">
             <div class="main2">
                 <h1>{{currentPreke.title}}</h1>
