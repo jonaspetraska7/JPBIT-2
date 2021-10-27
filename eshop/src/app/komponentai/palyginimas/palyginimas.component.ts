@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-palyginimas',
   templateUrl: './palyginimas.component.html',
@@ -12,4 +13,11 @@ export class PalyginimasComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+}
+let palyginimas: any[] = ['3'];
+
+
+function palyginti(x: any) {
+  palyginimas.push(x);
 }

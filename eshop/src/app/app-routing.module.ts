@@ -14,6 +14,7 @@ import { KaruseleComponent } from './komponentai/karusele/karusele.component';
 import { LabirintasComponent } from './labirintas/labirintas.component';
 import { LeftCategoryComponent } from './left-category/left-category.component';
 import { CartComponent } from './cart/cart.component';
+import { PalyginimasComponent } from './komponentai/palyginimas/palyginimas.component';
 
 const routes: Routes = [
   {path: '', component:ProduktuKategorijosComponent},
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path: 'klaida404', component:Klaida404Component},
   {path:'left', component:LeftCategoryComponent},
   {path: 'cart', component:CartComponent},
+  {path: 'palyginimas', component:PalyginimasComponent},
   {path: '**',   redirectTo: '/klaida404' },
   
 ];
