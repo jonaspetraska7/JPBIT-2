@@ -5,6 +5,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SlideshowModule } from 'ng-simple-slideshow';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +34,7 @@ import { LabirintasComponent } from './labirintas/labirintas.component';
 import { KotaktuFormaComponent } from './kotaktu-forma/kotaktu-forma.component';
 import { ToTopComponent } from './to-top/to-top.component';
 import { PalyginimasComponent } from './komponentai/palyginimas/palyginimas.component';
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -65,7 +69,9 @@ import { PalyginimasComponent } from './komponentai/palyginimas/palyginimas.comp
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    Ng2CarouselamosModule
+    Ng2CarouselamosModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
 
   ],
   providers: [],
