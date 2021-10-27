@@ -15,10 +15,11 @@ import { LabirintasComponent } from './labirintas/labirintas.component';
 import { LeftCategoryComponent } from './left-category/left-category.component';
 import { CartComponent } from './cart/cart.component';
 import { PalyginimasComponent } from './komponentai/palyginimas/palyginimas.component';
-import{ AngularFireAuthGuard } from '@angular/fire/compat/auth-AngularFireAuthGuard';
+import{ AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
 import { AppComponent } from './app.component';
+import { ProduktoPridejimasComponent } from './produkto-pridejimas/produkto-pridejimas.component';
 
-export const routes: Routes = [
+export const routesdfghh: Routes = [
   {path: '', component:ProduktuKategorijosComponent},
   {path: 'pagrindinis', component:PagrindinisComponent, canActivate: [AngularFireAuthGuard] },
   {path: 'kontaktai', component:KontaktaiComponent, canActivate: [AngularFireAuthGuard]},
@@ -45,7 +46,7 @@ const routes: Routes = [
   {path: '', component:ProduktuKategorijosComponent},
   {path: 'pagrindinis', component:PagrindinisComponent},
   {path: 'kontaktai', component:KontaktaiComponent},
-  {path: 'ziviles', component:ProduktuKategorijosComponent},
+  {path: 'ziviles', component:ProduktoPridejimasComponent},
   {path:'memory', component:MemoryGameComponent},
   {path:'labirintas', component:LabirintasComponent},
 
