@@ -99,3 +99,9 @@ h1 {
         background-image: linear-gradient(rgb(255, 255, 255), rgb(223, 156, 11));
     }
 }
+
+.palyginti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

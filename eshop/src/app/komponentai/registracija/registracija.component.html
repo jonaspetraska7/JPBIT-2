@@ -48,7 +48,10 @@
     <input id="11" type="text" name="pastoKodas"  ngModel>
 
     <label for="12">Valstybė</label>
-    <input id="12" type="text" name="valstybe"  ngModel>
+    <select id="12" type="text" name="valstybe"  ngModel>
+        <option *ngFor="let valstybe of valstybes" [value]="12">{{valstybe.name }}</option>
+    </select>
+        
     <br>
     <br>
 

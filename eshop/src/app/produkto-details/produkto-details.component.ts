@@ -15,7 +15,7 @@ export class ProduktoDetailsComponent implements OnInit {
 
 
 
-  constructor(private cartservisas:CartServiseService ,private route: ActivatedRoute, private router: Router, private cartServisas: CartServiseService) {
+  constructor(private route: ActivatedRoute, private router: Router, private cartServisas: CartServiseService) {
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     };
@@ -37,4 +37,8 @@ export class ProduktoDetailsComponent implements OnInit {
     alert(" Atsiprašome, kad prekės "+ x.title + " nebeturime, informuosime Jus kai vėl turėsime")
 }
 
+palyginti (x: any) {
+  this.cartServisas.lyginti(x);
 }
+}
+
