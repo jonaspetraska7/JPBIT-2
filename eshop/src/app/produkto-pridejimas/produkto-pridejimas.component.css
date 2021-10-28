@@ -1,0 +1,30 @@
+.main {
+    display: flex;
+    height: max-content;
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.form label {
+    font-size: larger;
+}
+
+.form input {
+    border: 2px solid gray;
+    padding: 3px;
+    margin: 5px;
+}
+
+.form div::first-letter {
+    text-transform: capitalize;
+}
+
+.form button {
+    padding: 10px;
+    align-self: center;
+    text-transform: capitalize;
+}
