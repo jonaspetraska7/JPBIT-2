@@ -7,7 +7,7 @@ import { SlideshowModule } from 'ng-simple-slideshow';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -72,6 +72,8 @@ import { environment } from 'src/environments/environment';
     Ng2CarouselamosModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    AngularFireAuthModule
+
 
   ],
   providers: [],

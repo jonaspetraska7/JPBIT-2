@@ -89,6 +89,6 @@
     <label for="21">Prenumeruoti naujienlaiškį</label>
         <input id="21" type="checkbox" name="naujienos" value="false" ngModel>
 
-    <button [disabled]="!manoForma.valid"  type="submit">Registruotis</button>
+    <button [disabled]="!manoForma.valid" type="submit" (click)="pateiktiForma(manoForma)">Registruotis</button>
 
 </form>
