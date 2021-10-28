@@ -14,8 +14,7 @@ import { registerLocaleData } from '@angular/common';
 export class RegistracijaComponent implements OnInit {
 
   constructor(
-    private authService: AuthService, 
-    private fireAuth: AngularFireAuthModule) { }
+    private authService: AuthService ) { }
 
 
   ngOnInit(): void {
