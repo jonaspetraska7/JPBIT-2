@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FireBaseService } from '../fire-base.service';
 
 @Component({
@@ -8,9 +10,23 @@ import { FireBaseService } from '../fire-base.service';
 })
 export class ProduktoPridejimasComponent implements OnInit {
 
-  constructor(private fire:FireBaseService) { }
+  constructor(private firestore:AngularFirestore) { 
+    firestore.collection('projektas').valueChanges().subscribe((x:any)=>this.naujas=x);
+    
+  }
 
   ngOnInit(): void {
   }
 
+  naujas:any[]=[]
+
+  funkcija(){
+    let naujasKazkas = {
+      vardas: "kitas vardukas",
+      telefonas: 15846
+    }
+    this.firestore.collection('projektas').add(naujasKazkas)
+  }
+
+ 
 }

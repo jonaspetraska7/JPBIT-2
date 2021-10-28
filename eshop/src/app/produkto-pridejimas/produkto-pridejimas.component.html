@@ -1,3 +1,19 @@
 <p>produkto-pridejimas works!</p>
 <p>cia bus produktu pridejimo inputai, reikes formu ir kitu nesamoniu.</p>
 <input type="text">
+
+<div style="height: 80vh;">
+
+
+    <button (click)="funkcija()">tikrinam konsole</button>
+
+    <p>naujas(tas kur is modulio): </p>
+
+
+    <div *ngFor="let x of naujas">
+        <p>{{x.vardas}}</p>
+
+    </div>
+
+
+</div>
