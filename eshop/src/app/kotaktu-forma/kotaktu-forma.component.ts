@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormBuilder, Validators, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
@@ -9,14 +9,22 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 })
 export class KotaktuFormaComponent implements OnInit {
 
-  constructor(private firestore: AngularFirestore) { }
+  zinute : any[]= [];
+
+  constructor(private firestore: AngularFirestore) {
+    this.firestore.collection('projektas').valueChanges().subscribe((x : any) => this.zinute = x)
+   }
 
   ngOnInit(): void {}
   pateiktiForma(manoForma: NgForm){
     let naujaZinute = {
-      vardas: manoForma.value,
+      vardas: manoForma.value.vardas,
+      telefonas: manoForma.value.telefonas,
+      email: manoForma.value.email,
+      zinute: manoForma.value.zinute,
     }
-    this.firestore.collection('projektas').doc('naujaZinute').set(naujaZinute);
+    console.log(naujaZinute);
+    this.firestore.collection('Zinutes').doc('KlientuZinutes').set(naujaZinute);
     manoForma.reset();
   }
 }
