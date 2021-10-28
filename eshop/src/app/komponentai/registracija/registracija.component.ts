@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AuthService } from 'src/app/auth.service';
-import { stringify } from 'querystring';
-import { registerLocaleData } from '@angular/common';
+
 
 
 @Component({
@@ -30,7 +29,7 @@ export class RegistracijaComponent implements OnInit {
 
   pateiktiForma(forma: NgForm) {
     console.log(forma.value)
-    let json = JSON.stringify(forma.value)
+     let json = JSON.stringify(forma.value)
     console.log(json)
     
   }
