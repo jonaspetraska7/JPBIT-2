@@ -35,6 +35,7 @@ import { KotaktuFormaComponent } from './kotaktu-forma/kotaktu-forma.component';
 import { ToTopComponent } from './to-top/to-top.component';
 import { PalyginimasComponent } from './komponentai/palyginimas/palyginimas.component';
 import { environment } from 'src/environments/environment';
+import { ProduktoPridejimasComponent } from './produkto-pridejimas/produkto-pridejimas.component';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import { environment } from 'src/environments/environment';
     KotaktuFormaComponent,
     ToTopComponent,
     PalyginimasComponent,
+    ProduktoPridejimasComponent,
   ],
   imports: [
     BrowserModule,
