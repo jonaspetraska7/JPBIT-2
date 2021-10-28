@@ -17,5 +17,6 @@ export class LoginComponent implements OnInit {
     console.log(forma.value)
     let json = JSON.stringify(forma.value)
     console.log(json)
+    this.login.login(forma.value.email, forma.value.password);
   }
 }

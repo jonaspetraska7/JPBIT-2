@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from 'src/app/auth.service';
@@ -29,11 +30,12 @@ export class RegistracijaComponent implements OnInit {
     console.log(forma.value)
      let json = JSON.stringify(forma.value)
     console.log(json)
+    console.log(forma.value.email)
+    console.log(forma.value.password)
+    this.authService.emailSignUp(forma.value.email, forma.value.password);
     
   }
 
-// register() {
-//   this.authService.emailSignUp(forma.email, forma.password);
-// }
+
 
 }
