@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AuthService } from 'src/app/auth.service';
 
 
