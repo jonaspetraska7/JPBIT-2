@@ -1,0 +1,55 @@
+.main {
+    display: flex;
+    height: max-content;
+}
+
+.form {
+    flex: 1;
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.form label {
+    font-size: larger;
+}
+
+.form input {
+    border: 2px solid gray;
+    padding: 3px;
+    margin: 5px;
+}
+
+.form div::first-letter {
+    text-transform: capitalize;
+}
+
+.form button {
+    padding: 10px;
+    align-self: center;
+    text-transform: capitalize;
+}
+
+.preview {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.preview img {
+    height: 200px;
+    width: 200px;
+}
+
+.preview h1 {
+    font-size: xx-large;
+}
+
+.preview p {
+    font-size: larger;
+}

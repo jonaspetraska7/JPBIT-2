@@ -34,7 +34,7 @@ export const kategorijos = [
         id: 5,
         id_parent: 4,
         title: "Žiedai",
-        description: "žiedai kiekvienia progai"
+        description: "žiedai kiekvienai progai"
     },
     {
         id: 6,

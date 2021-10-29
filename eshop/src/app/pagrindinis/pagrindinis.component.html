@@ -1,19 +1,4 @@
 <app-meniu></app-meniu>
 <app-left-category></app-left-category>
-<p>cia mano bandymai!</p>
-
-
-<select #selectedSort (change)="bandymas(selectedSort.value)">
-    <option value="123">Pagal kaina nuo brangiausių</option>
-    <option>Pagal kainą nuo pigiausių</option>
-    <option>Pagal pavadinimą nuo A iki Ž</option>
-    <option>Pagal pavadinimą nuo Ž iki A</option>
-    <option>Pagal reitingą nuo geriausiai vertinamo</option>
-    <option value="234">Pagal varda</option>
-    <option value="345">pagal reitinga</option>
-</select>
-
-<div *ngFor="let x of prekes">
-    <p>kaina produkto: {{x.price}} reitingas {{x.rating.rate}} vardas {{x.title}}</p>
-
-</div>
+<p>Bandymas balsavimo</p>
+<p>mums reikes prekes Id ir reitingo pasirinkimo</p>
