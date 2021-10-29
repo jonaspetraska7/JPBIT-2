@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,26 +15,19 @@ export class AuthService {
     private router: Router,
    ) { }
 
+dabartinisUser: any;
+
 login(email: string, password: string) {
-  this.afAuth.signInWithEmailAndPassword(email, password).then(() => {
+  this.afAuth.signInWithEmailAndPassword(email, password).then(async() => {
     
     
     console.log('AS PRISIJUGES');
     
     this.router.navigate(['/']);
     alert('Jus prisijunges:  '+ email);
-  });
-}
-emailSignUp(email: string, password: string) {
-  this.afAuth.createUserWithEmailAndPassword(email, password);
-}
 
-logout() {
-  this.afAuth.signOut().then(() => {this.router.navigate(['/'])});
-}
-
-async getCurrentUser() {
-  var user = await this.afAuth.currentUser;
+    var user = await this.afAuth.currentUser;
+this.dabartinisUser= user;
 
   if (user) {
     console.log('prisijunges vartotojas yra:')
@@ -41,10 +35,30 @@ async getCurrentUser() {
   } else {
     // No user is signed in.
   }
-  return user;
+  this.userAtnaujinta.next(true);
+  });
+
+}
+emailSignUp(email: string, password: string) {
+  this.afAuth.createUserWithEmailAndPassword(email, password);
 }
 
+logout() {
+  this.afAuth.signOut().then(async() => {
+    var user = await this.afAuth.currentUser;
+this.dabartinisUser= user;
 
+    this.router.navigate(['/'])});
+   
+    this.userAtnaujinta.next(true);
+}
+
+async getCurrentUser() {
+  
+  return this.dabartinisUser;
+}
+
+userAtnaujinta = new BehaviorSubject<boolean>(false);
 
 
 

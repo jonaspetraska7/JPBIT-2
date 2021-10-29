@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartServiseService } from '../cart-servise.service';
-import { produktai } from '../Produktai';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-meniu',
@@ -9,8 +9,12 @@ import { produktai } from '../Produktai';
 })
 export class MeniuComponent implements OnInit {
 
-  constructor(private cartservisas: CartServiseService) { }
+  constructor(
+    private cartservisas: CartServiseService,
+    private loginInfo: AuthService
+    ) { }
 
+  
   ngOnInit(): void {
 
     this.cartservisas.kainaAtnaujinta.subscribe(value => {
@@ -19,14 +23,24 @@ export class MeniuComponent implements OnInit {
       }
     });
 
+    this.loginInfo.userAtnaujinta.subscribe(async (value) => {
+      if (value === true) { 
+          this.user = await this.loginInfo.getCurrentUser()
+      }
+    });
+
+  }
+  atsijungti() {
+  this.loginInfo.logout();
   }
 
     suma= this.cartservisas.getItemPrices()
 
-    
+    user: any;
 }
 
- //Pirkti(x:produktomodelis) {
- // debugger;
- //  this.cartservisas.Pirkti(x:produktomodelis);
+ 
+
+
+
 

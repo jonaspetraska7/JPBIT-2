@@ -1,5 +1,6 @@
 <div id="header" class="header">
     <div class="container">
+        <div class="loginInfo"><p>Prisijunges: {{user.email}} </p></div>
         <div class="logo">
             <a [routerLink]="''"><img src="\assets\Puokste_originalus-copy.png" alt="" /></a>
         </div>
@@ -25,9 +26,16 @@
                 <li>
                     <a routerLink="/ziviles">ziviles</a>
                 </li>
-                <li>
+                <div *ngIf="user; else elseBlock">
+                    <li>
+                        <a (click)="atsijungti()">Atsijungti</a>
+                    </li>
+                </div>
+                <ng-template #elseBlock><li>
                     <a routerLink="/login">Prisijungimas</a>
-                </li>
+                </li></ng-template>
+                
+                
                 <li>
                     <a id="krepselis" routerLink="/cart"><img src="\assets\6007115_business_buy_cart_market_online_icon.png" alt="" /></a>
                     <p id="suma">Suma: {{ suma | number:'1.2-2'}} €</p>
