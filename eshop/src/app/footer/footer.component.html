@@ -2,14 +2,12 @@
     <div id="footer-logo">
         <img style="width: 80%;"  src="\assets\Puokste_originalus-copy.png" alt="logo" />
     </div>
-    <div id="kontaktai1">
-        <ul id="listItem">
-            <li>Telefono numeris: <a href="tel:+370612123456">+370612123456</a></li>
-            <li>E-mail'as: <a href="mailto:puokste@puokste.ly?subject=Paklausimas del geliu">puokste@puokste.ly</a> </li>
-            <li>Adresas: Puokštės g. 12-43</li>
-            <li>Miestas: Balbieriškis</li>
-            <li>Darbo laikas: I-V 10:00 - 12:00</li>
-        </ul>
+    <div id="kontaktai" *ngFor="let x of kontaktai">
+            <p>Telefonas: &nbsp;<a href="tel:+370612123456">{{ x.telefonas}}</a></p>
+            <p>E-mail'as: &nbsp; <a href="mailto:puokste@puokste.ly?subject=Paklausimas del geliu">{{ x.email}}</a></p>
+            <p> Adresas: &nbsp;{{ x.adresas}}</p>
+            <p> Miestas: &nbsp;{{ x.miestas}}</p>
+            <p> Darbo laikas: &nbsp;{{ x.darbolaikas}}</p>
     </div>
    
 </div>
