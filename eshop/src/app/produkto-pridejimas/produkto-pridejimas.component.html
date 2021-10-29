@@ -26,14 +26,17 @@
             </div>
             <div>
                 <label for="categories">Kategoriju numeriai</label>
-                <input type="number" formControlName="categories[0]">
-                <input type="number" formControlName="categories[1]">
-                <input type="number" formControlName="categories[2]">
+                <input type="number" formControlName="categories">
+                <input type="number" formControlName="categories">
+                <input type="number" formControlName="categories">
 
             </div>
-            <div>
+            <div formGroupName="rating">
                 <label for="rating">Reitingas</label>
-                <input type="number" id="rating" formControlName="rating">
+                <label for="ratingRate">reitingas(skaicius)</label>
+                <input type="number" id="ratingRate" formControlName="rate">
+                <label for="ratingCount">reitingas balsavo tiek zmoniu</label>
+                <input type="number" id="ratingCount" formControlName="count">
             </div>
             <div>
                 <label for="quantity">Produktu kiekis</label>
@@ -49,12 +52,13 @@
 
     </div>
     <div class="preview">
-        <h1>Prekes pavadinimas</h1>
-        <img src="https://cataas.com/cat" alt="Prekes nnuotrauka">
-        <p>Prekes aprasymas. kokia grazi puiki ekstra nuostabi pati paciausia preke</p>
-        <p>Priskirtos kategoirijos (nzn kaip su situos suzaist reiks)</p>
-        <p>10.99 Lt</p>
-        <p>Reitingas noretusi kad butu ratio ir balsavusiu kiekis, bet ... gausis kaip gausis</p>
-        <p>Likutis sandelyje: 150</p>
+        <h1>{{productAddForm.value.title}}</h1>
+        <p>{{productAddForm.value.categories}}</p>
+        <img [src]="productAddForm.value.image" alt="Prekes nnuotrauka">
+        <p>{{productAddForm.value.description}}</p>
+        <p>Priskirtos kategoirijos: {{productAddForm.value.categories}} (nzn kaip su situos suzaist reiks)</p>
+        <p>{{productAddForm.value.price}}</p>
+        <p>Reitingas noretusi kad butu ratio {{productAddForm.value.rating.rate}} ir balsavusiu kiekis, bet ... gausis kaip gausis</p>
+        <p>Likutis sandelyje: {{productAddForm.value.quantity}}</p>
     </div>
 </div>
