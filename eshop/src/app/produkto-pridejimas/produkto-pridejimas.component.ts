@@ -29,14 +29,19 @@ export class ProduktoPridejimasComponent implements OnInit {
       image: '',
       
       categories: [0,0,0],
-      rating: 0,
+      rating: {
+        rate:0,
+        count:0
+      },
       quantity: 0
     }
   )
 
   onsubmit(x: FormGroup) {
     this.firestore.collection('PridetiProduktai').add(x.value)
-    console.log('pridejom i firebase' + x.value)
+    console.log('pridejom i firebase' + x.value);
+    this.productAddForm.reset();
+    
   }
 
 
