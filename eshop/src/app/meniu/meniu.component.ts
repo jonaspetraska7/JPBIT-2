@@ -12,34 +12,36 @@ export class MeniuComponent implements OnInit {
   constructor(
     private cartservisas: CartServiseService,
     private loginInfo: AuthService
-    ) { }
+  ) { }
 
-  
+
+
   ngOnInit(): void {
 
     this.cartservisas.kainaAtnaujinta.subscribe(value => {
-      if (value === true) { 
-          this.suma = this.cartservisas.getItemPrices()
+      if (value === true) {
+        this.suma = this.cartservisas.getItemPrices()
       }
     });
 
     this.loginInfo.userAtnaujinta.subscribe(async (value) => {
-      if (value === true) { 
-          this.user = await this.loginInfo.getCurrentUser()
+      if (value === true) {
+        this.user = await this.loginInfo.getCurrentUser()
       }
     });
 
   }
+
   atsijungti() {
-  this.loginInfo.logout();
+    this.loginInfo.logout();
   }
 
-    suma= this.cartservisas.getItemPrices()
+  suma = this.cartservisas.getItemPrices()
 
-    user: any;
+  user: any;
 }
 
- 
+
 
 
 
