@@ -6,10 +6,11 @@ import { kategorijos } from '../KategorijuDuomenys';
 import { KategorijuModelis } from '../KategorijuDuomenys';
 import { ActivatedRoute } from '@angular/router';
 
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 import { Router } from '@angular/router';
 import { ApiServisasService } from '../api-servisas.service';
-import { of } from 'rxjs';
-import { CursorError } from '@angular/compiler/src/ml_parser/lexer';
+
 
 @Component({
     selector: 'app-produktu-kategorijos',
@@ -19,18 +20,21 @@ import { CursorError } from '@angular/compiler/src/ml_parser/lexer';
 
 export class ProduktuKategorijosComponent implements OnInit {
 
-    constructor(private cartServisas: CartServiseService, private sendID: ApiServisasService, private route: ActivatedRoute, private router: Router) {
+    constructor(private firestore:AngularFirestore, private cartServisas: CartServiseService, private sendID: ApiServisasService, private route: ActivatedRoute, private router: Router) {
         this.router.routeReuseStrategy.shouldReuseRoute = function () {
             return false;
         };
-
-        console.log('Suveikis');
+        this.firestore.collection('Produktai').valueChanges().subscribe((x: any) => this.produktuMasyvas = x);
+        this.firestore.collection('Kategorijos').valueChanges().subscribe((x:any)=> this.kategorijuMasyvas = x)
+        
     }
 
     ngOnInit(): void {
     }
+    produktuMasyvas:any[]=[];
+    kategorijuMasyvas:any[]=[];
 
-    products = produktai;
+    products = this.produktuMasyvas;
 
 
     // sortPrice() {
@@ -41,7 +45,7 @@ export class ProduktuKategorijosComponent implements OnInit {
     // }
 
 
-    categories = kategorijos
+    categories = this.kategorijuMasyvas;
 
 
     public currentCategoryId = Number(this.route.snapshot.paramMap.get("idCategory"));
