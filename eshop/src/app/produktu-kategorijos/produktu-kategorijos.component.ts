@@ -24,8 +24,15 @@ export class ProduktuKategorijosComponent implements OnInit {
         this.router.routeReuseStrategy.shouldReuseRoute = function () {
             return false;
         };
-        this.firestore.collection('Produktai').valueChanges().subscribe((x: any) => this.produktuMasyvas = x);
-        this.firestore.collection('Kategorijos').valueChanges().subscribe((x:any)=> this.kategorijuMasyvas = x)
+        this.firestore.collection('Produktai').valueChanges().subscribe((x: any) => {
+            this.products = x; 
+            this.currentProducts = this.getProductsByCategory(this.currentCategoryId);
+        });
+        this.firestore.collection('Kategorijos').valueChanges().subscribe((x:any)=> { 
+            this.categories = x
+            this.currentCategories = this.getCategoryByParent(this.currentCategoryId);
+            this.currentProducts = this.getProductsByCategory(this.currentCategoryId);
+        })
         
     }
 
@@ -34,7 +41,7 @@ export class ProduktuKategorijosComponent implements OnInit {
     produktuMasyvas:any[]=[];
     kategorijuMasyvas:any[]=[];
 
-    products = this.produktuMasyvas;
+    products:any[]=[];
 
 
     // sortPrice() {
@@ -45,7 +52,7 @@ export class ProduktuKategorijosComponent implements OnInit {
     // }
 
 
-    categories = this.kategorijuMasyvas;
+    categories:any[]=[];
 
 
     public currentCategoryId = Number(this.route.snapshot.paramMap.get("idCategory"));
@@ -141,13 +148,16 @@ export class ProduktuKategorijosComponent implements OnInit {
     }
 
     getProductsByCategory(idCategory: number) {
+        console.log("bando gauti produktus")
         if (!idCategory) {
+            console.log(this.products)
             return this.products;
         }
         let collectedProducts = [];
 
         for (let x of this.products) {
-            if (x.categories.indexOf(idCategory) > -1) {
+            console.log(x.categories)
+            if (x.categories?.indexOf(idCategory) > -1) {
                 collectedProducts.push(x);
             }
         }
@@ -164,8 +174,10 @@ export class ProduktuKategorijosComponent implements OnInit {
     public getCategoryByParent(idParent: number) {
         console.log('idParent from category: ' + idParent);
         let collectedCategories = [];
-
+        console.log("KATEGORIJOS")
+        console.log(this.categories)
         for (let x of this.categories) {
+
             if (x.id_parent == idParent) {
                 collectedCategories.push(x);
             }
