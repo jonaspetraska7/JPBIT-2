@@ -1,9 +1,6 @@
 <div class="main">
     <div class="form">
-
-        <p>
-            <button type="button">Add categories</button>
-        </p>
+        <button (click)="leidziam()">pridedam</button>
         <form [formGroup]="productAddForm" (ngSubmit)="onsubmit(productAddForm)">
 
             <div>
@@ -75,7 +72,19 @@
 
 
     </div>
-    <div class="preview ">
+
+
+    <div>
+        <p>Produktai is fb:</p>
+        <div *ngFor="let x of naujas; let i=index">
+            <p> {{i}} Pavadinimas: {{x.title}}</p>
+            <p>Kategorijos: {{x.categories}}</p>
+
+        </div>
+    </div>
+
+
+    <!-- <div class="preview ">
         <h1>{{productAddForm.value.title}}</h1>
 
         <img [src]="productAddForm.value.image " alt="Prekes nnuotrauka ">
@@ -85,4 +94,4 @@
         <p>Reitingas: {{productAddForm.value.rating.rate}} ir balsavusiu kiekis: {{productAddForm.value.rating.count}}</p>
         <p>Likutis sandelyje: {{productAddForm.value.quantity}}</p>
     </div>
-</div>
+</div> -->

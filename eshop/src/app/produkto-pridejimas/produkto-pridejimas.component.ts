@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Form, FormArray, FormControl, FormGroup, FormBuilder, ReactiveFormsModule, AbstractControl, Validators } from '@angular/forms';
+import { kategorijos } from '../KategorijuDuomenys';
 import { produktai } from '../Produktai';
 
 
@@ -14,7 +15,7 @@ import { produktai } from '../Produktai';
 export class ProduktoPridejimasComponent implements OnInit {
 
     constructor(private firestore: AngularFirestore, private formBuilder: FormBuilder) {
-        firestore.collection('projektas').valueChanges().subscribe((x: any) => this.naujas = x);
+        firestore.collection('Produktai').valueChanges().subscribe((x: any) => this.naujas = x);
 
     }
 
@@ -37,11 +38,17 @@ export class ProduktoPridejimasComponent implements OnInit {
 
 kazkas = produktai;
 
-
+kategoriju = kategorijos
 
 
 
 leidziam(){
+    // let a=1;
+    // for(let x of this.kazkas){
+    //     this.firestore.collection('Produktai').doc(a.toString()).set(x)
+    //     a++
+    // }
+
     // for(let x of this.kazkas){
     //     this.firestore.collection('PridetiProduktai').add(x)
     // }
