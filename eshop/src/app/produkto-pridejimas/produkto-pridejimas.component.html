@@ -1,6 +1,6 @@
 <div class="main">
     <div class="form">
-        <button (click)="leidziam()">pridedam</button>
+
         <form [formGroup]="productAddForm" (ngSubmit)="onsubmit(productAddForm)">
 
             <div>
@@ -24,31 +24,10 @@
                 <input type="text" id="image" formControlName="image">
             </div>
 
-
-
-
-            <!-- <div formArrayName="categories">
-                <label for="categories">Kategorijos</label>
-                <button (click)="imamcia()">prideti</button>
-                <div *ngFor="let x of iskurimsim.controls index as i">
-                    <div [formGroupName]="i">
-                        <input type="number" formControlName="categories">
-                    </div>
-
-                </div>
-            </div> -->
-
-            <div formArrayName="categories">
-                <button (click)=pridedam()>Pridėti kategorija</button>
-                <div *ngFor="let x of tuscia.controls; let i = index">
-                    <div>
-
-                    </div>
-
-                </div>
-
+            <div>
+                <label for="categories">Kategorijų IDs (SKIRTI PER KABLELĮ!!!)</label>
+                <input type="text" id="categories" formControlName="categories">
             </div>
-
 
             <div formGroupName="rating">
                 <label for="rating">Reitingas</label>
@@ -68,23 +47,12 @@
 
         </form>
 
-        <button (click)=leidziam()>paleisti</button>
+
 
 
     </div>
 
-
-    <div>
-        <p>Produktai is fb:</p>
-        <div *ngFor="let x of naujas; let i=index">
-            <p> {{i}} Pavadinimas: {{x.title}}</p>
-            <p>Kategorijos: {{x.categories}}</p>
-
-        </div>
-    </div>
-
-
-    <!-- <div class="preview ">
+    <div class="preview ">
         <h1>{{productAddForm.value.title}}</h1>
 
         <img [src]="productAddForm.value.image " alt="Prekes nnuotrauka ">
@@ -94,4 +62,4 @@
         <p>Reitingas: {{productAddForm.value.rating.rate}} ir balsavusiu kiekis: {{productAddForm.value.rating.count}}</p>
         <p>Likutis sandelyje: {{productAddForm.value.quantity}}</p>
     </div>
-</div> -->
+</div>

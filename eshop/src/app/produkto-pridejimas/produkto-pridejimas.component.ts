@@ -23,37 +23,6 @@ export class ProduktoPridejimasComponent implements OnInit {
     }
 
   
-    tuscia=new FormArray([])
-
-    pridedam(){
-        const categorijos = this.formBuilder.group({
-            numb:[0, Validators.maxLength(10)]
-        })
-        this.tuscia.push(categorijos)
-    }
-    // get kazkas(){
-    //     return this.tuscia.controls[] as FormArray;
-    // }
-
-
-kazkas = produktai;
-
-kategoriju = kategorijos
-
-
-
-leidziam(){
-    // let a=1;
-    // for(let x of this.kazkas){
-    //     this.firestore.collection('Produktai').doc(a.toString()).set(x)
-    //     a++
-    // }
-
-    // for(let x of this.kazkas){
-    //     this.firestore.collection('PridetiProduktai').add(x)
-    // }
-
-}
 
     productAddForm = this.formBuilder.group(
         {
@@ -63,7 +32,7 @@ leidziam(){
             description: '',
             image: '',
 
-            categorijos: this.formBuilder.array([]),
+            categories: [],
 
             rating: this.formBuilder.group({
                 rate: 0,
@@ -74,8 +43,10 @@ leidziam(){
     )
 
     onsubmit(x: FormGroup) {
-
+        
         console.log(this.productAddForm.value)
+        x.value.categories = x.value.categories.split(',');
+        console.log(x.value);
         //this.firestore.collection('PridetiProduktai').add(x.value)
         console.log('pridejom i firebase' + x.value);
         this.productAddForm.reset();
@@ -84,11 +55,5 @@ leidziam(){
 
     naujas: any[] = []
 
-    funkcija() {
-        let naujasKazkas = {
-            vardas: "kitas vardukas",
-            telefonas: 15846
-        }
-        this.firestore.collection('projektas').add(naujasKazkas)
-    }
+    
 }
