@@ -32,6 +32,8 @@ export class MeniuComponent implements OnInit {
 
   }
 
+  nePrisijunges='Anonimas';
+
   atsijungti() {
     this.loginInfo.logout();
   }
