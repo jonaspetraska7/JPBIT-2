@@ -19,34 +19,12 @@ import{ AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
 import { AppComponent } from './app.component';
 import { ProduktoPridejimasComponent } from './produkto-pridejimas/produkto-pridejimas.component';
 
-export const routesdfghh: Routes = [
-  {path: '', component:ProduktuKategorijosComponent},
-  {path: 'pagrindinis', component:PagrindinisComponent},
-  {path: 'kontaktai', component:KontaktaiComponent},
-  {path: 'ziviles', component:ProduktuKategorijosComponent, canActivate: [AngularFireAuthGuard]},
-  {path:'memory', component:MemoryGameComponent},
-  {path:'labirintas', component:LabirintasComponent},
-
-  {path: 'kategorija', component:ProduktuKategorijosComponent},
-  {path: 'kategorija/:idCategory', component: ProduktuKategorijosComponent},
-
-  {path: 'produktas/:idProduct', component:ProduktoDetailsComponent},
-  {path: 'karusele', component:KaruseleComponent},
-  {path: 'registracija', component:RegistracijaComponent},
-  {path: 'login', component:LoginComponent},
-  {path: 'pass-recover', component:PassRecoverComponent},
-  {path: 'klaida404', component:Klaida404Component},
-  {path:'left', component:LeftCategoryComponent},
-  {path: 'cart', component:CartComponent},
-  {path: 'palyginimas', component:PalyginimasComponent},
-  {path: '**',   redirectTo: '/klaida404' },
-]
 
 const routes: Routes = [
   {path: '', component:ProduktuKategorijosComponent},
   {path: 'pagrindinis', component:PagrindinisComponent},
   {path: 'kontaktai', component:KontaktaiComponent},
-  {path: 'ziviles', component:ProduktoPridejimasComponent},
+  {path: 'ziviles', component:ProduktoPridejimasComponent, canActivate: [AngularFireAuthGuard]},
   {path:'memory', component:MemoryGameComponent},
   {path:'labirintas', component:LabirintasComponent},
 
