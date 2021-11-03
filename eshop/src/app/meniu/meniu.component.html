@@ -25,8 +25,8 @@
                     <a routerLink="/kontaktai">Kontaktai</a>
                 </li>
 
-                <li>
-                    <a routerLink="/ziviles">ziviles</a>
+                <li *ngIf="user">
+                    <a routerLink="/adding">Pridėti produktą</a>
                 </li>
                 <li *ngIf="user; else elseBlock">
                     <a (click)="atsijungti()">Atsijungti</a>
@@ -37,8 +37,7 @@
                     </li>
                 </ng-template>
                 <li>
-                    <a id="krepselis" routerLink="/cart"><img
-                            src="\assets\6007115_business_buy_cart_market_online_icon.png" alt="" /></a>
+                    <a id="krepselis" routerLink="/cart"><img src="\assets\6007115_business_buy_cart_market_online_icon.png" alt="" /></a>
                     <p id="suma">Suma: {{ suma | number:'1.2-2'}} €</p>
                 </li>
             </ul>

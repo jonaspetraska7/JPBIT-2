@@ -24,7 +24,7 @@ const routes: Routes = [
   {path: '', component:ProduktuKategorijosComponent},
   {path: 'pagrindinis', component:PagrindinisComponent},
   {path: 'kontaktai', component:KontaktaiComponent},
-  {path: 'ziviles', component:ProduktoPridejimasComponent, canActivate: [AngularFireAuthGuard]},
+  {path: 'adding', component:ProduktoPridejimasComponent, canActivate: [AngularFireAuthGuard]},
   {path:'memory', component:MemoryGameComponent},
   {path:'labirintas', component:LabirintasComponent},
 

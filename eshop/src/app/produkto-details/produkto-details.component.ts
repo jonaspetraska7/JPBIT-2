@@ -3,6 +3,7 @@ import { produktai, ProduktoModelis } from '../Produktai';
 import { CartServiseService } from '../cart-servise.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 
 @Component({
@@ -15,10 +16,12 @@ export class ProduktoDetailsComponent implements OnInit {
 
 
 
-  constructor(private route: ActivatedRoute, private router: Router, private cartServisas: CartServiseService) {
+  constructor(private route: ActivatedRoute, private router: Router, private firebase:AngularFirestore, private cartServisas: CartServiseService) {
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     };
+    this.firebase.collection('Produktai').valueChanges().subscribe((x:any) => this.prekes=x)
+    
   }
 
   ngOnInit(): void {
@@ -26,7 +29,7 @@ export class ProduktoDetailsComponent implements OnInit {
   const productIdFromRoute = Number(routeParams.get('idProduct'));
   this.currentPreke=produktai.find(produktai=>produktai.id===productIdFromRoute)
   }
-  prekes = produktai;
+  prekes:any[]=[];
 
   currentPreke: ProduktoModelis | undefined;
 
@@ -39,6 +42,13 @@ export class ProduktoDetailsComponent implements OnInit {
 
 palyginti (x: any) {
   this.cartServisas.lyginti(x);
+}
+
+funkcija(){
+  for(let x of this.prekes){
+    alert('Prekes informacija gritai atsiras. Atsiprašome.')
+    
+  }
 }
 }
 
