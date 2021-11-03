@@ -14,12 +14,17 @@ import { KaruseleComponent } from './komponentai/karusele/karusele.component';
 import { LabirintasComponent } from './labirintas/labirintas.component';
 import { LeftCategoryComponent } from './left-category/left-category.component';
 import { CartComponent } from './cart/cart.component';
+import { PalyginimasComponent } from './komponentai/palyginimas/palyginimas.component';
+import{ AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
+import { AppComponent } from './app.component';
+import { ProduktoPridejimasComponent } from './produkto-pridejimas/produkto-pridejimas.component';
+
 
 const routes: Routes = [
   {path: '', component:ProduktuKategorijosComponent},
   {path: 'pagrindinis', component:PagrindinisComponent},
   {path: 'kontaktai', component:KontaktaiComponent},
-  {path: 'ziviles', component:ProduktuKategorijosComponent},
+  {path: 'adding', component:ProduktoPridejimasComponent, canActivate: [AngularFireAuthGuard]},
   {path:'memory', component:MemoryGameComponent},
   {path:'labirintas', component:LabirintasComponent},
 
@@ -34,6 +39,7 @@ const routes: Routes = [
   {path: 'klaida404', component:Klaida404Component},
   {path:'left', component:LeftCategoryComponent},
   {path: 'cart', component:CartComponent},
+  {path: 'palyginimas', component:PalyginimasComponent},
   {path: '**',   redirectTo: '/klaida404' },
   
 ];

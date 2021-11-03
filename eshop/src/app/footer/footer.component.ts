@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  kontaktai : any;
+
+  constructor(private firestore: AngularFirestore) { 
+    this.firestore.collection('Kontaktai').valueChanges().subscribe((x : any) => this.kontaktai = x)
+  }
 
   ngOnInit(): void {
   }

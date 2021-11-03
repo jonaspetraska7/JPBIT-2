@@ -3,6 +3,14 @@
     overflow: hidden;
 }
 
+.loginInfo {
+    display: flex;
+    justify-content: end;
+    padding-bottom: 10px;
+    
+    margin: 2px;
+}
+
 .container {
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
@@ -10,7 +18,7 @@
 }
 
 .header {
-    padding: 30px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
     background: rgb(204, 204, 128);
     background: linear-gradient( 151deg, rgba(204, 204, 128, 0.35057773109243695) 30%, rgba(244, 244, 234, 0.8127626050420168) 100%);
     top: 0;

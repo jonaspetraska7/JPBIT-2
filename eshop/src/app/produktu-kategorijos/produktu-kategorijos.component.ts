@@ -6,10 +6,11 @@ import { kategorijos } from '../KategorijuDuomenys';
 import { KategorijuModelis } from '../KategorijuDuomenys';
 import { ActivatedRoute } from '@angular/router';
 
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 import { Router } from '@angular/router';
 import { ApiServisasService } from '../api-servisas.service';
-import { of } from 'rxjs';
-import { CursorError } from '@angular/compiler/src/ml_parser/lexer';
+
 
 @Component({
     selector: 'app-produktu-kategorijos',
@@ -19,18 +20,28 @@ import { CursorError } from '@angular/compiler/src/ml_parser/lexer';
 
 export class ProduktuKategorijosComponent implements OnInit {
 
-    constructor(private cartServisas: CartServiseService, private sendID: ApiServisasService, private route: ActivatedRoute, private router: Router) {
+    constructor(private firestore:AngularFirestore, private cartServisas: CartServiseService, private sendID: ApiServisasService, private route: ActivatedRoute, private router: Router) {
         this.router.routeReuseStrategy.shouldReuseRoute = function () {
             return false;
         };
-
-        console.log('Suveikis');
+        this.firestore.collection('Produktai').valueChanges().subscribe((x: any) => {
+            this.products = x; 
+            this.currentProducts = this.getProductsByCategory(this.currentCategoryId);
+        });
+        this.firestore.collection('Kategorijos').valueChanges().subscribe((x:any)=> { 
+            this.categories = x
+            this.currentCategories = this.getCategoryByParent(this.currentCategoryId);
+            this.currentProducts = this.getProductsByCategory(this.currentCategoryId);
+        })
+        
     }
 
     ngOnInit(): void {
     }
+    produktuMasyvas:any[]=[];
+    kategorijuMasyvas:any[]=[];
 
-    products = produktai;
+    products:any[]=[];
 
 
     // sortPrice() {
@@ -41,7 +52,7 @@ export class ProduktuKategorijosComponent implements OnInit {
     // }
 
 
-    categories = kategorijos
+    categories:any[]=[];
 
 
     public currentCategoryId = Number(this.route.snapshot.paramMap.get("idCategory"));
@@ -137,13 +148,16 @@ export class ProduktuKategorijosComponent implements OnInit {
     }
 
     getProductsByCategory(idCategory: number) {
+        console.log("bando gauti produktus")
         if (!idCategory) {
+            console.log(this.products)
             return this.products;
         }
         let collectedProducts = [];
 
         for (let x of this.products) {
-            if (x.categories.indexOf(idCategory) > -1) {
+            console.log(x.categories)
+            if (x.categories?.indexOf(idCategory) > -1) {
                 collectedProducts.push(x);
             }
         }
@@ -160,8 +174,10 @@ export class ProduktuKategorijosComponent implements OnInit {
     public getCategoryByParent(idParent: number) {
         console.log('idParent from category: ' + idParent);
         let collectedCategories = [];
-
+        console.log("KATEGORIJOS")
+        console.log(this.categories)
         for (let x of this.categories) {
+
             if (x.id_parent == idParent) {
                 collectedCategories.push(x);
             }

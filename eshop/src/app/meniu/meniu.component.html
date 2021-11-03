@@ -1,5 +1,8 @@
 <div id="header" class="header">
     <div class="container">
+        <div class="loginInfo">
+            <p>Prisijunges: {{user?.email}}</p>
+        </div>
         <div class="logo">
             <a [routerLink]="''"><img src="\assets\Puokste_originalus-copy.png" alt="" /></a>
         </div>
@@ -14,18 +17,25 @@
                 <li>
                     <a routerLink="">Pagrindinis</a>
                 </li>
+
                 <li>
                     <a routerLink="/memory">Atmintukas</a>
                 </li>
                 <li>
                     <a routerLink="/kontaktai">Kontaktai</a>
                 </li>
-                <li>
-                    <a routerLink="/labirintas">labirintas</a>
+
+                <li *ngIf="user">
+                    <a routerLink="/adding">Pridėti produktą</a>
                 </li>
-                <li>
-                    <a routerLink="/login">Prisijungimas</a>
+                <li *ngIf="user; else elseBlock">
+                    <a (click)="atsijungti()">Atsijungti</a>
                 </li>
+                <ng-template #elseBlock>
+                    <li>
+                        <a routerLink="/login">Prisijungti</a>
+                    </li>
+                </ng-template>
                 <li>
                     <a id="krepselis" routerLink="/cart"><img src="\assets\6007115_business_buy_cart_market_online_icon.png" alt="" /></a>
                     <p id="suma">Suma: {{ suma | number:'1.2-2'}} €</p>

@@ -1,0 +1,65 @@
+<div class="main">
+    <div class="form">
+
+        <form [formGroup]="productAddForm" (ngSubmit)="onsubmit(productAddForm)">
+
+            <div>
+                <label for="id">Produkto ID</label>
+                <input type="number" id="id" formControlName="id">
+            </div>
+            <div>
+                <label for="title">Produkto pavadinimas</label>
+                <input type="text" id="title" formControlName="title">
+            </div>
+            <div>
+                <label for="price">Produkto kaina</label>
+                <input type="number" id="price" formControlName="price">
+            </div>
+            <div>
+                <label for="description">Aprasymas</label>
+                <input type="text" id="description" formControlName="description">
+            </div>
+            <div>
+                <label for="image">Paveikslelio nuoroda</label>
+                <input type="text" id="image" formControlName="image">
+            </div>
+
+            <div>
+                <label for="categories">Kategorijų IDs (SKIRTI PER KABLELĮ!!!)</label>
+                <input type="text" id="categories" formControlName="categories">
+            </div>
+
+            <div formGroupName="rating">
+                <label for="rating">Reitingas</label>
+                <label for="ratingRate">reitingas(skaicius)</label>
+                <input type="number" id="ratingRate" formControlName="rate">
+                <label for="ratingCount">reitingas balsavo tiek zmoniu</label>
+                <input type="number" id="ratingCount" formControlName="count">
+            </div>
+            <div>
+                <label for="quantity">Produktu kiekis</label>
+                <input type="number" id="quantity" formControlName="quantity">
+            </div>
+
+            <div>
+                <button type="submit ">submit</button>
+            </div>
+
+        </form>
+
+
+
+
+    </div>
+
+    <div class="preview ">
+        <h1>{{productAddForm.value.title}}</h1>
+
+        <img [src]="productAddForm.value.image " alt="Prekes nnuotrauka ">
+        <p>{{productAddForm.value.description}}</p>
+        <p>Priskirtos kategorijos: {{productAddForm.value.categories}} </p>
+        <p>{{productAddForm.value.price}} €</p>
+        <p>Reitingas: {{productAddForm.value.rating.rate}} ir balsavusiu kiekis: {{productAddForm.value.rating.count}}</p>
+        <p>Likutis sandelyje: {{productAddForm.value.quantity}}</p>
+    </div>
+</div>

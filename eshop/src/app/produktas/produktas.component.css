@@ -113,3 +113,9 @@ h2 {
 .product-bottom-content {
     display: inline-block;
 }
+
+.compare {
+    
+    height: 50px;
+    width: 50px;
+}

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { produktai } from './Produktai';
 import { ProduktoModelis } from './Produktai';
+import { ProduktoDetailsComponent } from './produkto-details/produkto-details.component';
 
 @Injectable({
   providedIn: 'root'
@@ -61,11 +62,20 @@ clearCart(x:ProduktoModelis){
  this.items = [];
  
 }
+palyginimas: any[]=[];
+lyginti(x: any) {
+  this.palyginimas.push(x);
 
+}
+
+gautiPalyginimoMasyva() {
+  return this.palyginimas;
+}
 //removeCartItem(x:ProduktoModelis){
 //  this.items=[];
 //}
 
-
-
 }
+
+
+

@@ -5,6 +5,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SlideshowModule } from 'ng-simple-slideshow';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +33,9 @@ import { KaruseleComponent } from './komponentai/karusele/karusele.component';
 import { LabirintasComponent } from './labirintas/labirintas.component';
 import { KotaktuFormaComponent } from './kotaktu-forma/kotaktu-forma.component';
 import { ToTopComponent } from './to-top/to-top.component';
+import { PalyginimasComponent } from './komponentai/palyginimas/palyginimas.component';
+import { environment } from 'src/environments/environment';
+import { ProduktoPridejimasComponent } from './produkto-pridejimas/produkto-pridejimas.component';
 
 
 @NgModule({
@@ -54,6 +60,8 @@ import { ToTopComponent } from './to-top/to-top.component';
     LabirintasComponent,
     KotaktuFormaComponent,
     ToTopComponent,
+    PalyginimasComponent,
+    ProduktoPridejimasComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +71,11 @@ import { ToTopComponent } from './to-top/to-top.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    Ng2CarouselamosModule
+    Ng2CarouselamosModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule
+
 
   ],
   providers: [],
