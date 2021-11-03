@@ -13,30 +13,72 @@
       AB SEB bankas <br />A/S (IBAN): LT00 000 000 000 000 000 <br />
       Banko kodas: 70440 <br />
       SWIFT kodas (BIC): CBVILT2X
-      <br>
+      <br />
       Kūrėjai:
-      <br>
-      Mindaugas Vilkas
+      <br />
+      Mindaugas Vilkas <br />
+      Andrius Masiulis
     </p>
   </div>
   <div id="kontaktuForma">
-    <form ngNativeValidate #manoForma="ngForm" (ngSubmit)="pateiktiForma(manoForma)">
-
-      <div><input type="text" name="vardas" placeholder="Vardas" required ngModel #vardas="ngModel" />
+    <form
+      ngNativeValidate
+      #manoForma="ngForm"
+      (ngSubmit)="pateiktiForma(manoForma)"
+    >
+      <div>
+        <input
+          type="text"
+          name="vardas"
+          placeholder="Vardas"
+          required
+          ngModel
+          #vardas="ngModel"
+        />
         <small *ngIf="vardas.touched && !vardas.valid">Įveskite vardą </small>
       </div>
 
-      <div><input type="string" name="telefonas" placeholder="Telefonas" required ngModel
-          pattern='(86\d{7}|\+3706\d{7})' #telefonas="ngModel" /><small
-          *ngIf="telefonas.touched && !telefonas.valid">Neteisingas telefono numeris</small></div>
+      <div>
+        <input
+          type="string"
+          name="telefonas"
+          placeholder="Telefonas"
+          required
+          ngModel
+          pattern="(86\d{7}|\+3706\d{7})"
+          #telefonas="ngModel"
+        /><small *ngIf="telefonas.touched && !telefonas.valid"
+          >Neteisingas telefono numeris</small
+        >
+      </div>
 
-      <div><input type="email" name="email" placeholder="El. paštas" required ngModel #email="ngModel" /><small
-          *ngIf="email.touched && !email.valid">Įveskite elektroninį paštą</small> </div>
+      <div>
+        <input
+          type="email"
+          name="email"
+          placeholder="El. paštas"
+          required
+          ngModel
+          #email="ngModel"
+        /><small *ngIf="email.touched && !email.valid"
+          >Įveskite elektroninį paštą</small
+        >
+      </div>
 
-
-      <textarea style="max-height: 90px; max-width: 450px; min-width: 300px;" name="zinute" id="zinute" cols="20" rows="5"
-        placeholder="Žinutė" required ngModel #zinute="ngModel"> <small *ngIf="zinute.touched && 
-        !zinute.valid">Įveskite tekstą</small> </textarea>
+      <textarea
+        style="max-height: 90px; max-width: 450px; min-width: 300px"
+        name="zinute"
+        id="zinute"
+        cols="20"
+        rows="5"
+        placeholder="Žinutė"
+        required
+        ngModel
+        #zinute="ngModel"
+      >
+ <small *ngIf="zinute.touched && 
+        !zinute.valid">Įveskite tekstą</small> </textarea
+      >
 
       <button *ngIf="manoForma.valid" class="button" type="submit">
         SIŲSTI
